@@ -80,7 +80,7 @@ def surfaceToPandasDF(objs, surfs = ['Target'], fnOut='processed.mat'):
         # Average available data
         # 'on_srf'
         # Here no data returns NaN
-        onSurf = np.mean(gd['on'])
+        onSurf = np.nanmean(gd['on'])
         
         # 'norm_pos'
         # Works for now, but needs updating
