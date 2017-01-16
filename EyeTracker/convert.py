@@ -87,7 +87,7 @@ def surfaceToPandasDF(objs, surfs = ['Target'], fnOut='processed.mat'):
         # Need to handle mean on [x,y]
         # Need to handle mean on []
         try:
-            NP = np.mean(gd['NP'], axis=0)
+            NP = np.nanmean(gd['NP'], axis=0)
             if isinstance(NP, np.float64):
                 NP = [0,0]
         except:
@@ -122,7 +122,7 @@ fn = "SurfaceTest3.p"
 
 ## End    
 objs = unpickle(fn)
-df = surfaceToPandasDF(objs, fn+'.mat')
+df = surfaceToPandasDF(objs, fnOut=fn+'.mat')
 
 ## Plots
 # Logical on surface plot
