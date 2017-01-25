@@ -6,6 +6,7 @@ Collect gaze and surface data
 @author: gareth
 """
 
+#%% Prepare
 
 import zmq
 from msgpack import loads  
@@ -84,10 +85,12 @@ def runExp(fn, sub):
         # Close open file    
         f.close()      
 
-    
+  
+#%% Run 
+  
 ## Params
-fn = "SurfaceTest3.p"
-port = 43191
+fn = "SurfaceTest4.p"
+port = 50020
 
 ## Run
 sub = connect(port=port, subs='surface')

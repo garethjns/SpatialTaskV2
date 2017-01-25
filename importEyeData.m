@@ -3,6 +3,7 @@ close all
 
 
 %% Import data
+
 fn = 'EyeTracker\SurfaceTest3.p.mat';
 [gaze, nG] = loadGaze(fn);
 
@@ -34,6 +35,7 @@ scatter(gaze.NP(gaze.onSurf==false,1), gaze.NP(gaze.onSurf==false,2))
 
 
 %% Load trial data
+
 gazePropThresh = 0.1;
 
 fn = 'incomplete.mat';
@@ -67,4 +69,4 @@ end
 
 plot(stimLog.sTime, stimLog.onSurfProp)
 hold on
-plot(stimLog.sTime, stimLog.onSurfProp>=gazePropThresh )
+plot(stimLog.sTime, stimLog.onSurfProp>=gazePropThresh)

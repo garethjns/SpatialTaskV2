@@ -96,7 +96,6 @@ def surfaceToPandasDF(objs, surfs = ['Target'], fnOut='processed.mat'):
         # Report progress
         print str(ts) + ' (' + str(it/n*100) + '%)'
         
-       
         # Get save norm_pos data and TS
         dRow = pd.DataFrame({'TS': ts, 
                       'onSurf' : onSurf,
@@ -129,7 +128,11 @@ df = surfaceToPandasDF(objs, fnOut=fn+'.mat')
 plt.plot(df['onSurf'])
 plt.show()
 
+
+#%% Plot
 # Scatter norm_pos data, color read when on target surface
-plt.figure(figsize=(10,10))
+plt.figure(figsize=(20,20))
 plt.scatter(df['NP0'][df['onSurf']==1], df['NP1'][df['onSurf']==1], c='r')
 plt.scatter(df['NP0'][df['onSurf']==0], df['NP1'][df['onSurf']==0], c='b')
+plt.ylim([-2,2])
+plt.xlim([-2,2])
