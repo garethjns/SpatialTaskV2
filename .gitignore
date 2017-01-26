@@ -17,6 +17,18 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# MATLAB
+*.asv
+*.mat
+
+# Python
+*.p
+
+# Folders
+Data/
+html/
+Graphs/
+
 # =========================
 # Operating System Files
 # =========================

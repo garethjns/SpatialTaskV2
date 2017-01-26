@@ -4,7 +4,8 @@ close all
 
 %% Import data
 
-fn = 'EyeTracker\SurfaceTest3.p.mat';
+% fn = 'EyeTracker\SurfaceTest3.p.mat';
+fn = 'F:\Shriya data\7\7_ProcessedGaze.mat';
 [gaze, nG] = loadGaze(fn);
 
 
@@ -38,7 +39,7 @@ scatter(gaze.NP(gaze.onSurf==false,1), gaze.NP(gaze.onSurf==false,2))
 
 gazePropThresh = 0.1;
 
-fn = 'incomplete.mat';
+fn = 'F:\Shriya data\7\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
 a = load(fn);
 stimLog = a.stimLog(~isnan(a.stimLog.PosBin(:,1)),:);
 nT = height(stimLog);
