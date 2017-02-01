@@ -1,3 +1,6 @@
+% Exploratory analysis of eye data
+% Guides processing in addEyeData function
+
 clear
 close all
 
@@ -135,6 +138,24 @@ plotGaze([gazeCorrected.NP0, gazeCorrected.NP1], ...
 % Plot onSurf comparison (ED)
 plotGaze([gazeCorrected.NP0, gazeCorrected.NP1], ...
     gazeCorrected.onSurfED, 'gazeCorrected - ED')
+
+
+%% Replay gaze comaprison
+
+if 1
+    close all
+    
+    params1.target = 'rect';
+    params1.size = onSurfEx*sExp;
+    params1.lag = 22;
+    params1.speed = 4;
+    
+    params2.target = 'circle';
+    params2.size = EDLim;
+    
+    replayComparison(gaze, gaze.onSurf, params1, ...
+        gazeCorrected, gazeCorrected.onSurfED, params2)
+end
 
 
 %% Load trial data

@@ -39,13 +39,14 @@ for pf = 1:nPoss
         'LineStyle', 'none')
     
     % Set axis if data is available
-    yl = [nanmin(stats(2,:,pf))-10, ...
-        nanmax(stats(2,:,pf))*1.1];
+    % Why did these axis lims switch?!
+    yl = [nanmin(nanmin(stats(3,:,:)))*1.1, ...
+        nanmax(nanmax(stats(3,:,:)))*1.1];
     if all(~isnan(yl))
         ylim(yl)
     end
-    xl = [nanmin(nanmin(stats(3,:,:)))*1.1, ...
-        nanmax(nanmax(stats(3,:,:)))*1.1];
+    xl = [nanmin(stats(2,:,pf))-10, ...
+        nanmax(stats(2,:,pf))*1.1];
     if all(~isnan(xl))
         xlim(xl)
     end

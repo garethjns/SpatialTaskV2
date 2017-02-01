@@ -1,14 +1,15 @@
 % Bugs:
-% Across-subject averages need sorting out. They don't deal well with
+%  - Across-subject averages need sorting out. They don't deal well with
 % all-nan data for subjects (eg for early when eyetracker threshold on)
 % Use wrong number of subejcts when calculating SE
 % Might take NaN to poopulate postion and diff rows - switched to take from
 % subject 7 rather than 1 now.
+%  - Trying to open tables in variable viewer causes crash in 
+% variableEditorMetadata() - might be due to NaTs??
+% Avoidable if stop on errors is off
 
 close all
 clear
-% Load the data (assuming the 'Nicole\07-Apr-2016 16_24_11\ folder is in
-% the working direcory)
 
 % Historical list of exps - add new to end. Will be reassigned numbers in
 % processing.
@@ -34,14 +35,19 @@ eN = numel(fields(exp));
 allData = [];
 clear data
 for e = 1:eN
+    % Get subject field
     fn = exp.(['s', num2str(e)]);
     disp(['Loading ', fn])
+    
+    % Load psychophysics data
     a = load(fn);
     n = height(a.stimLog);
     
-    % V1
+    % Process data according to version subject was run on
+    % (swithces not mutually exclusive)
+    % V1: S1 and S2
     switch fn
-        case {exp.s1, exp.s2}
+        case {exp.s1, exp.s2} 
             % These two lack two columns present in later exps, add dummies
             % PossBinLog and PossBin
             
@@ -61,7 +67,7 @@ for e = 1:eN
             end
     end
     
-    % V2
+    % V2: S1-6
     switch  fn
         case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6}
             % These need dummy timing columns
@@ -72,11 +78,12 @@ for e = 1:eN
             a.stimLog.endClock = NaN(n, 6);
     end
     
-    % V3 - add eyedata if available
+    % V3: - add eyedata if available
     % If not, adds placeholders
+    % Available S7 onwards, but run for all
     a.stimLog = addEyeData(a.stimLog, eye.(['s', num2str(e)]));
     
-    % All
+    % All subjects
     % Add a "correct" and "error" columns
     for r = 1:n
         a.stimLog.ACorrect(r,1) = all( a.stimLog.respBinAN{r,1}(1,:) ...
@@ -104,22 +111,34 @@ xlabel('Position')
 ylabel('Error')
 
 
-%% Apply gaze threshold
+%% Apply gaze threshold 
 % If threshold set, trials will be dropped where onSurfProp is below
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
 
-thresh = 0;
+% Which onSurfProp to use?
+osp = 'onSurfProp';
+% Or
+osp = 'onSurfPropCorrectedED';
+
+thresh = 0.8;
 
 allOK = [];
 for e = 1:eN
    fieldName = ['s', num2str(e)];
    
-   data.(fieldName).onSurf = eyeIndex(data.(fieldName), thresh);
+   [data.(fieldName).onSurf, rs1, rs2] = ...
+       eyeIndex(data.(fieldName), osp, thresh);
    
    dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
    % Lazy
    allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
+   
+   disp('----')
+   disp(fieldName)
+   disp(rs1)
+   disp(rs2)
+   disp('----')
 end
 
 allData.onSurf = allOK;
@@ -129,7 +148,6 @@ dataOrig = data;
 data = dataFilt;
 allData = allData(allData.onSurf==1,:);
 clear dataFilt
-
 
 
 %% Plot 1
@@ -327,6 +345,17 @@ for e = 1:eN
     % ng;
 end
 
+% No effect in top plot because effectively averaging out effect described
+% in next cell - the data for the 60 bar is data from the inner and outer
+% positions only, which have opposite auditory accuracies regarless of the
+% visual stimulus. The plot is not useful.
+
+% The second plot removes the effect of average over auditory accuracy
+% across space, but does not account for visual direction. Hence still
+% averaging over visual accuracy across space, which changes as well. In
+% A 67.5 plot, the visual can only be moving back towards the midline. This
+% plot isn't usful either, it's too confusing and still obscures too much.
+
 
 %% Does visual location affect AUDITORY accuracy? - Rel
 % Calculate auditory accuracy as function of relative visual differnece
@@ -346,6 +375,19 @@ for e = 1:eN
     [h1, h2] = plotAPCvsPL(statsP7.(fieldName), statsP8.(fieldName), tit);
     % ng;
 end
+
+% The avg plot here averages A accuracy across space, but not visual.
+% 60 deg bar is highest because this data must all come from the centre 
+% auditory position. If "0" is the outper position, V can't be +60.
+% Conversly, -60 data can only come from "0" on an outer position.
+% This plot is again not useful.
+
+% The seond plot here doesn't avarage A or V accuracy across space.
+% Gradient of prop correct over accuracy bars indicates effect of visual.
+% Eg. For 37.5, -30 visual increases accuracy where as -30 reduces auditory
+% accuracy.
+% There's an edge effect on errors, so possibly only worth considering
+% middle?
 
 
 %% Create across subject average of

@@ -1,0 +1,1 @@
+function stimlog = correctEyeData(stimlog)
