@@ -1,4 +1,4 @@
- function stats = fitGLM3(allData)
+function stats = fitGLM4(allData)
 
 % AResp = a+ b*ALoc + c*Vloc
 if ~isempty(allData)
@@ -32,11 +32,11 @@ if ~isempty(allData)
     
     
     % CorAud = a + b*ALoc + c*VLoc + d*ALoc*VLoc
-    mdlSpec = 'AResp ~ APos + VPos';
+    mdlSpec = 'AResp ~ APos*VPos';
     mdl1 = fitglm(data, mdlSpec, 'Distribution', 'normal');
     
     % CorAud = a + b*ALoc + c*VLoc + d*ALoc*VLoc
-    mdlSpec = 'VResp ~ APos + VPos';
+    mdlSpec = 'VResp ~ APos*VPos';
     mdl2 = fitglm(data, mdlSpec, 'Distribution', 'normal');
     
     stats.AResp = mdl1;

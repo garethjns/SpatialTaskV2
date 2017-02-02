@@ -121,7 +121,7 @@ osp = 'onSurfProp';
 % Or
 osp = 'onSurfPropCorrectedED';
 
-thresh = 0.8;
+thresh = 0;
 
 allOK = [];
 for e = 1:eN
@@ -551,7 +551,7 @@ end
 gatherGLMCoeffs(GLMStats.NLPredictors, {'ACorr', 'VCorr'})
 
 
-%% Other models
+%% Is auditory response influenced by A, V, locs?
 
 % AResp = a+ b*ALoc + c*Vloc
 
@@ -564,9 +564,29 @@ for e = 1:eN
     tit = ['S', num2str(e), ...
         ': GLM Fits'];
     % Get the data/stats for the plot:
-    GLMStats.LinearResp.(fieldName) = fitGLM3(data.(fieldName));
+    GLMStats.LinearResp.(fieldName) = fitGLM4(data.(fieldName));
 end
 
 % Gather and plot coeffs
 % statsP10 =
 gatherGLMCoeffs(GLMStats.LinearResp, {'AResp', 'VResp'})
+
+
+%% Is auditory response influenced by A, V, A*V locs?
+% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
+
+close all
+
+% On each subject
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    % Title for the graph:
+    tit = ['S', num2str(e), ...
+        ': GLM Fits'];
+    % Get the data/stats for the plot:
+    GLMStats.NonLinearResp.(fieldName) = fitGLM4(data.(fieldName));
+end
+
+% Gather and plot coeffs
+% statsP10 =
+gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
