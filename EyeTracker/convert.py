@@ -117,7 +117,7 @@ def surfaceToPandasDF(objs, surfs = ['Target'], fnOut='processed.mat'):
 #%% Convert
     
 ## Params
-fn = "7_RawGaze.p"
+fn = "8.p"
 
 ## End    
 objs = unpickle(fn)

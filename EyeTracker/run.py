@@ -93,5 +93,5 @@ fn = "SurfaceTest4.p"
 port = 50020
 
 ## Run
-sub = connect(port=port, subs='surface')
+sub = connect(port=port, subs=['surface', 'gaze'])
 runExp(fn, sub)
