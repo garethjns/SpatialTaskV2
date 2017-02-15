@@ -94,6 +94,11 @@ try
                 ' mins'])
         end
         
+        % Save start time
+        if n==1
+           params.startTime = now; 
+        end
+        
         % Prepare next stim
         [AO, aStim, vStim] = prepStim(stimOrder(n,:), params, AO, figs);
         
