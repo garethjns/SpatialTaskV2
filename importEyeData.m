@@ -9,6 +9,7 @@ close all
 
 % fn = 'EyeTracker\SurfaceTest3.p.mat';
 fn = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
+% fn = 'Data\8\8.p.mat';
 [gaze, nG] = loadGaze(fn, {'TS', 'NP0', 'NP1', 'onSurf'});
 
 
@@ -147,8 +148,8 @@ if 1
     
     params1.target = 'rect';
     params1.size = onSurfEx*sExp;
-    params1.lag = 22;
-    params1.speed = 4;
+    params1.lag = 6;
+    params1.speed = 2;
     
     params2.target = 'circle';
     params2.size = EDLim;
@@ -160,9 +161,10 @@ end
 
 %% Load trial data
 
-gazePropThresh = 0.1;
+gazePropThresh = 0.5;
 
 fn = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
+% fn = 'Data\8\8.p.mat';
 a = load(fn);
 stimLog = a.stimLog(~isnan(a.stimLog.PosBin(:,1)),:);
 nT = height(stimLog);
