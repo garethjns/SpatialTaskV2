@@ -8,7 +8,7 @@ close all
 %% Import data
 
 % fn = 'EyeTracker\SurfaceTest3.p.mat';
-fn = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
+fn = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 % fn = 'Data\8\8.p.mat';
 [gaze, nG] = loadGaze(fn, {'TS', 'NP0', 'NP1', 'onSurf'});
 
@@ -163,7 +163,7 @@ end
 
 gazePropThresh = 0.5;
 
-fn = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
+fn = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
 % fn = 'Data\8\8.p.mat';
 a = load(fn);
 stimLog = a.stimLog(~isnan(a.stimLog.PosBin(:,1)),:);

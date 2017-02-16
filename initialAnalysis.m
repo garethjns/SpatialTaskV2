@@ -21,6 +21,7 @@ exp.s4 = 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat';
 exp.s5 = 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat';
 exp.s6 = 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat';
 exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
+exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
 % Corresponding list of eyedata paths
 eye.s1 = '';
 eye.s2 = '';
@@ -29,6 +30,7 @@ eye.s4 = '';
 eye.s5 = '';
 eye.s6 = '';
 eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
+eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 
 eN = numel(fields(exp));
 
@@ -121,7 +123,7 @@ osp = 'onSurfProp';
 % Or
 osp = 'onSurfPropCorrectedED';
 
-thresh = 0;
+thresh = 0.5;
 
 allOK = [];
 for e = 1:eN
