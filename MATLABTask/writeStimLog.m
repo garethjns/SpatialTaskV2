@@ -62,8 +62,8 @@ stimLog.PosBin(n,:) = [find(stimBinA), ...
 stimLog.PosBinLog{n} = [stimBinA; stimBinV];
 
 % Add time
-stimLog.timeStamp(n,:) = [startTime, endTime];
-stimLog.startClock(n,:) = startClock;
+stimLog.timeStamp(n,:) = [startTime, endTime]; % GetSecs
+stimLog.startClock(n,:) = startClock; % MATLAB time
 stimLog.endClock(n,:) = endClock;
 
 

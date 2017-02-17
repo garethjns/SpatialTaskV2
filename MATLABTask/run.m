@@ -6,8 +6,14 @@ close all
 %% Params
 
 clc
+
 params = setParams('MOTU');
 % Also sets chanmap
+
+% Address for python TCP server
+params.TCPAddr = '128.40.249.99';
+params.TCPPort = 52012;
+
 % Screen specific params
 params.screenCalib.do = 0;
 params.screenCalib.message = ...
