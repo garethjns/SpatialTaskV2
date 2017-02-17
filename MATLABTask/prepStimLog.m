@@ -47,11 +47,12 @@ stimLog.Properties.VariableDescriptions{nd} = ...
     'Response binned by physical location (angle, [A1:12;V])';
 
 stimLog.timeStamp = NaN(params.n, 2); nd = nd+1;
-stimLog.Properties.VariableDescriptions{nd} = '{startTime, endTime} in MATLAB time';
+stimLog.Properties.VariableDescriptions{nd} = '{startTime, endTime} in GetSecs time';
 
 stimLog.startClock = NaN(params.n, 6); nd = nd+1;
 stimLog.Properties.VariableDescriptions{nd} = 'startTime as MATLAB clock';
 
 stimLog.endClock = NaN(params.n, 6); nd = nd+1;
 stimLog.Properties.VariableDescriptions{nd} = 'endTime as MATLAB clock';
+
 

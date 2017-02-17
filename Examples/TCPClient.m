@@ -1,6 +1,9 @@
 
+TCPAddr = 'localhost';
+TCPAddr = '128.40.249.99';
+
 % Prepare connection
-t = tcpip('localhost', 52002, 'NetworkRole', 'client')
+t = tcpip(TCPAddr, 52003, 'NetworkRole', 'client')
 
 % Open connection
 fopen(t)
