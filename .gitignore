@@ -29,6 +29,7 @@ EyeTracker/*.p
 Data/
 html/
 Graphs/
+MATLABTask/Data/
 
 # =========================
 # Operating System Files
