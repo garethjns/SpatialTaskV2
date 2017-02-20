@@ -3,6 +3,7 @@
 clear
 close all
 
+
 %% Params
 
 clc
@@ -60,6 +61,7 @@ params.vEventMag = 0.9-params.LEDOffset;
 
 params.nBreaks = 1;
 params.breakTimeForcedWait = 5;
+
 
 %% Run
 
