@@ -23,6 +23,7 @@ $RECYCLE.BIN/
 
 # Python
 *.p
+EyeTracker/*.p
 
 # Folders
 Data/
