@@ -25,6 +25,7 @@
 
 ### 1. Set up Linux/Python computer
 - Open terminal.
+	- CD anaconda2
 - Run Spyder (Python 2.7).
 	- Open EyeTracker/Run.py.
 - Open eye tracker software.
@@ -43,10 +44,13 @@
 - Set up touch screen.
 	- Check it's plugged in.
 	- Check it's virtually located to the bottom right of the main monitor.
-- Open MATLAB.
-	- Set working directory to C:\SpatialTaskV2\MATLABTask\.
+- Open MATLAB 2013b.
+	- Set working directory to C:\Gareth\SpatialTaskV2\MATLABTask\.
 	- Open run.m in editor.
-	- Set temporary subject ID and click run.
+	- Set temporary subject ID
+	- Set TCP address and port (**params.TCPAddr**, **params.TCPPort**) to match Python values.
+	- On Python computer click run in run.py
+	- On MALAB computer click run for run.m
 	- Check touchscreen figure is aligned with monitor.
 	- Check touchscreen figure calibration is correct (do the plotted dots align with the red dots?) If yes, enter 'y' and press enter.
 		- If not:
@@ -64,7 +68,7 @@
 		- Set subject ID.
 		- Set nBlocks to ~8 (1 block = 100 trials = ~250 S).
 		- Set nBreaks to ~4.
-	- Set TCP address and port (**params.TCPAddr**, **params.TCPPort**) to match Python values.
+	
 
 
 ### 3. Introduce subject
@@ -97,7 +101,7 @@
 	- In the "Calibration" menu select "Natural Features Calibration".
 	- Begin calibration by clicking (C) in the top left.
 	- Ask subject to look at each world marker in turn and click to make these in the world.
-	- Click (C) again to end calibration.
+	- Press C key to end calibration.
 	- Check calibration accuracy.
 	- Press (R) to begin recording video/gaze data.
 - In Spyder:
