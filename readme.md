@@ -26,24 +26,25 @@
 ### 1. Set up Linux/Python computer
 - Open terminal.
 - Run Spyder (Python 2.7).
-	- Set working directory - recorded files will be saved here.
-	- Open collectAndStampSurface.py.
+	- Open EyeTracker/Run.py.
 - Open eye tracker software.
 	- Turn on detection of both eyes.
+	- Check pupil remote plugin is loaded
 	- Find server port number under "Pupil Remote" menu.
-- In collectAndStampSurface.py in Spyder:
-	- Set port number.
+- In run.py in Spyder:
+	- Set port number for the pupil remote server (**port**).
+	- Set address and port of TCP server (**TCPAddr**, **TCPPort**). Address should be Linux computers adress on network.
 	- Set filename name for pickle file (use subject ID).
 
 ### 2. Set up Windows/MATLAB computer.
 - Check cable 7 is plugged in at back of MOTU and cable 16 isn't.
-- Turn on MOTU.
+- Turn on MOTU. Check that sampling rate indicator light on front settles on a value. If it doesn't, restart the Windows computer.
 - Turn on both amplifiers.
 - Set up touch screen.
 	- Check it's plugged in.
 	- Check it's virtually located to the bottom right of the main monitor.
 - Open MATLAB.
-	- Set working directory to this repository (C:\SpatialTaskV2\).
+	- Set working directory to C:\SpatialTaskV2\MATLABTask\.
 	- Open run.m in editor.
 	- Set temporary subject ID and click run.
 	- Check touchscreen figure is aligned with monitor.
@@ -54,7 +55,8 @@
 			- Enable calibration in run.m's parameters.
 			- Run run.m and re-calibrate.
 	- Check the touchscreens touch calibration is correct (does pressing on the screen click in the correct place?).
-		- If not, right click [] on taskbar and run screen calibration. 
+		- If not, double click eGalaxTouch icon in system tray and run monitor mapping.
+		- Check touchscreen again, if calibration is still wrong, right click eGalaxTouch icon and run 4 point calibration. 
 	- Enter chamber and check stimuli are working.
 	- End test by pressing ctrl+c.
 		- Type dbquit if in debug mode (indicated by K>> in command window).
@@ -62,6 +64,7 @@
 		- Set subject ID.
 		- Set nBlocks to ~8 (1 block = 100 trials = ~250 S).
 		- Set nBreaks to ~4.
+	- Set TCP address and port (**params.TCPAddr**, **params.TCPPort**) to match Python values.
 
 
 ### 3. Introduce subject
@@ -76,7 +79,7 @@
 - Outside booth:
 	- Place eyetracker on subject and position eye cameras.
 - Move subject inside booth.
-	- Check eye tracker camera pupil detection and adjust as required.
+	- Check eye tracker camera pupil detection and adjust as required. Make sure detect pupil 0 and 1 are both enabled in pupil app.
 	- Check world camera alignment.
 	- Show subject expected fixation LED location.
 	- Raise/lower chair so subject's head is vertically level with fixation LED.
@@ -89,7 +92,7 @@
 	- Ensure the target surface markers are detected (green boxes around markers). 
 		- If not, adjust "min_marker_perimeter" in "Surface Tracker" menu.
 	- Ensure surface is defined, detected, and named "Target".
-		- If not defined, add and name in "Surface Tracker" menu.
+		- If not defined, add and name as "Target" in Surface Tracker menu.
 		- If not detected, check markers are being detected.
 	- In the "Calibration" menu select "Natural Features Calibration".
 	- Begin calibration by clicking (C) in the top left.
@@ -98,13 +101,15 @@
 	- Check calibration accuracy.
 	- Press (R) to begin recording video/gaze data.
 - In Spyder:
-	- Click in collectAndStampSurface.py and press ctrl+enter to run.
-	- Check Python connects to ZMQ server and begins collecting data when surface is detected in world camera.
+	- Click in run.py and click green run button.
+	- Check Python connects to ZMQ server and waits for MATLAB to connect to TCP server.
 
 ### 5. Start task
 - On the Windows/MATLAB computer:
 	- Run run.m.
 		- Respond 'y' to calibration question.
+- On Linux computer 
+	- Check MATLAB has successfully connected to TCP server and Python has begun collecting data from eyetracker.
 
 ### 6. Monitor task
 - Tell subject to press touchscreen when ready to start (twice).
@@ -116,30 +121,30 @@
 	- Hope Windows computer doesn't bluescreen randomly.
 - MATLAB task can be stopped with ctrl+c.
 	- If task is stopped, or crashes for another reason, MATLAB enters debug mode.
-	- If there is data that needs to be saved, save the workspace manually (data is only automatically saved during each break, not after every trial).
+	- If there is data that needs to be saved, save the workspace manually (data is only automatically saved during each break, but not after every trial).
 - When finished, untangle subject from cables and debrief.
 
 ### 7. Save data and shutdown
-- On Windows computer:
-	- When the task completes, MATLAB saves its data automatically.
-	- In ...\[SubjectID]\[Datetime]\TeComplete.mat.
-	- Copy ...\[SubjectID]\ directory to external backup.
-	- Close MATLAB editor (to prevent open files automatically re-opening next time someone starts MATLAB).
-	- Close MATLAB.
-	- Turn off amplifiers.
-	- Turn off MOTU soundcard.
 - On Linux computer:
 	- In world view click (R) in world window to stop recording.
 	- In Python click stop to stop collection.
 		- This raises an exception, which will be caught.
 		- Python will then automatically convert the saved pickle file to a .mat file.
-	- Copy the directory containing the eyetracker video from [] to external backup.
-	- Copy the .p and .mat file for the subject from [] to external backup.
+	- Copy the directory containing the eyetracker video from /Home/Gareth/Recordings/ to external backup.
+	- Copy the .p and .mat file for the subject from SpatialTaskV2/EyeTracker/ to external backup.
 	- Close eye tracker software.
 	- Unplug eye tracker.
+- On Windows computer:
+	- When the task completes, MATLAB saves its data automatically.
+	- In ...\Data\[SubjectID]\[Datetime]\TeComplete.mat.
+	- Copy ...\Data\[SubjectID]\ directory to external backup.
+	- Close MATLAB editor (to prevent open files automatically re-opening next time someone starts MATLAB).
+	- Close MATLAB.
+	- Turn off amplifiers.
+	- Turn off MOTU soundcard.
 
 # To do
  - Add live functionality
-	- Need to either connect to ZMQ server (Linux PC) directly from MATLAB (Windows PC) via crossover cable. Or connect to Python (Linux PC) from MATLAB (Windows PC). If this isn't possible, Python (Linux) -> MATLAB (Linux) -> MATLAB (Windows) ???
+	- Via TCP server?
 	- Minor modification to MATLAB code also required to monitor and act on online eye data.
 
