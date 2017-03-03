@@ -22,8 +22,8 @@ params.screenCalib.message = ...
 % Set number of monitors - response figures will be placed on last
 params.nMons = 2;
 
-params.Subject = 'eyeTrackerTest';
-params.nBlocks = 2;
+params.Subject = 'GarethEye';
+params.nBlocks = 8;
 
 % params.Rates = [5, 15];
 params.Rates = [5, 15];
@@ -59,7 +59,7 @@ params.LEDOffset = 0.5; % LED on at 0.55v
 params.LEDMax = 1.1-params.LEDOffset; % 0.6 + offset = 1.1V
 params.vEventMag = 0.9-params.LEDOffset;
 
-params.nBreaks = 1;
+params.nBreaks = 4;
 params.breakTimeForcedWait = 5;
 
 
