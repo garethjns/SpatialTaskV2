@@ -30,7 +30,7 @@ import eyeTracker as et
 # clear
   
 ## Params
-fn = "SyncTest"
+fn = "GarethEye"
 port = 50020 # Eye tracker server port on localhost
 TCPAddr = '128.40.249.99' # Time server address (this computer)
 TCPPort = 52012 # Time server port

@@ -408,5 +408,6 @@ class eyeTracker():
         
         print('    Saved: ' + fnOut)
         self.df = df
+        
         return(df)
         

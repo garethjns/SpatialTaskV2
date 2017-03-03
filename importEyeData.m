@@ -10,6 +10,7 @@ close all
 % fn = 'EyeTracker\SurfaceTest3.p.mat';
 fn = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 % fn = 'Data\8\8.p.mat';
+fn = 'EyeTracker/GarethEye.mat'
 [gaze, nG] = loadGaze(fn, {'TS', 'NP0', 'NP1', 'onSurf'});
 
 
