@@ -25,7 +25,7 @@
 
 ### 1. Set up Linux/Python computer
 - Open terminal.
-	- CD anaconda2
+	- cd anaconda2
 - Run Spyder (Python 2.7).
 	- Open EyeTracker/Run.py.
 - Open eye tracker software.
@@ -58,7 +58,7 @@
 			- dbquit if necessary.
 			- Enable calibration in run.m's parameters.
 			- Run run.m and re-calibrate.
-	- Check the touchscreens touch calibration is correct (does pressing on the screen click in the correct place?).
+	- Check the touchscreen's touch calibration is correct (does pressing on the screen click in the correct place?).
 		- If not, double click eGalaxTouch icon in system tray and run monitor mapping.
 		- Check touchscreen again, if calibration is still wrong, right click eGalaxTouch icon and run 4 point calibration. 
 	- Enter chamber and check stimuli are working.
@@ -68,6 +68,7 @@
 		- Set subject ID.
 		- Set nBlocks to ~8 (1 block = 100 trials = ~250 S).
 		- Set nBreaks to ~4.
+		- preTraining to 1.
 	
 
 
