@@ -91,6 +91,8 @@
 		- Subject needs to respond on touchscreen twice:
 			- First to indicate auditory location.
 			- Second to indicate visual location.
+		- If the task stops, check touchscreen message to see if it's a break.
+		- Touchscreen messages will guide subject with what to do.
 - Outside booth:
 	- Place eyetracker on subject and position eye cameras.
 	- Unplug eye tracker.
