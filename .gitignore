@@ -20,16 +20,19 @@ $RECYCLE.BIN/
 # MATLAB
 *.asv
 *.mat
+*Church2Spatial.m
 
 # Python
 *.p
 EyeTracker/*.p
+EyeTracker/*.mat
 
 # Folders
 Data/
 html/
 Graphs/
 MATLABTask/Data/
+EyeTracker/Data/
 
 # =========================
 # Operating System Files
