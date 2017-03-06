@@ -68,7 +68,8 @@
 		- Set subject ID.
 		- Set nBlocks to ~8 (1 block = 100 trials = ~250 S).
 		- Set nBreaks to ~4.
-		- preTraining to 1.
+		- exchangeTime to 1.
+		- PTSKip to 0.
 	
 
 
