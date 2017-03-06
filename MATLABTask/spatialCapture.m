@@ -32,13 +32,18 @@ AO = initHW(params);
 % WaitSecs(1);
 
 % EyeTracker should be waiting for start
-[params.PTBTime, params.pyTime, ...
-    params.delayTime, params.matTime] = ...
-    syncTime(params);
-disp('Synced')
-disp(params.PTBTime)
-disp(params.pyTime)
-disp(params.matTime)
+if params.exchangeTime
+    [params.PTBTime, params.pyTime, ...
+        params.delayTime, params.matTime] = ...
+        syncTime(params);
+    disp('Synced')
+    disp(params.PTBTime)
+    disp(params.pyTime)
+    disp(params.matTime)
+    % If fail, stop
+else
+    disp('Skipping time sync and eye tracking')
+end
 
 % Run PT
 ginput(1);
@@ -78,7 +83,7 @@ stimLog = prepStimLog(params, stimOrder);
 % Ready to start
 figure(figs.resp)
 figs = updateRespMessage(figs, params, ...
-    'Place head, then press to start main task');
+    'Press to start main task when ready');
 disp('Waiting to start')
 % Wait for tap to start
 ginput(1);
@@ -324,7 +329,7 @@ params.saveFile2 = [params.expDir, params.saveFile];
 function OK = writeMat(params, stimOrder, stimLog, PTLogs) %#ok<INUSD> (are used)
 % Save data collected so far to disk
 
-OK = saveHandler(params.saveFile2, 1, 0, {'stimOrder', 'stimLog', 'PTLogs'});
+OK = saveHandler(params.saveFile2, 1, 0, {'stimOrder', 'stimLog', 'PTLogs', 'params'});
 
 % Check, but only warn on failure here
 if ~OK

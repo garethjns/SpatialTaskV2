@@ -22,8 +22,12 @@ params.screenCalib.message = ...
 % Set number of monitors - response figures will be placed on last
 params.nMons = 2;
 
-params.Subject = 'GarethEye';
+% Subject parameters
+params.Subject = 'Test';
 params.nBlocks = 8;
+
+% EyeTracking parameters
+params.exchangeTime = 1; % If on, sync with Python computer
 
 % params.Rates = [5, 15];
 params.Rates = [5, 15];
@@ -38,8 +42,8 @@ params.InconLimitMin = 15; % Minimum incongruency to include
 params.PositionMax = 75; % Absolute maximum position extremity 
 
 % PTParams
-params.PTSkip = 1;
-params.PTThresh = 0.5;
+params.PTSkip = 0;
+params.PTThresh = 0.7;
 params.PTnBlocks = 2;
 
 % Specific stimulus parameters

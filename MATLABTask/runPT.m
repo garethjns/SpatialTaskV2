@@ -39,16 +39,17 @@ for n = 1:params.n
     [AO, aStim, vStim] = prepStim(stimOrder(n,:), params, AO, figs);
     
     % Trigger next stim
-    [~, endTime] = presentStim(params, AO);
+   [startTime, endTime, startClock, endClock] = ...
+            presentStim(params, AO);
     
     % Wait for response, return location and RT
     % NB: Uses specific function in this file
     [Axy, Vxy, ART, VRT, figs] = waitResponsePT(figs, params, endTime);
     
     % Log response
-    stimLog = writeStimLog(...
-        stimLog, params, figs, n, Axy, Vxy, ART, VRT, ...
-        aStim, vStim);
+     stimLog = writeStimLog(...
+            stimLog, params, figs, n, Axy, Vxy, ART, VRT, ...
+            aStim, vStim, startTime, endTime, startClock, endClock);
     
     % Record trial time for estimated time remaining
     tts(n) = toc;
