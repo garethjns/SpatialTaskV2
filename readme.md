@@ -76,14 +76,25 @@
 - Give information sheet to subject to keep.
 - Get subject to read and sign consent form.
 - Explain eye tracker and basic task requirements. 
-	- Keep gaze fixated on target.
+	- Keep gaze fixated on target during stimulation.
  	- Respond on touchscreen.
 - Explain paradigm.
 	- Pre-training phase (<5 mins).
+		- AV stimuli will come from same location, subject has to indicate loaction with one press on touchscreen.
+		- They can look around after stimuli before responding to orientate themselves, but should look back to red fixation LED after responding. This will be tracked.
+		- Pre-training will continue until a threshold of localisation accuray is reached.
+		- When finished, a message will appear on touch screen saying ready to begin main task.
+		- When ready, press screen again to continue.
 	- Actual task (~1 hour).
+		- Subject needs to keep eyes on fixation LED while stimuli are playing (~1s).
+		- Subject needs to respond on touchscreen twice:
+			- First to indicate auditory location.
+			- Second to indicate visual location.
 - Outside booth:
 	- Place eyetracker on subject and position eye cameras.
+	- Unplug eye tracker.
 - Move subject inside booth.
+	- Plug eyetracker in inside booth and re-enable eye detection.
 	- Check eye tracker camera pupil detection and adjust as required. Make sure detect pupil 0 and 1 are both enabled in pupil app.
 	- Check world camera alignment.
 	- Show subject expected fixation LED location.
