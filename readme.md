@@ -41,6 +41,10 @@
 - Check cable 7 is plugged in at back of MOTU and cable 16 isn't.
 - Turn on MOTU. Check that sampling rate indicator light on front settles on a value. If it doesn't, restart the Windows computer.
 - Turn on both amplifiers.
+- Run testSpeakersLights.m to check all speakers and lights are working as expected. Each speaker/light pair should come on one by one.
+	- If multiple speakers/lights don't work, check amplifiers are both on.
+	- If light/sound are sperated, check cable mapping.
+	- If audible clicks, LED output is going to a speakers. Check cable mapping (specifically switching channels 7 and 16).
 - Set up touch screen.
 	- Check it's plugged in.
 	- Check it's virtually located to the bottom right of the main monitor.
