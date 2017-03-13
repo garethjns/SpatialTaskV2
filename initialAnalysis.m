@@ -20,8 +20,10 @@ exp.s3 = 'Data\2\26-Apr-2016 17_04_28\SpatialCapture_2.mat';
 exp.s4 = 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat';
 exp.s5 = 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat';
 exp.s6 = 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat';
-exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
-exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
+% exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
+% exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
+exp.s7 = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
+exp.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
 % Corresponding list of eyedata paths
 eye.s1 = '';
 eye.s2 = '';
@@ -29,8 +31,11 @@ eye.s3 = '';
 eye.s4 = '';
 eye.s5 = '';
 eye.s6 = '';
-eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
-eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
+% eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
+% eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
+eye.s7 = ''; % Recording, but time sync failed
+eye.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
+
 
 eN = numel(fields(exp));
 
@@ -70,20 +75,39 @@ for e = 1:eN
     end
     
     % V2: S1-6
-    switch  fn
+    switch fn
         case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6}
             % These need dummy timing columns
-            
             n = height(a.stimLog);
             a.stimLog.timeStamp = NaN(n, 2);
-            a.stimLog.startClock = NaN(n, 6);
-            a.stimLog.endClock = NaN(n, 6);
+            a.stimLog.startClock = repmat([1900, 1, 1, 1, 1, 1],n,1);
+            a.stimLog.endClock = repmat([1900, 1, 1, 1, 1, 1],n,1);
     end
     
     % V3: - add eyedata if available
     % If not, adds placeholders
     % Available S7 onwards, but run for all
-    a.stimLog = addEyeData(a.stimLog, eye.(['s', num2str(e)]));
+    switch fn 
+        case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6, exp.s7}
+            % Not using eye data
+            % Give addEyeData2 some dummy params
+            a.params = [];
+
+        otherwise % Fututre exps (8 onwards)
+            % From here, timesync info is available in params. Need to load
+            % this. 
+            % Not using eye data from before this.
+            % stimlog should contains gaze, not correctedGaze anymore.
+            
+            % No additional processing here at the moment
+            % - handled in addEyeData2
+    end
+    
+    plotOn = true;
+    a.stimLog = addEyeData2(a.stimLog, ...
+        eye.(['s', num2str(e)]), ...
+        a.params, ...
+        plotOn);
     
     % All subjects
     % Add a "correct" and "error" columns
@@ -121,9 +145,10 @@ ylabel('Error')
 % Which onSurfProp to use?
 osp = 'onSurfProp';
 % Or
-osp = 'onSurfPropCorrectedED';
+% osp = 'onSurfPropCorrectedED'; - removed
 
-thresh = 0.5;
+% thresh = 0.7;
+thresh = 0.75; % Turn off
 
 allOK = [];
 for e = 1:eN

@@ -4,13 +4,14 @@ n = height(data);
 if all(isnan(data.(osp)))
     % This is subject with no eye data
     rs1 = 'No eye data';
-    rs2 = '';
     if thresh>0
         % If thresh>0, remove all
         OK = false(n,1);
+        rs2 = 'Thresh >0, including none';
     else
-        % If index is 0, keep
+        % If thresh is 0, keep all
         OK = true(n,1);
+        rs2 = 'Thresh 0, including all';
     end
 else
     

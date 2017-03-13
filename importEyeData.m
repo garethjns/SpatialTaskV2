@@ -5,14 +5,74 @@ clear
 close all
 
 
-%% Import data
+%% Import Eye data
 
 % fn = 'EyeTracker\SurfaceTest3.p.mat';
-fn = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
-fn = 'Data\GarethEye\21-Feb-2017 15_53_30\GarethEye.mat';
+% fn = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
+% fn = 'Data\GarethEye\21-Feb-2017 15_53_30\GarethEye.mat';
+fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
 
 % fn = 'Data\8\8.p.mat';
-[gaze, nG] = loadGaze(fn, {'TS', 'NP0', 'NP1', 'onSurf', 'mType'});
+[gaze, nG] = loadGaze2(fn, {'TS', 'NP0', 'NP1', 'onSurf', 'mType'});
+
+
+%% Load trial data
+
+gazePropThresh = 0.5;
+
+% fn = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
+% fn = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
+fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
+
+% fn = 'Data\8\8.p.mat';
+a = load(fn);
+stimLog = a.stimLog(~isnan(a.stimLog.PosBin(:,1)),:);
+
+nT = height(stimLog);
+
+% Convert time 
+stimLog.sTime = datetime(stimLog.startClock);
+stimLog.eTime = datetime(stimLog.endClock);
+
+
+%% Fix offset
+% If data is available
+% Get the MATLAB time and convert it to posix.
+% Calculate the offset between the two
+% Stimlog contains .timeStamp containing times of trials in MATLAB time
+% gaze contains TS in posixtime (and TS2 in readable format)
+% Add a column to gaze with the offset corrected, and converted to MATLAB
+% time
+
+if isfield(a, 'params') && isfield(a.params, 'pyTime') && isfield(a.params, 'matTime')
+    
+    % Convert MATLAB time to posix
+    mTime = posixtime(datetime(a.params.matTime, 'ConvertFrom', 'datenum'));
+    % Undo this to check it's no losing accuracy
+    mTime2 = datenum(datetime(mTime, 'ConvertFrom', 'posixtime'));
+    if a.params.matTime~=mTime2
+       keyboard
+    end
+    % Py time is already posix
+    pyTime = a.params.pyTime;
+    
+    % Calculate offset between py and matlab
+    offset = mTime - pyTime;
+    % Negative = py ahead. 
+
+else
+   offset = 0; 
+end
+    
+% Save a new column with pyPosix time + offset
+gaze.TS3 = gaze.TS + offset;
+% Check this with readable column similar to TS2
+% Note that datetime shouldn't lose accuracy
+% datenum(TS4) shoud have same percision as TS3
+gaze.TS4 = datetime(gaze.TS3, 'ConvertFrom', 'posixtime');
+% ie:
+% Should be 100%.... almost is
+sum(gaze.TS3 ==  datenum(posixtime(gaze.TS4))) / height(gaze)
 
 
 %% Preprocess gaze data
@@ -163,21 +223,6 @@ if 1
 end
 
 
-%% Load trial data
-
-gazePropThresh = 0.5;
-
-fn = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
-fn = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
-% fn = 'Data\8\8.p.mat';
-a = load(fn);
-stimLog = a.stimLog(~isnan(a.stimLog.PosBin(:,1)),:);
-nT = height(stimLog);
-
-% Convert time 
-stimLog.sTime = datetime(stimLog.startClock);
-stimLog.eTime = datetime(stimLog.endClock);
-
 %% Plot trials and raw gaze
 
 figure
@@ -202,8 +247,8 @@ for r = 1:nT
         tsNext = stimLog.sTime(r+1);
     end
     
-    tIdx = gaze.TS2>=ts & gaze.TS2<=te;
-    tNextIdx = gaze.TS2>te & gaze.TS2<tsNext;
+    tIdx = gaze.TS4>=ts & gaze.TS4<=te;
+    tNextIdx = gaze.TS4>te & gaze.TS4<tsNext;
     
     % gs = gazeCorrected.onSurfED(tIdx);
     gs = gaze.onSurf(tIdx);
@@ -216,6 +261,7 @@ for r = 1:nT
     
     plot([ts,te], [1.001, 1.001], 'LineWidth', 3)
     plot([ts,te], [stimLog.onSurfProp(r), stimLog.onSurfProp(r)], 'LineWidth', 3, 'Color',  'k')
+    plot([te,te], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 1, 'Color',  'b')
     plot([te,tsNext], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 3, 'Color',  'r')
     % drawnow
 end
@@ -247,8 +293,8 @@ for r = 1:nT
         tsNext = stimLog.sTime(r+1);
     end
     
-    tIdx = gazeCorrected.TS2>=ts & gazeCorrected.TS2<=te;
-    tNextIdx = gazeCorrected.TS2>te & gazeCorrected.TS2<tsNext;
+    tIdx = gazeCorrected.TS4>=ts & gazeCorrected.TS4<=te;
+    tNextIdx = gazeCorrected.TS4>te & gazeCorrected.TS4<tsNext;
     
     % gs = gazeCorrected.onSurfED(tIdx);
     gs = gazeCorrected.onSurf(tIdx);
