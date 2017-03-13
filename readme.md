@@ -153,8 +153,8 @@
 	- In Python click stop to stop collection.
 		- This raises an exception, which will be caught.
 		- Python will then automatically convert the saved pickle file to a .mat file.
-	- Copy the directory containing the eyetracker video from /Home/Gareth/Recordings/ to external backup.
-	- Copy the .p and .mat file for the subject from SpatialTaskV2/EyeTracker/ to external backup.
+	- Copy the directory containing the eyetracker video from /Home/recordings/ to /Home/recordings/SpatialTaskV2 Recordings/.
+		- Rename the backed up directory from the date to the subject ID.
 	- Close eye tracker software.
 	- Unplug eye tracker.
 - On Windows computer:
