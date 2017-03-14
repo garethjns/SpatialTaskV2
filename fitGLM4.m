@@ -43,8 +43,8 @@ if ~isempty(allData)
     stats.VResp = mdl2;
     
 else
-    stats.AResp.Coefficients.Estimate = [NaN, NaN, NaN];
-    stats.AResp.Coefficients.pValue = [NaN, NaN, NaN];
-    stats.VResp.Coefficients.Estimate = [NaN, NaN, NaN];
-    stats.VResp.Coefficients.pValue = [NaN, NaN, NaN];
+    stats.AResp.Coefficients.Estimate = [NaN, NaN, NaN, NaN];
+    stats.AResp.Coefficients.pValue = [NaN, NaN, NaN, NaN];
+    stats.VResp.Coefficients.Estimate = [NaN, NaN, NaN, NaN];
+    stats.VResp.Coefficients.pValue = [NaN, NaN, NaN, NaN];
 end
