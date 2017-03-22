@@ -10,7 +10,8 @@ close all
 % fn = 'EyeTracker\SurfaceTest3.p.mat';
 % fn = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 % fn = 'Data\GarethEye\21-Feb-2017 15_53_30\GarethEye.mat';
-fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
+% fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
+fn = 'Data\KatEye1\15-Mar-2017 12_32_08\KatEye1.mat';
 
 % fn = 'Data\8\8.p.mat';
 [gaze, nG] = loadGaze2(fn, {'TS', 'NP0', 'NP1', 'onSurf', 'mType'});
@@ -22,7 +23,8 @@ gazePropThresh = 0.5;
 
 % fn = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
 % fn = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
-fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
+% fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
+fn = 'Data\KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1.mat';
 
 % fn = 'Data\8\8.p.mat';
 a = load(fn);
@@ -259,11 +261,42 @@ for r = 1:nT
     stimLog.nGazeSamplesAfterThisTrial(r) = numel(gsGap);
     stimLog.onSurfPropAfterThisTrial(r) = nanmean(gsGap);
     
-    plot([ts,te], [1.001, 1.001], 'LineWidth', 3)
-    plot([ts,te], [stimLog.onSurfProp(r), stimLog.onSurfProp(r)], 'LineWidth', 3, 'Color',  'k')
-    plot([te,te], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 1, 'Color',  'b')
-    plot([te,tsNext], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 3, 'Color',  'r')
+    % plot([ts,te], [1.001, 1.001], 'LineWidth', 3)
+    % plot([ts,te], [stimLog.onSurfProp(r), stimLog.onSurfProp(r)], 'LineWidth', 3, 'Color',  'k')
+    % plot([te,te], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 1, 'Color',  'b')
+    % plot([te,tsNext], [stimLog.onSurfPropAfterThisTrial(r), stimLog.onSurfPropAfterThisTrial(r)], 'LineWidth', 3, 'Color',  'r')
     % drawnow
+    
+    % Trial indicator
+    plot([ts,te], ...
+        [1.001, 1.001], ...
+        'LineWidth', 3)
+    % During trial eye prop
+    plot([ts,te], ...
+        [stimLog.onSurfProp(r), ...
+        stimLog.onSurfProp(r)], ...
+        'LineWidth', 3, 'Color',  'k')
+    % Prop-direction indicator line
+    if stimLog.onSurfProp(r) > stimLog.onSurfPropAfterThisTrial(r)
+        col = 'b';
+        % If everything is working and subject is behaving,
+        % expecting higher on target prop during trials, and less
+        % when subject looks down to respond.
+    else
+        % Yellow if surface proportion is higher off trial than it
+        % was during trial - will indicate spatial or temporal
+        % drift, or subject errors.
+        col = 'y';
+    end
+    plot([te,te], ...
+        [stimLog.onSurfProp(r), ...
+        stimLog.onSurfPropAfterThisTrial(r)], ...
+        'LineWidth', 1, 'Color',  col)
+    % Outside trial eye prop
+    plot([te,tsNext], ...
+        [stimLog.onSurfPropAfterThisTrial(r), ...
+        stimLog.onSurfPropAfterThisTrial(r)], ...
+        'LineWidth', 3, 'Color',  'r')
 end
 
 % plot(stimLog.sTime, stimLog.onSurfProp)

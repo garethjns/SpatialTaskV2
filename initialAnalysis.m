@@ -147,8 +147,8 @@ osp = 'onSurfProp';
 % Or
 % osp = 'onSurfPropCorrectedED'; - removed
 
-thresh = 0.7;
-% thresh = 0; % Turn off
+% thresh = 0.7;
+thresh = 0; % Turn off
 
 allOK = [];
 for e = 1:eN
