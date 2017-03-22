@@ -24,6 +24,8 @@ exp.s6 = 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat';
 % exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
 exp.s7 = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
 exp.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
+% exp.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1.mat';
+exp.s9 = 'Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat';
 % Corresponding list of eyedata paths
 eye.s1 = '';
 eye.s2 = '';
@@ -35,7 +37,8 @@ eye.s6 = '';
 % eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 eye.s7 = ''; % Recording, but time sync failed
 eye.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
-
+% eye.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\KatEye1.mat';
+eye.s9 = 'Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat';
 
 eN = numel(fields(exp));
 
@@ -147,8 +150,8 @@ osp = 'onSurfProp';
 % Or
 % osp = 'onSurfPropCorrectedED'; - removed
 
-% thresh = 0.7;
-thresh = 0; % Turn off
+thresh = 0.7;
+% thresh = 0; % Turn off
 
 allOK = [];
 for e = 1:eN
