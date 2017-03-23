@@ -1,3 +1,5 @@
+
+
 % Bugs:
 %  - Across-subject averages need sorting out. They don't deal well with
 % all-nan data for subjects (eg for early when eyetracker threshold on)
@@ -11,21 +13,26 @@
 close all
 clear
 
+%% Set paths
+
+% Data\ is in directory above.
+dPath = [fileparts(pwd), '\Data\'];
+
 % Historical list of exps - add new to end. Will be reassigned numbers in
 % processing.
 % Paths can be changed here
-exp.s1 = 'Data\Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat';
-exp.s2 = 'Data\Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat';
-exp.s3 = 'Data\2\26-Apr-2016 17_04_28\SpatialCapture_2.mat';
-exp.s4 = 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat';
-exp.s5 = 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat';
-exp.s6 = 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat';
+exp.s1 = [dPath, 'Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat'];
+exp.s2 = [dPath, 'Data\Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat'];
+exp.s3 = [dPath, 'Data\2\26-Apr-2016 17_04_28\SpatialCapture_2.mat'];
+exp.s4 = [dPath, 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat'];
+exp.s5 = [dPath, 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat'];
+exp.s6 = [dPath, 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat'];
 % exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
 % exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
-exp.s7 = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
-exp.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
+exp.s7 = [dPath, 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat'];
+exp.s8 = [dPath, 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat'];
 % exp.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1.mat';
-exp.s9 = 'Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat';
+exp.s9 = [dPath, 'Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat'];
 % Corresponding list of eyedata paths
 eye.s1 = '';
 eye.s2 = '';
@@ -36,9 +43,9 @@ eye.s6 = '';
 % eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
 % eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
 eye.s7 = ''; % Recording, but time sync failed
-eye.s8 = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
+eye.s8 = [dPath, 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat'];
 % eye.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\KatEye1.mat';
-eye.s9 = 'Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat';
+eye.s9 = [dPath, 'Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat'];
 
 eN = numel(fields(exp));
 
