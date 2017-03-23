@@ -21,31 +21,52 @@ dPath = [fileparts(pwd), '\Data\'];
 % Historical list of exps - add new to end. Will be reassigned numbers in
 % processing.
 % Paths can be changed here
-exp.s1 = [dPath, 'Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat'];
-exp.s2 = [dPath, 'Data\Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat'];
-exp.s3 = [dPath, 'Data\2\26-Apr-2016 17_04_28\SpatialCapture_2.mat'];
-exp.s4 = [dPath, 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat'];
-exp.s5 = [dPath, 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat'];
-exp.s6 = [dPath, 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat'];
-% exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
-% exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
-exp.s7 = [dPath, 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat'];
-exp.s8 = [dPath, 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat'];
-% exp.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1.mat';
-exp.s9 = [dPath, 'Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat'];
+s = 1;
+exp.(['s', num2str(s)]) = ... 1
+    [dPath, 'Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 2
+    [dPath, 'Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 3
+    [dPath, '2\26-Apr-2016 17_04_28\SpatialCapture_2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 4
+    [dPath, '4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 5
+    [dPath, '5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat'];...
+    s=s+1; 
+exp.(['s', num2str(s)]) = ... 6
+    [dPath, '6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat'];...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 7 
+    [dPath, 'GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 8 
+    [dPath, 'ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 9 
+    [dPath, 'KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1_backup.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 10
+    [dPath, 'GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat']; ...
+    s=s+1;
 % Corresponding list of eyedata paths
-eye.s1 = '';
-eye.s2 = '';
-eye.s3 = '';
-eye.s4 = '';
-eye.s5 = '';
-eye.s6 = '';
-% eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
-% eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
-eye.s7 = ''; % Recording, but time sync failed
-eye.s8 = [dPath, 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat'];
-% eye.s9 = 'Data\KatEye1\15-Mar-2017 12_32_08\KatEye1.mat';
-eye.s9 = [dPath, 'Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat'];
+s = 1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 1
+eye.(['s', num2str(s)]) = ''; s=s+1; % 2
+eye.(['s', num2str(s)]) = ''; s=s+1; % 3
+eye.(['s', num2str(s)]) = ''; s=s+1; % 4
+eye.(['s', num2str(s)]) = ''; s=s+1; % 5
+eye.(['s', num2str(s)]) = ''; s=s+1; % 6
+eye.(['s', num2str(s)]) = ''; s=s+1; % 7, Recording, but time sync failed
+eye.(['s', num2str(s)]) = ... 8
+    [dPath, 'ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 9
+    [dPath, 'KatEye1\15-Mar-2017 12_32_08\KatEye1.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 10
+    [dPath, 'GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat']; s=s+1;
 
 eN = numel(fields(exp));
 
@@ -58,7 +79,16 @@ for e = 1:eN
     
     % Load psychophysics data
     a = load(fn);
+    
+    % Remove trials without responses
+    % Using aStim field as it#s common to all versions and is populated on
+    % response
+    rmIdx = cellfun(@isempty, a.stimLog.aStim);
+    a.stimLog = a.stimLog(~rmIdx,:);
+    
+    % Get number of available trials
     n = height(a.stimLog);
+    disp(['Loaded ', num2str(n), ' trials'])
     
     % Process data according to version subject was run on
     % (swithces not mutually exclusive)
@@ -107,7 +137,7 @@ for e = 1:eN
             % From here, timesync info is available in params. Need to load
             % this. 
             % Not using eye data from before this.
-            % stimlog should contains gaze, not correctedGaze anymore.
+            % stimlog should contains gaze, not correctedGaze any more.
             
             % No additional processing here at the moment
             % - handled in addEyeData2
@@ -118,24 +148,29 @@ for e = 1:eN
         eye.(['s', num2str(e)]), ...
         a.params, ...
         plotOn);
+    title(['Subject ', num2str(e)]);
+    xlabel('Time')
+    ylabel('On target prop.')
     
     % All subjects
     % Add a "correct" and "error" columns
     for r = 1:n
-        a.stimLog.ACorrect(r,1) = all( a.stimLog.respBinAN{r,1}(1,:) ...
+        a.stimLog.ACorrect(r,1) = all(a.stimLog.respBinAN{r,1}(1,:) ...
             ==  a.stimLog.PosBinLog{r,1}(1,:));
-        a.stimLog.VCorrect(r,1) = all( a.stimLog.respBinAN{r,1}(2,:) ...
+        a.stimLog.VCorrect(r,1) = all(a.stimLog.respBinAN{r,1}(2,:) ...
             ==  a.stimLog.PosBinLog{r,1}(2,:));
         
         a.stimLog.AError(r,1) = (find( a.stimLog.respBinAN{r,1}(1,:)) ...
-            - find( a.stimLog.PosBinLog{r,1}(1,:))) * 15;
+            - find(a.stimLog.PosBinLog{r,1}(1,:))) * 15;
         a.stimLog.VError(r,1) = (find( a.stimLog.respBinAN{r,1}(2,:)) ...
-            - find( a.stimLog.PosBinLog{r,1}(2,:))) * 15;
+            - find(a.stimLog.PosBinLog{r,1}(2,:))) * 15;
     end
     
     % Save subject data in structre and append to allData table
     data.(['s', num2str(e)]) = a.stimLog;
     allData = [allData; a.stimLog]; %#ok<AGROW>
+    
+    clear a
 end
 
 figure
