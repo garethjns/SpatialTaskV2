@@ -12,7 +12,7 @@ close all
 % fn = 'Data\GarethEye\21-Feb-2017 15_53_30\GarethEye.mat';
 % fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat';
 % fn = 'Data\KatEye1\15-Mar-2017 12_32_08\KatEye1.mat';
-fn = 'Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat';
+fn = 'S:\OneDrive\Gareth\Current\AC\Human psychophysics\Churchland task\SpatialTaskV2\SpatialTaskV2\Data\GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat';
 
 % fn = 'Data\8\8.p.mat';
 [gaze, nG] = loadGaze2(fn, {'TS', 'NP0', 'NP1', 'onSurf', 'mType'});
@@ -26,7 +26,7 @@ gazePropThresh = 0.5;
 % fn = 'Data\GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat';
 % fn = 'Data\ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat';
 % fn = 'Data\KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1.mat';
-fn = 'Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat';
+fn = 'S:\OneDrive\Gareth\Current\AC\Human psychophysics\Churchland task\SpatialTaskV2\SpatialTaskV2\Data\GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat';
 
 % fn = 'Data\8\8.p.mat';
 a = load(fn);

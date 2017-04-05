@@ -27,8 +27,11 @@ if ~isempty(allData)
         data.VResp(r,1) = find(respBin)*15+7.5;
     end
     
-    data.APos = abs(allData.Position(:,1));
-    data.VPos = abs(allData.Position(:,2));
+    incIdx = abs(data.AResp-data.VResp)==15;
+    data = data(incIdx,:);
+    
+    data.APos = abs(allData.Position(incIdx,1));
+    data.VPos = abs(allData.Position(incIdx,2));
     
     
     % CorAud = a + b*ALoc + c*VLoc + d*ALoc*VLoc
