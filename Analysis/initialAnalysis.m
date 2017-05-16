@@ -52,6 +52,21 @@ exp.(['s', num2str(s)]) = ... 9
 exp.(['s', num2str(s)]) = ... 10
     [dPath, 'GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat']; ...
     s=s+1;
+exp.(['s', num2str(s)]) = ... 11
+    [dPath, '11XY\05-Apr-2017 09_57_28\SpatialCapture_11XY.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 12
+    [dPath, '12NB\05-Apr-2017 14_53_36\SpatialCapture_12NB.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 13
+    [dPath, '13SR\06-Apr-2017 15_20_21\SpatialCapture_13SR.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 14
+    [dPath, '14JD\07-Apr-2017 10_11_53\SpatialCapture_14JD.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 15
+    [dPath, '15SI\07-Apr-2017 16_08_46\SpatialCapture_15SI.mat']; ...
+    s=s+1;
 % Corresponding list of eyedata paths
 s = 1;
 eye.(['s', num2str(s)]) = ''; s=s+1; % 1
@@ -67,6 +82,14 @@ eye.(['s', num2str(s)]) = ... 9
     [dPath, 'KatEye1\15-Mar-2017 12_32_08\KatEye1.mat']; s=s+1;
 eye.(['s', num2str(s)]) = ... 10
     [dPath, 'GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 11 processing
+eye.(['s', num2str(s)]) = ... 12
+    [dPath, '12NB\05-Apr-2017 14_53_36\12NB.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 13
+    [dPath, '13SR\06-Apr-2017 15_20_21\13SR.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 14 - space issues
+eye.(['s', num2str(s)]) = ... 15
+    [dPath, '15SI\07-Apr-2017 16_08_46\15SI.mat']; s=s+1;
 
 eN = numel(fields(exp));
 
@@ -221,6 +244,15 @@ data = dataFilt;
 allData = allData(allData.onSurf==1,:);
 clear dataFilt
 
+
+%% Plot accuracies
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    statsAc.(fieldName) = gatherAccs(data.(fieldName));
+end
+    
 
 %% Plot 1
 % For each position, plot absolute error against abosolute difference
