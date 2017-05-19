@@ -216,7 +216,7 @@ osp = 'onSurfProp';
 % osp = 'onSurfPropCorrectedED'; - removed
 
 thresh = 0.7;
-% thresh = 0; % Turn off
+thresh = 0; % Turn off
 
 allOK = [];
 for e = 1:eN
@@ -245,14 +245,75 @@ allData = allData(allData.onSurf==1,:);
 clear dataFilt
 
 
-%% Plot accuracies
+%% Plot accuracies - Abs diffs
+
+rel = false;
 
 close all
 for e = 1:eN
     fieldName = ['s', num2str(e)];
-    statsAc.(fieldName) = gatherAccs(data.(fieldName));
-end
     
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - Abs'];
+    
+    fold = false;
+    [statsAc.(fieldName), statsVc.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAc.(fieldName), statsVc.(fieldName), tit);
+    
+    fold = true;
+    [statsAcFold.(fieldName), statsVcFold.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAcFold.(fieldName), statsVcFold.(fieldName), tit);
+end
+
+% All data
+fold = false;
+[statsAcAll.(fieldName), statsVcAll.(fieldName)] = ...
+        gatherAccs(allData, fold, rel);
+plotAccs(statsAc.(fieldName), statsVc.(fieldName), 'All data - Abs');
+
+fold = true;
+[statsAcAllFold.(fieldName), statsVcAllFold.(fieldName)] = ...
+        gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFold.(fieldName), statsVcAllFold.(fieldName), ...
+    'All data - Abs');
+
+
+%% Plot accuracies - Rel diffs
+
+rel = true;
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - Abs'];
+    
+    fold = false;
+    [statsAc.(fieldName), statsVc.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAc.(fieldName), statsVc.(fieldName), tit);
+    
+    fold = true;
+    [statsAcFold.(fieldName), statsVcFold.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAcFold.(fieldName), statsVcFold.(fieldName), tit);
+end
+
+% All data
+fold = false;
+[statsAcAll.(fieldName), statsVcAll.(fieldName)] = ...
+        gatherAccs(allData, fold, rel);
+plotAccs(statsAc.(fieldName), statsVc.(fieldName), 'All data - Abs');
+
+fold = true;
+[statsAcAllFold.(fieldName), statsVcAllFold.(fieldName)] = ...
+        gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFold.(fieldName), statsVcAllFold.(fieldName), ...
+    'All data - Abs');
+
 
 %% Plot 1
 % For each position, plot absolute error against abosolute difference
@@ -266,7 +327,7 @@ for e = 1:eN
     
     % Title for the graph:
     tit = ['S', num2str(e), ...
-        ': Absolute incongruency vs absolute response error'];
+        ': Absolute incongruence vs absolute response error'];
     % Get the data/stats for the plot:
     statsP1.(fieldName) = gatherPosPlot1(data.(fieldName), flag);
     % And plot:
@@ -286,7 +347,7 @@ for e = 1:eN
     fieldName = ['s', num2str(e)];
     % Title for the graph:
     tit = ['S', num2str(e), ...
-        ': Absolute incongruency vs relative response error'];
+        ': Absolute incongruence vs relative response error'];
     % Get the data/stats for the plot:
     statsP2.(fieldName) = gatherPosPlot1(data.(fieldName), flag);
     % And plot:
