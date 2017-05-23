@@ -15,14 +15,15 @@ ax.YTick = 1:numel(uPos);
 ax.YTickLabel = string(uPos);
 ax.XTick = 1:numel(uPos);
 ax.XTickLabel = string(uPos);
-xlabel('VPos')
-ylabel('APos')
+xlabel('APos')
+ylabel('VPos')
 colorbar
 title('Auditory')
 
 % Vis
+% TRANSPOSE so v is on x (on image)
 ax = subplot(1,2,2);
-imagesc(statsV(:,:,1), [0,1])
+imagesc(statsV(:,:,1)', [0,1])
 ax.YTick = 1:numel(uPos);
 ax.YTickLabel = string(uPos);
 ax.XTick = 1:numel(uPos);

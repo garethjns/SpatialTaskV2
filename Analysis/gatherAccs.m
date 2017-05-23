@@ -15,17 +15,30 @@ if rel
     ap = abs(allData.Position(:,1));
     
     % Recaulcaute the between these (not the abs difference)
-    allDiffs = abs(vp) - abs(ap);
-    % Then flip the sign, so negative is back towards midline
-    allDiffs = 0 - allDiffs;
+    VADiffs = abs(vp) - abs(ap);
+    % Then flip the sign, so negative is aud back towards midline
+    VADiffs = 0 - VADiffs;
+    % ie.
+    % Given V location, aLoc = VLoc + VADiff
+    
+    % Recalculate AV Diffs
+    AVDiffs = abs(ap) - abs(vp);
+    % And invert so negative vis back towards midline
+    AVDiffs = 0 - AVDiffs;
+    % ie.
+    % Given A location, ALoc = VLoc + AVDiff
+    
+    % [ap(1:5),vp(1:5)]
+    % [AVDiffs(1:5), VADiffs(1:5)]
+    
     
     % And just keep the unique ones
-    diffs = unique(allDiffs);
+    diffs = unique([AVDiffs, AVDiffs]);
     
-    % Replace allData's diffs column with this one for indexing in loop
-    allData.Diff = allDiffs;
 else % Abs
     diffs = unique(allData.Diff);
+    AVDiffs = allData.Diff;
+    VADiffs = allData.Diff;
 end
 nDiff = length(diffs);
 
@@ -45,20 +58,24 @@ statsV = NaN(xNAll, 4, nDiff);
 
 for d = 1:nDiff
     
-    % Get index of this difference
-    dIdx = allData.Diff == diffs(d);
+    % Get indexes of this difference from the perspective of each modality
+    % Ie. If diff=-60 we want trials where:
+    % For auditory response, A is at 67 and V is at 7.5 (dAVIdx)
+    % For visual response, V is at 67 and A is at 7.5 (dVAIdx)
+    dAVIdx = AVDiffs == diffs(d);
+    dVAIdx = VADiffs == diffs(d);
     
     % Fold?
     if fold
-        x = abs(allData.Position(dIdx,1));
+        x = abs(allData.Position(dAVIdx,1));
     else
-        x = allData.Position(dIdx,1);
+        x = allData.Position(dAVIdx,1);
     end
     
     % Get/count positions available for this diff
     xU = unique(x);
     xN = numel(xU);
-    y = allData.ACorrect(dIdx);
+    y = allData.ACorrect(dAVIdx);
     
     % Get index to place these available values in to stats matrix
     placeIdx = ismember(xUAll, xU);
@@ -86,13 +103,13 @@ for d = 1:nDiff
     % V
     % Run same as above for visual response
     if fold
-        x = abs(allData.Position(dIdx,2));
+        x = abs(allData.Position(dVAIdx,2));
     else
-        x = allData.Position(dIdx,2);
+        x = allData.Position(dVAIdx,2);
     end
     xU = unique(x);
     xN = numel(xU);
-    y = allData.VCorrect(dIdx);
+    y = allData.VCorrect(dVAIdx);
     
     [statsV(placeIdx,1,d), ~, xInt] = unique(x);
     statsV(placeIdx,2,d) = accumarray(xInt, y);

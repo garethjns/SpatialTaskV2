@@ -244,6 +244,24 @@ clear dataFilt
 
 
 %% Plot accuracies - Abs diffs
+% Plots: 
+% 1
+% Two subplots, left for auditory response accuracy and right for
+% visual response accuracy.
+% X is location of the stimulus
+% Y is proportion of correct responses
+% Lines are location of other modality. In this cell the 
+% direction of the disparity is ignored.
+%
+% 2
+% A heatmap showing the same data but from a different angle. Colour
+% indicates proportion correct.
+% 
+% The first plots for each subject plots accuracy across all of space, the
+% second plots for folded space.
+%
+% The final set of plots is a quick average of all the data that should
+% look siliar to the across subject average, but doesn't have error bars.
 
 rel = false;
 
@@ -278,33 +296,23 @@ plotAccs(statsAcAllFoldAbs, statsVcAllFoldAbs, ...
     'All data - Abs');
 
 
-%% Across subject averages - accuracy
-
-close all
-
-tit = 'Response accuracy - fold, abs, across subs';
-[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldAbs);
-[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldAbs);
-plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
-
-tit = 'Response accuracy - fold, rel, across subs';
-[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldRel);
-[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldRel);
-plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
-
-
-tit = 'Response accuracy - unfold, abs, across subs';
-[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcAbs);
-[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcAbs);
-plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
-
-tit = 'Response accuracy - unfold, rel, across subs';
-[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcRel);
-[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcRel);
-plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
-
-
 %% Plot accuracies - Rel diffs
+% Plots: 
+% 1
+% Two subplots, left for auditory response accuracy and right for
+% visual response accuracy.
+% X is location of the stimulus
+% Y is proportion of correct responses
+% Lines are location of other modality. In this cell the plots include
+% direction, where - disparity indicates the other modaility was closer to
+% the midline.
+%
+% 
+% The first plots for each subject plots accuracy across all of space, the
+% second plots for folded space.
+%
+% The final set of plots is a quick average of all the data that should
+% look siliar to the across subject average, but doesn't have error bars.
 
 rel = true;
 
@@ -339,7 +347,39 @@ plotAccs(statsAcAllFoldRel, statsVcAllFoldRel, ...
     'All data - Abs');
 
 
+%% Across subject averages - accuracy
+% This cell plots the above two cells as across-subject averages
+% It also adds heatmap showing the same data but from a different angle.
+% (ie accuracy vs disparity)
+
+close all
+
+tit = 'Response accuracy - fold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - fold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+
+tit = 'Response accuracy - unfold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - unfold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+
 %% Plot % correct heatmaps - folded and unfolded
+% This cell plots heatmaps of A and V localisation accuracy as a postion vs
+% v position. These are plotted with and without folded space.
+% There are plots of each subject and an across-subject average.
 
 close all
 for e = 1:eN

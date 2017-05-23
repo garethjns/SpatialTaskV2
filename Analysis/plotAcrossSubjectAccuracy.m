@@ -34,10 +34,27 @@ H1.Position = [H1.Position(1), H1.Position(2), ...
     H1.Position(3)*2, H1.Position(4)];
 
 for d = 1:nDiff
+    
+    % Style lines
+    % -- for "other stim moving IN" ie. diff -
+    if diffs(d)>=0
+        ls = '-';
+    else
+        ls = '--';
+    end
+    
+    % Thicker line for AV congruent
+    if diffs(d)==0
+        lw = 1.6;
+    else
+        lw = 1;
+    end
+    
     % A
     subplot(1,2,1)
     hold on
-    h1(d) = errorbar(posAx, summaryA(:,d,1), summaryA(:,d,4));
+    h1(d) = errorbar(posAx, summaryA(:,d,1), summaryA(:,d,4), ...
+        'LineStyle', ls, 'LineWidth', lw);
     scatter(posAx, summaryA(:,d,1), 'MarkerEdgeColor', h1(d).Color)
     xlabel('Aud physical location, deg')
     ylabel('Aud % correct')
@@ -45,7 +62,8 @@ for d = 1:nDiff
     % V
     subplot(1,2,2);
     hold on
-    h2(d) = errorbar(posAx, summaryV(:,d,1), summaryV(:,d,4));
+    h2(d) = errorbar(posAx, summaryV(:,d,1), summaryV(:,d,4), ...
+        'LineStyle', ls, 'LineWidth', lw);
     scatter(posAx, summaryV(:,d,1), 'MarkerEdgeColor', h2(d).Color)
     xlabel('Vis physical location, deg')
     ylabel('Vis % correct')
@@ -60,6 +78,9 @@ suptitle(tit)
 
 % Legend
 hLeg = legend(h1, num2str(diffs'));
+% Add title to legend
+hLeg.Title.String = 'AV disparity, deg';
+hLeg = legend(h2, num2str(diffs'));
 % Add title to legend
 hLeg.Title.String = 'AV disparity, deg';
 
