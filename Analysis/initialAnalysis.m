@@ -1,12 +1,10 @@
-
-
 % Bugs:
 %  - Across-subject averages need sorting out. They don't deal well with
 % all-nan data for subjects (eg for early when eyetracker threshold on)
 % Use wrong number of subejcts when calculating SE
 % Might take NaN to poopulate postion and diff rows - switched to take from
 % subject 7 rather than 1 now.
-%  - Trying to open tables in variable viewer causes crash in 
+%  - Trying to open tables in variable viewer causes crash in
 % variableEditorMetadata() - might be due to NaTs??
 % Avoidable if stop on errors is off
 
@@ -36,17 +34,17 @@ exp.(['s', num2str(s)]) = ... 4
     s=s+1;
 exp.(['s', num2str(s)]) = ... 5
     [dPath, '5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat'];...
-    s=s+1; 
+    s=s+1;
 exp.(['s', num2str(s)]) = ... 6
     [dPath, '6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat'];...
     s=s+1;
-exp.(['s', num2str(s)]) = ... 7 
+exp.(['s', num2str(s)]) = ... 7
     [dPath, 'GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat']; ...
     s=s+1;
-exp.(['s', num2str(s)]) = ... 8 
+exp.(['s', num2str(s)]) = ... 8
     [dPath, 'ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat']; ...
     s=s+1;
-exp.(['s', num2str(s)]) = ... 9 
+exp.(['s', num2str(s)]) = ... 9
     [dPath, 'KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1_backup.mat']; ...
     s=s+1;
 exp.(['s', num2str(s)]) = ... 10
@@ -117,7 +115,7 @@ for e = 1:eN
     % (swithces not mutually exclusive)
     % V1: S1 and S2
     switch fn
-        case {exp.s1, exp.s2} 
+        case {exp.s1, exp.s2}
             % These two lack two columns present in later exps, add dummies
             % PossBinLog and PossBin
             
@@ -150,15 +148,15 @@ for e = 1:eN
     % V3: - add eyedata if available
     % If not, adds placeholders
     % Available S7 onwards, but run for all
-    switch fn 
+    switch fn
         case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6, exp.s7}
             % Not using eye data
             % Give addEyeData2 some dummy params
             a.params = [];
-
+            
         otherwise % Fututre exps (8 onwards)
             % From here, timesync info is available in params. Need to load
-            % this. 
+            % this.
             % Not using eye data from before this.
             % stimlog should contains gaze, not correctedGaze any more.
             
@@ -205,7 +203,7 @@ xlabel('Position')
 ylabel('Error')
 
 
-%% Apply gaze threshold 
+%% Apply gaze threshold
 % If threshold set, trials will be dropped where onSurfProp is below
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
@@ -220,20 +218,20 @@ thresh = 0; % Turn off
 
 allOK = [];
 for e = 1:eN
-   fieldName = ['s', num2str(e)];
-   
-   [data.(fieldName).onSurf, rs1, rs2] = ...
-       eyeIndex(data.(fieldName), osp, thresh);
-   
-   dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
-   % Lazy
-   allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
-   
-   disp('----')
-   disp(fieldName)
-   disp(rs1)
-   disp(rs2)
-   disp('----')
+    fieldName = ['s', num2str(e)];
+    
+    [data.(fieldName).onSurf, rs1, rs2] = ...
+        eyeIndex(data.(fieldName), osp, thresh);
+    
+    dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
+    % Lazy
+    allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
+    
+    disp('----')
+    disp(fieldName)
+    disp(rs1)
+    disp(rs2)
+    disp('----')
 end
 
 allData.onSurf = allOK;
@@ -257,27 +255,53 @@ for e = 1:eN
         ': Response accuracy - Abs'];
     
     fold = false;
-    [statsAc.(fieldName), statsVc.(fieldName)] = ...
+    [statsAcAbs.(fieldName), statsVcAbs.(fieldName)] = ...
         gatherAccs(data.(fieldName), fold, rel);
-    plotAccs(statsAc.(fieldName), statsVc.(fieldName), tit);
+    plotAccs(statsAcAbs.(fieldName), statsVcAbs.(fieldName), tit);
     
     fold = true;
-    [statsAcFold.(fieldName), statsVcFold.(fieldName)] = ...
+    [statsAcFoldAbs.(fieldName), statsVcFoldAbs.(fieldName)] = ...
         gatherAccs(data.(fieldName), fold, rel);
-    plotAccs(statsAcFold.(fieldName), statsVcFold.(fieldName), tit);
+    plotAccs(statsAcFoldAbs.(fieldName), statsVcFoldAbs.(fieldName), tit);
 end
 
 % All data
 fold = false;
-[statsAcAll.(fieldName), statsVcAll.(fieldName)] = ...
-        gatherAccs(allData, fold, rel);
-plotAccs(statsAc.(fieldName), statsVc.(fieldName), 'All data - Abs');
+[statsAcAllAbs, statsVcAllAbs] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllAbs, statsVcAllAbs, 'All data - Abs');
 
 fold = true;
-[statsAcAllFold.(fieldName), statsVcAllFold.(fieldName)] = ...
-        gatherAccs(allData, fold, rel);
-plotAccs(statsAcAllFold.(fieldName), statsVcAllFold.(fieldName), ...
+[statsAcAllFoldAbs, statsVcAllFoldAbs] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFoldAbs, statsVcAllFoldAbs, ...
     'All data - Abs');
+
+
+%% Across subject averages - accuracy
+
+close all
+
+tit = 'Response accuracy - fold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - fold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+
+tit = 'Response accuracy - unfold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - unfold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
 
 
 %% Plot accuracies - Rel diffs
@@ -292,27 +316,68 @@ for e = 1:eN
         ': Response accuracy - Abs'];
     
     fold = false;
-    [statsAc.(fieldName), statsVc.(fieldName)] = ...
+    [statsAcRel.(fieldName), statsVcRel.(fieldName)] = ...
         gatherAccs(data.(fieldName), fold, rel);
-    plotAccs(statsAc.(fieldName), statsVc.(fieldName), tit);
+    plotAccs(statsAcRel.(fieldName), statsVcRel.(fieldName), tit);
     
     fold = true;
-    [statsAcFold.(fieldName), statsVcFold.(fieldName)] = ...
+    [statsAcFoldRel.(fieldName), statsVcFoldRel.(fieldName)] = ...
         gatherAccs(data.(fieldName), fold, rel);
-    plotAccs(statsAcFold.(fieldName), statsVcFold.(fieldName), tit);
+    plotAccs(statsAcFoldRel.(fieldName), statsVcFoldRel.(fieldName), tit);
 end
 
 % All data
 fold = false;
-[statsAcAll.(fieldName), statsVcAll.(fieldName)] = ...
-        gatherAccs(allData, fold, rel);
-plotAccs(statsAc.(fieldName), statsVc.(fieldName), 'All data - Abs');
+[statsAcAll, statsVcAll] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAll, statsVcAll, 'All data - Abs');
 
 fold = true;
-[statsAcAllFold.(fieldName), statsVcAllFold.(fieldName)] = ...
-        gatherAccs(allData, fold, rel);
-plotAccs(statsAcAllFold.(fieldName), statsVcAllFold.(fieldName), ...
+[statsAcAllFoldRel, statsVcAllFoldRel] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFoldRel, statsVcAllFoldRel, ...
     'All data - Abs');
+
+
+%% Plot % correct heatmaps - folded and unfolded
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    fold = true;
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - folded'];
+    
+    
+    [hmAFold.(fieldName), hmVFold.(fieldName), ax] = ...
+        gatherPCHeatmaps(data.(fieldName), fold);
+    
+    plotHeatmaps(hmAFold.(fieldName), hmVFold.(fieldName), ax, tit);
+    
+    
+    fold = false;
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - not folded'];
+    
+    [hmA.(fieldName), hmV.(fieldName), ax] = ...
+        gatherPCHeatmaps(data.(fieldName), fold);
+    
+    plotHeatmaps(hmA.(fieldName), hmV.(fieldName), ax, tit);
+    
+end
+
+fold = true;
+tit = 'Alldata: Response accuracy - folded';
+[hmAFoldAll, hmVFoldAll, ax] = ...
+    gatherPCHeatmaps(allData, fold);
+plotHeatmaps(hmAFoldAll, hmVFoldAll, ax, tit);
+
+fold = false;
+tit = 'AllData : Response accuracy - not folded';
+[hmAAll, hmVAll, ax] = ...
+    gatherPCHeatmaps(allData, fold);
+plotHeatmaps(hmAAll, hmVAll, ax, tit);
 
 
 %% Plot 1
@@ -542,7 +607,7 @@ for e = 1:eN
 end
 
 % The avg plot here averages A accuracy across space, but not visual.
-% 60 deg bar is highest because this data must all come from the centre 
+% 60 deg bar is highest because this data must all come from the centre
 % auditory position. If "0" is the outper position, V can't be +60.
 % Conversly, -60 data can only come from "0" on an outer position.
 % This plot is again not useful.
@@ -762,7 +827,7 @@ gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
 % Only including data with 15o incongruency
 
 % close all
-% 
+%
 % % On each subject
 % for e = 1:eN
 %     fieldName = ['s', num2str(e)];
@@ -772,7 +837,7 @@ gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
 %     % Get the data/stats for the plot:
 %     GLMStats.NonLinearResp.(fieldName) = fitGLM5(data.(fieldName));
 % end
-% 
+%
 % % Gather and plot coeffs
 % % statsP10 =
 % gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
