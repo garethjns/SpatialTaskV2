@@ -34,21 +34,27 @@ statsV = NaN(nPos, nPos, 2);
 
 for y = 1:nPos % y, V
     
+    % Get visual index
     vPos = uPos(y);
     vIdx = vp == vPos;
     
     for x = 1:nPos % x, A
+        
+        % Get auditory index
         aPos = uPos(x);
         aIdx = ap == aPos;
         
+        % Get data subset
         data = allData(vIdx & aIdx,:);
         
+        % Calcaulte and save prop correct repsonses and save single values
+        % to image
         n = height(data);
         statsA(y,x,1) = sum(data.ACorrect)/n;
         statsV(y,x,1) = sum(data.VCorrect)/n;
         
+        % Save n as well
         statsA(y,x,2) = n;
         statsV(y,x,2) = n;
-        
     end
 end

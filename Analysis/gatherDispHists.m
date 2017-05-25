@@ -1,11 +1,16 @@
 function [dataA, dataV, pAx, dAx] = ...
-    gatherDispHists(allData, rel, binned, pInc)
+    gatherDispHists(allData, rel, pInc)
+% Get response error for each modality in folded space, for each disparity
+% from perspective of that modality (ie. recalcuated, not .Diff column).
 
 if isempty(allData)
-    statsA = [];
-    statsV = [];
+    dataA = [];
+    datasV = [];
     return
 end
+
+% Not implemented - no point?
+binned = false;
 
 % If empty, use all
 if isempty(pInc)
@@ -56,42 +61,39 @@ else % Abs
 end
 nDiff = length(diffs);
 
-
-% Fold space
-x = abs(allData.Position(:,2));
-
-% Get/count all positions
-xUAll = unique(x);
-xNAll = numel(xUAll);
-
 % Use specified postions
 nPoss = length(pInc);
 
 % Preallocate
-dataA = NaN(height(allData), nPoss, nDiff);
-dataV = NaN(height(allData), nPoss, nDiff);
+dataA = NaN(height(allData)/2, nPoss, nDiff);
+dataV = NaN(height(allData)/2, nPoss, nDiff);
 
-
-
+% For each position
 for p = 1:nPoss
+    % Get index for A and V and fold space
     pIdxA = abs(allData.Position(:,1)) == pInc(p);
     pIdxV = abs(allData.Position(:,2)) == pInc(p);
     
+    % For each diff
     for d = 1:length(diffs)
-        
         
         % Get indexes and data subsets
         % pIdxA = ismember(allData.Position(:,1), [pInc, 0-pInc]);
         % pIdxV = ismember(allData.Position(:,2), [pInc, 0-pInc]);
         
+        % Get diff indexes for each modality
         dAVIdx = AVDiffs == diffs(d);
-        subsetA = allData(dAVIdx & pIdxA,:);
         dVAIdx = VADiffs == diffs(d);
+        
+        % Get data subsets using dIdx and pIdx
+        subsetA = allData(dAVIdx & pIdxA,:);
         subsetV = allData(dVAIdx & pIdxV,:);
         
         if binned
-            
+            % Not implemented
         else
+            % Collect raw data for use with histogram or ksdensity
+            
             % Extract the diff angle column. This is {:}[2x1].
             % Convert to mat - appends all together
             matA = cell2mat(subsetA.diffAngle);

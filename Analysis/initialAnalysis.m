@@ -382,30 +382,30 @@ plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
 % There are plots of each subject and an across-subject average.
 
 close all
-for e = 1:eN
-    fieldName = ['s', num2str(e)];
-    
-    fold = true;
-    tit = ['S', num2str(e), ...
-        ': Response accuracy - folded'];
-    
-    
-    [hmAFold.(fieldName), hmVFold.(fieldName), ax] = ...
-        gatherPCHeatmaps(data.(fieldName), fold);
-    
-    plotHeatmaps(hmAFold.(fieldName), hmVFold.(fieldName), ax, tit);
-    
-    
-    fold = false;
-    tit = ['S', num2str(e), ...
-        ': Response accuracy - not folded'];
-    
-    [hmA.(fieldName), hmV.(fieldName), ax] = ...
-        gatherPCHeatmaps(data.(fieldName), fold);
-    
-    plotHeatmaps(hmA.(fieldName), hmV.(fieldName), ax, tit);
-    
-end
+% for e = 1:eN
+%     fieldName = ['s', num2str(e)];
+%     
+%     fold = true;
+%     tit = ['S', num2str(e), ...
+%         ': Response accuracy - folded'];
+%     
+%     
+%     [hmAFold.(fieldName), hmVFold.(fieldName), ax] = ...
+%         gatherPCHeatmaps(data.(fieldName), fold);
+%     
+%     plotHeatmaps(hmAFold.(fieldName), hmVFold.(fieldName), ax, tit);
+%     
+%     
+%     fold = false;
+%     tit = ['S', num2str(e), ...
+%         ': Response accuracy - not folded'];
+%     
+%     [hmA.(fieldName), hmV.(fieldName), ax] = ...
+%         gatherPCHeatmaps(data.(fieldName), fold);
+%     
+%     plotHeatmaps(hmA.(fieldName), hmV.(fieldName), ax, tit);
+%     
+% end
 
 fold = true;
 tit = 'Alldata: Response accuracy - folded';
@@ -444,7 +444,8 @@ close all
 %     plotDispHists(dataA, dataV, pAx, dAx, false)
 %     
 % end
-
+binned = false;
+pInc = [];
 
 tit = 'Response distributions, all data, rel, normX';
 rel = true;
