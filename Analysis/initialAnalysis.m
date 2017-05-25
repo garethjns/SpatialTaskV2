@@ -244,19 +244,19 @@ clear dataFilt
 
 
 %% Plot accuracies - Abs diffs
-% Plots: 
+% Plots:
 % 1
 % Two subplots, left for auditory response accuracy and right for
 % visual response accuracy.
 % X is location of the stimulus
 % Y is proportion of correct responses
-% Lines are location of other modality. In this cell the 
+% Lines are location of other modality. In this cell the
 % direction of the disparity is ignored.
 %
 % 2
 % A heatmap showing the same data but from a different angle. Colour
 % indicates proportion correct.
-% 
+%
 % The first plots for each subject plots accuracy across all of space, the
 % second plots for folded space.
 %
@@ -297,7 +297,7 @@ plotAccs(statsAcAllFoldAbs, statsVcAllFoldAbs, ...
 
 
 %% Plot accuracies - Rel diffs
-% Plots: 
+% Plots:
 % 1
 % Two subplots, left for auditory response accuracy and right for
 % visual response accuracy.
@@ -307,7 +307,7 @@ plotAccs(statsAcAllFoldAbs, statsVcAllFoldAbs, ...
 % direction, where - disparity indicates the other modaility was closer to
 % the midline.
 %
-% 
+%
 % The first plots for each subject plots accuracy across all of space, the
 % second plots for folded space.
 %
@@ -418,6 +418,66 @@ tit = 'AllData : Response accuracy - not folded';
 [hmAAll, hmVAll, ax] = ...
     gatherPCHeatmaps(allData, fold);
 plotHeatmaps(hmAAll, hmVAll, ax, tit);
+
+
+%% Response deviation histograms
+% See
+% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002073
+% Fig 2
+% Plot, for A and V response in folded space:
+% AV cong as baseline
+% For each disparity, histogram of response error
+
+close all
+% rel = false;
+% binned = false;
+% 
+% pInc = [];
+% 
+% close all
+% for e = 1:eN
+%     fieldName = ['s', num2str(e)];
+%     e=12
+%     
+%     [dataA, dataV, pAx, dAx] = ...
+%         gatherDispHists(data.(fieldName), rel, binned, pInc);
+%     plotDispHists(dataA, dataV, pAx, dAx, false)
+%     
+% end
+
+
+tit = 'Response distributions, all data, rel, normX';
+rel = true;
+normY = false;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, binned, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+tit = 'Response distributions, all data, abs, normX';
+rel = false;
+normY = false;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, binned, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+
+tit = 'Response distributions, all data, rel, normX, normY';
+rel = true;
+normY = true;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, binned, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+tit = 'Response distributions, all data, abs, normX, normY';
+rel = false;
+normY = true;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, binned, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
 
 
 %% Plot 1
