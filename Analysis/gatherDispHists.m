@@ -65,8 +65,8 @@ nDiff = length(diffs);
 nPoss = length(pInc);
 
 % Preallocate
-dataA = NaN(height(allData)/2, nPoss, nDiff);
-dataV = NaN(height(allData)/2, nPoss, nDiff);
+dataA = NaN(round(height(allData)/2), nPoss, nDiff);
+dataV = NaN(round(height(allData)/2), nPoss, nDiff);
 
 % For each position
 for p = 1:nPoss

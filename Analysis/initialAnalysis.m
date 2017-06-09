@@ -275,6 +275,7 @@ for e = 1:eN
     fold = false;
     [statsAcAbs.(fieldName), statsVcAbs.(fieldName)] = ...
         gatherAccs(data.(fieldName), fold, rel);
+    
     plotAccs(statsAcAbs.(fieldName), statsVcAbs.(fieldName), tit);
     
     fold = true;
@@ -452,7 +453,7 @@ rel = true;
 normY = false;
 normX = true;
 [dataA, dataV, pAx, dAx] = ...
-    gatherDispHists(allData, rel, binned, pInc);
+    gatherDispHists(allData, rel, pInc);
 plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
 
 tit = 'Response distributions, all data, abs, normX';
@@ -460,7 +461,7 @@ rel = false;
 normY = false;
 normX = true;
 [dataA, dataV, pAx, dAx] = ...
-    gatherDispHists(allData, rel, binned, pInc);
+    gatherDispHists(allData, rel, pInc);
 plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
 
 
@@ -469,7 +470,7 @@ rel = true;
 normY = true;
 normX = true;
 [dataA, dataV, pAx, dAx] = ...
-    gatherDispHists(allData, rel, binned, pInc);
+    gatherDispHists(allData, rel, pInc);
 plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
 
 tit = 'Response distributions, all data, abs, normX, normY';
@@ -477,7 +478,7 @@ rel = false;
 normY = true;
 normX = true;
 [dataA, dataV, pAx, dAx] = ...
-    gatherDispHists(allData, rel, binned, pInc);
+    gatherDispHists(allData, rel, pInc);
 plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
 
 
@@ -701,6 +702,7 @@ for e = 1:eN
     % Get the data/stats for the plot:
     [statsP7.(fieldName), statsP8.(fieldName)] = ...
         gatherAPCvsVL(data.(fieldName), flag);
+    
     % And plot:
     % plotCongProp(statsP4.(fieldName), tit);
     [h1, h2] = plotAPCvsPL(statsP7.(fieldName), statsP8.(fieldName), tit);
