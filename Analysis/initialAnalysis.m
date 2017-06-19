@@ -214,7 +214,7 @@ osp = 'onSurfProp';
 % Or
 % osp = 'onSurfPropCorrectedED'; - removed
 
-thresh = 0.7;
+thresh = 0.9;
 % thresh = 0; % Turn off
 
 allOK = [];
@@ -253,7 +253,7 @@ for e = 1:eN
     fieldName = ['s', num2str(e)];
         tit = ['S', num2str(e)];
     
-    gazeTrajectories(data.(fieldName), gazeData.(fieldName), ...
+    gazeTrajectories(dataOrig.(fieldName), gazeData.(fieldName), ...
         tit, thresh, allLines)
     
 end

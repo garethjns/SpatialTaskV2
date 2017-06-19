@@ -54,7 +54,7 @@ for r = 1:nTrials
     % Bin time data in to 100 ms bins
     xAx = round(tDiff(tIdx)*1000,-2);
     % Get group numbers (ints) to use with accumary
-    [xUnq,~,ints] = unique(xAx);
+    [xUnq, ~, ints] = unique(xAx);
     
     % Get index of available x data for correct placement in to traj matrix
     % Eg. if no data in 1000, bin, ismember will return zero and NaN
@@ -75,13 +75,16 @@ figure
 hold on
 
 if all
+    if any(osIdx)
     plot(x, traj(:, osIdx), ...
         'Color', [0.85, 0.85, 0.85], ...
         'LineStyle', '--')
-    
-    plot(x,traj(:, ~osIdx, 1), ...
+    end
+    if ~any(osIdx)
+    plot(x, traj(:, ~osIdx), ...
         'Color', [1, 0.75, 0.75], ...
         'LineStyle', '--')
+    end
 end
 
 h(1) = errorbar(x, ...
