@@ -165,7 +165,7 @@ for e = 1:eN
     end
     
     plotOn = true;
-    a.stimLog = addEyeData2(a.stimLog, ...
+    [a.stimLog, gaze] = addEyeData2(a.stimLog, ...
         eye.(['s', num2str(e)]), ...
         a.params, ...
         plotOn);
@@ -189,9 +189,10 @@ for e = 1:eN
     
     % Save subject data in structre and append to allData table
     data.(['s', num2str(e)]) = a.stimLog;
+    gazeData.(['s', num2str(e)]) = gaze;
     allData = [allData; a.stimLog]; %#ok<AGROW>
     
-    clear a
+    clear a gaze
 end
 
 figure
@@ -214,7 +215,7 @@ osp = 'onSurfProp';
 % osp = 'onSurfPropCorrectedED'; - removed
 
 thresh = 0.7;
-thresh = 0; % Turn off
+% thresh = 0; % Turn off
 
 allOK = [];
 for e = 1:eN
@@ -241,6 +242,21 @@ dataOrig = data;
 data = dataFilt;
 allData = allData(allData.onSurf==1,:);
 clear dataFilt
+
+
+%% Gaze trajectories
+
+close all
+allLines = true;
+
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+        tit = ['S', num2str(e)];
+    
+    gazeTrajectories(data.(fieldName), gazeData.(fieldName), ...
+        tit, thresh, allLines)
+    
+end
 
 
 %% Plot accuracies - Abs diffs

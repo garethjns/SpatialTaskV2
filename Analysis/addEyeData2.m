@@ -1,4 +1,4 @@
-function stimLog = addEyeData2(stimLog, eyePath, params, plotOn)
+function [stimLog, gaze] = addEyeData2(stimLog, eyePath, params, plotOn)
 % Add eye tracker data to stimLog.
 % Handles empty eye data subjects
 % Inheriting from importEyeDataScript, using loadGaze2, which handles surf
@@ -29,17 +29,17 @@ else
     % No gaze data, turn off processing
     % Placeholders added below
     process = false;
+    gaze = [];
 end
 
 
-%% If eye data availble, process
+%% If eye data available, process
 % Assuming timing sync data is available
 % Check removed - return error if not
 
 % Convert time in stimLog
 stimLog.sTime = datetime(stimLog.startClock);
 stimLog.eTime = datetime(stimLog.endClock);
-
 
 if process
     % Get the MATLAB time and convert it to posix.
