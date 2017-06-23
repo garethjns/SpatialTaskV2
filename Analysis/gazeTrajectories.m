@@ -52,7 +52,7 @@ for r = 1:nTrials
     osProp(1,r) = mean(gazeData.onSurf(stimIdx));
     
     % Bin time data in to 100 ms bins
-    xAx = round(tDiff(tIdx)*1000,-2);
+    xAx = round(tDiff(tIdx)*1000, -2);
     % Get group numbers (ints) to use with accumary
     [xUnq, ~, ints] = unique(xAx);
     

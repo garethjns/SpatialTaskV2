@@ -203,26 +203,37 @@ legend({'Auditory', ' Visual'})
 xlabel('Position')
 ylabel('Error')
 
+% Back up imported data
+dataOrig = data;
+allDataOrig = allData;
+
 
 %% Apply gaze threshold
 % If threshold set, trials will be dropped where onSurfProp is below
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
 
+% Reset
+data = dataOrig;
+allData = allDataOrig;
+
 % Which onSurfProp to use?
 osp = 'onSurfProp';
 % Or
 % osp = 'onSurfPropCorrectedED'; - removed
 
-thresh = 0.9;
-% thresh = 0; % Turn off
+% Set thresh where there is eye data
+thresh1 = 0.75;
+% Set thresh where there isn't eye data - true = include all, false =
+% discard all
+thresh2 = true;
 
 allOK = [];
 for e = 1:eN
     fieldName = ['s', num2str(e)];
     
     [data.(fieldName).onSurf, rs1, rs2] = ...
-        eyeIndex(data.(fieldName), osp, thresh);
+        eyeIndex(data.(fieldName), osp, thresh1, thresh2);
     
     dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
     % Lazy
@@ -238,7 +249,6 @@ end
 allData.onSurf = allOK;
 
 % Continue with data passing thresh only
-dataOrig = data;
 data = dataFilt;
 allData = allData(allData.onSurf==1,:);
 clear dataFilt
@@ -254,7 +264,7 @@ for e = 1:eN
         tit = ['S', num2str(e)];
     
     gazeTrajectories(dataOrig.(fieldName), gazeData.(fieldName), ...
-        tit, thresh, allLines)
+        tit, thresh1, allLines)
     
 end
 
@@ -496,6 +506,41 @@ normX = true;
 [dataA, dataV, pAx, dAx] = ...
     gatherDispHists(allData, rel, pInc);
 plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+
+%% Middle pos error hists
+
+abs = false;
+folded = true;
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': '];
+    
+    % Get data (temp) is relative
+    [A, V] = gatherMidHist(data.(fieldName));
+    
+    % Plot - decide here if rel or abs with respect to response error
+    plotMidHist(A, V, tit, abs)
+end
+
+abs = false;
+tit = 'All subjects, xNorm, yNorm';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs)
+
+abs = false;
+tit = 'All subjects, xNorm';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs, true, false)
+
+abs = true;
+tit = 'All subjects, xNorm, abs';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs, true, false)
 
 
 %% Plot 1
