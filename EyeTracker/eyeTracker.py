@@ -29,7 +29,6 @@ class eyeTracker():
     Automatic processing uses defualts and saves data to disk and self
     Assumes one surface called target
     
-   
     surfaceToPandasDF fails when trying to deal with anything that's not a 
     surface subscription - needs updating
      - Replaced with surfaceGazeToPandasDF for now but a more flexible 

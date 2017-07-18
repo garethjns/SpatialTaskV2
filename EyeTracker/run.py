@@ -30,7 +30,7 @@ import eyeTracker as et
 # clear
   
 ## Params
-fn = "Test"
+fn = "15SI"
 dPath = "Data/"
 port = 50020 # Eye tracker server port on localhost
 TCPAddr = '128.40.249.99' # Time server address (this computer)
@@ -40,3 +40,5 @@ TCPPort = 52012 # Time server port
 eye = et.eyeTracker(fn=dPath+fn, port=port, subs=['surface', 'gaze'],
                  TCPAddr=TCPAddr, TCPPort=TCPPort,
                  connectNow=True, startNow=True, processNow=True)
+
+
