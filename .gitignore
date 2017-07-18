@@ -30,6 +30,7 @@ EyeTracker/*.mat
 # Folders
 Data/
 html/
+Analysis/Graphs/
 Graphs/
 MATLABTask/Data/
 EyeTracker/Data/

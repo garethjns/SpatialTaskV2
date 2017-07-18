@@ -4,33 +4,90 @@
 % Use wrong number of subejcts when calculating SE
 % Might take NaN to poopulate postion and diff rows - switched to take from
 % subject 7 rather than 1 now.
-%  - Trying to open tables in variable viewer causes crash in 
+%  - Trying to open tables in variable viewer causes crash in
 % variableEditorMetadata() - might be due to NaTs??
 % Avoidable if stop on errors is off
 
 close all
 clear
 
+%% Set paths
+
+% Data\ is in directory above.
+dPath = [fileparts(pwd), '\Data\'];
+
 % Historical list of exps - add new to end. Will be reassigned numbers in
 % processing.
 % Paths can be changed here
-exp.s1 = 'Data\Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat';
-exp.s2 = 'Data\Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat';
-exp.s3 = 'Data\2\26-Apr-2016 17_04_28\SpatialCapture_2.mat';
-exp.s4 = 'Data\4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat';
-exp.s5 = 'Data\5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat';
-exp.s6 = 'Data\6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat';
-exp.s7 = 'Data\7\23-Jan-2017 15_16_25\SpatialCapture_7.mat';
-exp.s8 = 'Data\8\02-Feb-2017 10_39_19\SpatialCapture_8.mat';
+s = 1;
+exp.(['s', num2str(s)]) = ... 1
+    [dPath, 'Nicole\07-Apr-2016 16_24_11\SpatialCapture_Nicole.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 2
+    [dPath, 'Gareth\21-Apr-2016 15_56_01\SpatialCapture_Gareth.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 3
+    [dPath, '2\26-Apr-2016 17_04_28\SpatialCapture_2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 4
+    [dPath, '4.2\08-Jul-2016 12_45_35\SpatialCapture_4.2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 5
+    [dPath, '5.2\08-Jul-2016 15_03_32\SpatialCapture_5.2.mat'];...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 6
+    [dPath, '6.1\08-Jul-2016 16_19_28\SpatialCapture_6.1.mat'];...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 7
+    [dPath, 'GarethEye\21-Feb-2017 15_53_30\SpatialCapture_GarethEye.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 8
+    [dPath, 'ShriyaEye2\03-Mar-2017 14_55_20\SpatialCapture_ShriyaEye2.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 9
+    [dPath, 'KatEye1\15-Mar-2017 12_32_08\SpatialCapture_KatEye1_backup.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 10
+    [dPath, 'GarethEye3\22-Mar-2017 11_04_38\SpatialCapture_GarethEye3.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 11
+    [dPath, '11XY\05-Apr-2017 09_57_28\SpatialCapture_11XY.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 12
+    [dPath, '12NB\05-Apr-2017 14_53_36\SpatialCapture_12NB.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 13
+    [dPath, '13SR\06-Apr-2017 15_20_21\SpatialCapture_13SR.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 14
+    [dPath, '14JD\07-Apr-2017 10_11_53\SpatialCapture_14JD.mat']; ...
+    s=s+1;
+exp.(['s', num2str(s)]) = ... 15
+    [dPath, '15SI\07-Apr-2017 16_08_46\SpatialCapture_15SI.mat']; ...
+    s=s+1;
 % Corresponding list of eyedata paths
-eye.s1 = '';
-eye.s2 = '';
-eye.s3 = '';
-eye.s4 = '';
-eye.s5 = '';
-eye.s6 = '';
-eye.s7 = 'Data\7\23-Jan-2017 15_16_25\7_ProcessedGaze.mat';
-eye.s8 = 'Data\8\02-Feb-2017 10_39_19\8.p.mat';
+s = 1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 1
+eye.(['s', num2str(s)]) = ''; s=s+1; % 2
+eye.(['s', num2str(s)]) = ''; s=s+1; % 3
+eye.(['s', num2str(s)]) = ''; s=s+1; % 4
+eye.(['s', num2str(s)]) = ''; s=s+1; % 5
+eye.(['s', num2str(s)]) = ''; s=s+1; % 6
+eye.(['s', num2str(s)]) = ''; s=s+1; % 7, Recording, but time sync failed
+eye.(['s', num2str(s)]) = ... 8
+    [dPath, 'ShriyaEye2\03-Mar-2017 14_55_20\ShriyaEye2.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 9
+    [dPath, 'KatEye1\15-Mar-2017 12_32_08\KatEye1.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 10
+    [dPath, 'GarethEye3\22-Mar-2017 11_04_38\GarethEye3.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 11 processing
+eye.(['s', num2str(s)]) = ... 12
+    [dPath, '12NB\05-Apr-2017 14_53_36\12NB.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ... 13
+    [dPath, '13SR\06-Apr-2017 15_20_21\13SR.mat']; s=s+1;
+eye.(['s', num2str(s)]) = ''; s=s+1; % 14 - space issues
+eye.(['s', num2str(s)]) = ... 15
+    [dPath, '15SI\07-Apr-2017 16_08_46\15SI.mat']; s=s+1;
 
 eN = numel(fields(exp));
 
@@ -43,13 +100,22 @@ for e = 1:eN
     
     % Load psychophysics data
     a = load(fn);
+    
+    % Remove trials without responses
+    % Using aStim field as it#s common to all versions and is populated on
+    % response
+    rmIdx = cellfun(@isempty, a.stimLog.aStim);
+    a.stimLog = a.stimLog(~rmIdx,:);
+    
+    % Get number of available trials
     n = height(a.stimLog);
+    disp(['Loaded ', num2str(n), ' trials'])
     
     % Process data according to version subject was run on
     % (swithces not mutually exclusive)
     % V1: S1 and S2
     switch fn
-        case {exp.s1, exp.s2} 
+        case {exp.s1, exp.s2}
             % These two lack two columns present in later exps, add dummies
             % PossBinLog and PossBin
             
@@ -70,38 +136,63 @@ for e = 1:eN
     end
     
     % V2: S1-6
-    switch  fn
+    switch fn
         case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6}
             % These need dummy timing columns
-            
             n = height(a.stimLog);
             a.stimLog.timeStamp = NaN(n, 2);
-            a.stimLog.startClock = NaN(n, 6);
-            a.stimLog.endClock = NaN(n, 6);
+            a.stimLog.startClock = repmat([1900, 1, 1, 1, 1, 1],n,1);
+            a.stimLog.endClock = repmat([1900, 1, 1, 1, 1, 1],n,1);
     end
     
     % V3: - add eyedata if available
     % If not, adds placeholders
     % Available S7 onwards, but run for all
-    a.stimLog = addEyeData(a.stimLog, eye.(['s', num2str(e)]));
+    switch fn
+        case {exp.s1, exp.s2, exp.s3, exp.s4, exp.s5, exp.s6, exp.s7}
+            % Not using eye data
+            % Give addEyeData2 some dummy params
+            a.params = [];
+            
+        otherwise % Fututre exps (8 onwards)
+            % From here, timesync info is available in params. Need to load
+            % this.
+            % Not using eye data from before this.
+            % stimlog should contains gaze, not correctedGaze any more.
+            
+            % No additional processing here at the moment
+            % - handled in addEyeData2
+    end
+    
+    plotOn = true;
+    [a.stimLog, gaze] = addEyeData2(a.stimLog, ...
+        eye.(['s', num2str(e)]), ...
+        a.params, ...
+        plotOn);
+    title(['Subject ', num2str(e)]);
+    xlabel('Time')
+    ylabel('On target prop.')
     
     % All subjects
     % Add a "correct" and "error" columns
     for r = 1:n
-        a.stimLog.ACorrect(r,1) = all( a.stimLog.respBinAN{r,1}(1,:) ...
+        a.stimLog.ACorrect(r,1) = all(a.stimLog.respBinAN{r,1}(1,:) ...
             ==  a.stimLog.PosBinLog{r,1}(1,:));
-        a.stimLog.VCorrect(r,1) = all( a.stimLog.respBinAN{r,1}(2,:) ...
+        a.stimLog.VCorrect(r,1) = all(a.stimLog.respBinAN{r,1}(2,:) ...
             ==  a.stimLog.PosBinLog{r,1}(2,:));
         
         a.stimLog.AError(r,1) = (find( a.stimLog.respBinAN{r,1}(1,:)) ...
-            - find( a.stimLog.PosBinLog{r,1}(1,:))) * 15;
+            - find(a.stimLog.PosBinLog{r,1}(1,:))) * 15;
         a.stimLog.VError(r,1) = (find( a.stimLog.respBinAN{r,1}(2,:)) ...
-            - find( a.stimLog.PosBinLog{r,1}(2,:))) * 15;
+            - find(a.stimLog.PosBinLog{r,1}(2,:))) * 15;
     end
     
     % Save subject data in structre and append to allData table
     data.(['s', num2str(e)]) = a.stimLog;
+    gazeData.(['s', num2str(e)]) = gaze;
     allData = [allData; a.stimLog]; %#ok<AGROW>
+    
+    clear a gaze
 end
 
 figure
@@ -112,44 +203,344 @@ legend({'Auditory', ' Visual'})
 xlabel('Position')
 ylabel('Error')
 
+% Back up imported data
+dataOrig = data;
+allDataOrig = allData;
 
-%% Apply gaze threshold 
+
+%% Apply gaze threshold
 % If threshold set, trials will be dropped where onSurfProp is below
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
 
+% Reset
+data = dataOrig;
+allData = allDataOrig;
+
 % Which onSurfProp to use?
 osp = 'onSurfProp';
 % Or
-osp = 'onSurfPropCorrectedED';
+% osp = 'onSurfPropCorrectedED'; - removed
 
-thresh = 0.5;
+% Set thresh where there is eye data
+thresh1 = 0.75;
+% Set thresh where there isn't eye data - true = include all, false =
+% discard all
+thresh2 = true;
 
 allOK = [];
 for e = 1:eN
-   fieldName = ['s', num2str(e)];
-   
-   [data.(fieldName).onSurf, rs1, rs2] = ...
-       eyeIndex(data.(fieldName), osp, thresh);
-   
-   dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
-   % Lazy
-   allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
-   
-   disp('----')
-   disp(fieldName)
-   disp(rs1)
-   disp(rs2)
-   disp('----')
+    fieldName = ['s', num2str(e)];
+    
+    [data.(fieldName).onSurf, rs1, rs2] = ...
+        eyeIndex(data.(fieldName), osp, thresh1, thresh2);
+    
+    dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
+    % Lazy
+    allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
+    
+    disp('----')
+    disp(fieldName)
+    disp(rs1)
+    disp(rs2)
+    disp('----')
 end
 
 allData.onSurf = allOK;
 
 % Continue with data passing thresh only
-dataOrig = data;
 data = dataFilt;
 allData = allData(allData.onSurf==1,:);
 clear dataFilt
+
+
+%% Gaze trajectories
+
+close all
+allLines = true;
+
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+        tit = ['S', num2str(e)];
+    
+    gazeTrajectories(dataOrig.(fieldName), gazeData.(fieldName), ...
+        tit, thresh1, allLines)
+    
+end
+
+
+%% Plot accuracies - Abs diffs
+% Plots:
+% 1
+% Two subplots, left for auditory response accuracy and right for
+% visual response accuracy.
+% X is location of the stimulus
+% Y is proportion of correct responses
+% Lines are location of other modality. In this cell the
+% direction of the disparity is ignored.
+%
+% 2
+% A heatmap showing the same data but from a different angle. Colour
+% indicates proportion correct.
+%
+% The first plots for each subject plots accuracy across all of space, the
+% second plots for folded space.
+%
+% The final set of plots is a quick average of all the data that should
+% look siliar to the across subject average, but doesn't have error bars.
+
+rel = false;
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - Abs'];
+    
+    fold = false;
+    [statsAcAbs.(fieldName), statsVcAbs.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    
+    plotAccs(statsAcAbs.(fieldName), statsVcAbs.(fieldName), tit);
+    
+    fold = true;
+    [statsAcFoldAbs.(fieldName), statsVcFoldAbs.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAcFoldAbs.(fieldName), statsVcFoldAbs.(fieldName), tit);
+end
+
+% All data
+fold = false;
+[statsAcAllAbs, statsVcAllAbs] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllAbs, statsVcAllAbs, 'All data - Abs');
+
+fold = true;
+[statsAcAllFoldAbs, statsVcAllFoldAbs] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFoldAbs, statsVcAllFoldAbs, ...
+    'All data - Abs');
+
+
+%% Plot accuracies - Rel diffs
+% Plots:
+% 1
+% Two subplots, left for auditory response accuracy and right for
+% visual response accuracy.
+% X is location of the stimulus
+% Y is proportion of correct responses
+% Lines are location of other modality. In this cell the plots include
+% direction, where - disparity indicates the other modaility was closer to
+% the midline.
+%
+%
+% The first plots for each subject plots accuracy across all of space, the
+% second plots for folded space.
+%
+% The final set of plots is a quick average of all the data that should
+% look siliar to the across subject average, but doesn't have error bars.
+
+rel = true;
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': Response accuracy - Abs'];
+    
+    fold = false;
+    [statsAcRel.(fieldName), statsVcRel.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAcRel.(fieldName), statsVcRel.(fieldName), tit);
+    
+    fold = true;
+    [statsAcFoldRel.(fieldName), statsVcFoldRel.(fieldName)] = ...
+        gatherAccs(data.(fieldName), fold, rel);
+    plotAccs(statsAcFoldRel.(fieldName), statsVcFoldRel.(fieldName), tit);
+end
+
+% All data
+fold = false;
+[statsAcAll, statsVcAll] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAll, statsVcAll, 'All data - Abs');
+
+fold = true;
+[statsAcAllFoldRel, statsVcAllFoldRel] = ...
+    gatherAccs(allData, fold, rel);
+plotAccs(statsAcAllFoldRel, statsVcAllFoldRel, ...
+    'All data - Abs');
+
+
+%% Across subject averages - accuracy
+% This cell plots the above two cells as across-subject averages
+% It also adds heatmap showing the same data but from a different angle.
+% (ie accuracy vs disparity)
+
+close all
+
+tit = 'Response accuracy - fold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - fold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcFoldRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcFoldRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+
+tit = 'Response accuracy - unfold, abs, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcAbs);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcAbs);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+tit = 'Response accuracy - unfold, rel, across subs';
+[summaryA, dataA, posAx] = gatherAcrossSubjectAccuracy(statsAcRel);
+[summaryV, dataV, ~] = gatherAcrossSubjectAccuracy(statsVcRel);
+plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+
+
+%% Plot % correct heatmaps - folded and unfolded
+% This cell plots heatmaps of A and V localisation accuracy as a postion vs
+% v position. These are plotted with and without folded space.
+% There are plots of each subject and an across-subject average.
+
+close all
+% for e = 1:eN
+%     fieldName = ['s', num2str(e)];
+%     
+%     fold = true;
+%     tit = ['S', num2str(e), ...
+%         ': Response accuracy - folded'];
+%     
+%     
+%     [hmAFold.(fieldName), hmVFold.(fieldName), ax] = ...
+%         gatherPCHeatmaps(data.(fieldName), fold);
+%     
+%     plotHeatmaps(hmAFold.(fieldName), hmVFold.(fieldName), ax, tit);
+%     
+%     
+%     fold = false;
+%     tit = ['S', num2str(e), ...
+%         ': Response accuracy - not folded'];
+%     
+%     [hmA.(fieldName), hmV.(fieldName), ax] = ...
+%         gatherPCHeatmaps(data.(fieldName), fold);
+%     
+%     plotHeatmaps(hmA.(fieldName), hmV.(fieldName), ax, tit);
+%     
+% end
+
+fold = true;
+tit = 'Alldata: Response accuracy - folded';
+[hmAFoldAll, hmVFoldAll, ax] = ...
+    gatherPCHeatmaps(allData, fold);
+plotHeatmaps(hmAFoldAll, hmVFoldAll, ax, tit);
+
+fold = false;
+tit = 'AllData : Response accuracy - not folded';
+[hmAAll, hmVAll, ax] = ...
+    gatherPCHeatmaps(allData, fold);
+plotHeatmaps(hmAAll, hmVAll, ax, tit);
+
+
+%% Response deviation histograms
+% See
+% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002073
+% Fig 2
+% Plot, for A and V response in folded space:
+% AV cong as baseline
+% For each disparity, histogram of response error
+
+close all
+% rel = false;
+% binned = false;
+% 
+% pInc = [];
+% 
+% close all
+% for e = 1:eN
+%     fieldName = ['s', num2str(e)];
+%     e=12
+%     
+%     [dataA, dataV, pAx, dAx] = ...
+%         gatherDispHists(data.(fieldName), rel, binned, pInc);
+%     plotDispHists(dataA, dataV, pAx, dAx, false)
+%     
+% end
+binned = false;
+pInc = [];
+
+tit = 'Response distributions, all data, rel, normX';
+rel = true;
+normY = false;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+tit = 'Response distributions, all data, abs, normX';
+rel = false;
+normY = false;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+
+tit = 'Response distributions, all data, rel, normX, normY';
+rel = true;
+normY = true;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+tit = 'Response distributions, all data, abs, normX, normY';
+rel = false;
+normY = true;
+normX = true;
+[dataA, dataV, pAx, dAx] = ...
+    gatherDispHists(allData, rel, pInc);
+plotDispHists(dataA, dataV, pAx, dAx, normX, normY, tit)
+
+
+%% Middle pos error hists
+
+abs = false;
+folded = true;
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': '];
+    
+    % Get data (temp) is relative
+    [A, V] = gatherMidHist(data.(fieldName));
+    
+    % Plot - decide here if rel or abs with respect to response error
+    plotMidHist(A, V, tit, abs)
+end
+
+abs = false;
+tit = 'All subjects, xNorm, yNorm';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs)
+
+abs = false;
+tit = 'All subjects, xNorm';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs, true, false)
+
+abs = true;
+tit = 'All subjects, xNorm, abs';
+[A, V] = gatherMidHist(allData);
+plotMidHist(A, V, tit, abs, true, false)
 
 
 %% Plot 1
@@ -164,7 +555,7 @@ for e = 1:eN
     
     % Title for the graph:
     tit = ['S', num2str(e), ...
-        ': Absolute incongruency vs absolute response error'];
+        ': Absolute incongruence vs absolute response error'];
     % Get the data/stats for the plot:
     statsP1.(fieldName) = gatherPosPlot1(data.(fieldName), flag);
     % And plot:
@@ -184,7 +575,7 @@ for e = 1:eN
     fieldName = ['s', num2str(e)];
     % Title for the graph:
     tit = ['S', num2str(e), ...
-        ': Absolute incongruency vs relative response error'];
+        ': Absolute incongruence vs relative response error'];
     % Get the data/stats for the plot:
     statsP2.(fieldName) = gatherPosPlot1(data.(fieldName), flag);
     % And plot:
@@ -372,6 +763,7 @@ for e = 1:eN
     % Get the data/stats for the plot:
     [statsP7.(fieldName), statsP8.(fieldName)] = ...
         gatherAPCvsVL(data.(fieldName), flag);
+    
     % And plot:
     % plotCongProp(statsP4.(fieldName), tit);
     [h1, h2] = plotAPCvsPL(statsP7.(fieldName), statsP8.(fieldName), tit);
@@ -379,7 +771,7 @@ for e = 1:eN
 end
 
 % The avg plot here averages A accuracy across space, but not visual.
-% 60 deg bar is highest because this data must all come from the centre 
+% 60 deg bar is highest because this data must all come from the centre
 % auditory position. If "0" is the outper position, V can't be +60.
 % Conversly, -60 data can only come from "0" on an outer position.
 % This plot is again not useful.
@@ -592,3 +984,24 @@ end
 % Gather and plot coeffs
 % statsP10 =
 gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
+
+
+%% Is auditory response influenced by A, V, A*V locs?
+% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
+% Only including data with 15o incongruency
+
+% close all
+%
+% % On each subject
+% for e = 1:eN
+%     fieldName = ['s', num2str(e)];
+%     % Title for the graph:
+%     tit = ['S', num2str(e), ...
+%         ': GLM Fits'];
+%     % Get the data/stats for the plot:
+%     GLMStats.NonLinearResp.(fieldName) = fitGLM5(data.(fieldName));
+% end
+%
+% % Gather and plot coeffs
+% % statsP10 =
+% gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})

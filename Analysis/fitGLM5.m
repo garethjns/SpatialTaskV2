@@ -14,8 +14,8 @@ if ~isempty(allData)
         respBin = [respBin(6:-1:1); respBin(7:12)];
         % Reduce
         respBin = any(respBin);
-        % Find
-        data.AResp(r,1) = find(respBin);
+        % Find and convert to postion
+        data.AResp(r,1) = find(respBin)*15+7.5;
         
         % V
         respBin = allData.respBinAN{r}(2,:);
@@ -23,12 +23,15 @@ if ~isempty(allData)
         respBin = [respBin(6:-1:1); respBin(7:12)];
         % Reduce
         respBin = any(respBin);
-        % find
-        data.VResp(r,1) = find(respBin);
+        % Find and convert to postion
+        data.VResp(r,1) = find(respBin)*15+7.5;
     end
     
-    data.APos = abs(allData.Position(:,1));
-    data.VPos = abs(allData.Position(:,2));
+    incIdx = abs(data.AResp-data.VResp)==15;
+    data = data(incIdx,:);
+    
+    data.APos = abs(allData.Position(incIdx,1));
+    data.VPos = abs(allData.Position(incIdx,2));
     
     
     % CorAud = a + b*ALoc + c*VLoc + d*ALoc*VLoc
@@ -43,8 +46,8 @@ if ~isempty(allData)
     stats.VResp = mdl2;
     
 else
-    stats.AResp.Coefficients.Estimate = [NaN, NaN, NaN];
-    stats.AResp.Coefficients.pValue = [NaN, NaN, NaN];
-    stats.VResp.Coefficients.Estimate = [NaN, NaN, NaN];
-    stats.VResp.Coefficients.pValue = [NaN, NaN, NaN];
+    stats.AResp.Coefficients.Estimate = [NaN, NaN, NaN, NaN];
+    stats.AResp.Coefficients.pValue = [NaN, NaN, NaN, NaN];
+    stats.VResp.Coefficients.Estimate = [NaN, NaN, NaN, NaN];
+    stats.VResp.Coefficients.pValue = [NaN, NaN, NaN, NaN];
 end

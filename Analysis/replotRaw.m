@@ -1,7 +1,7 @@
 function replotRaw(data, tit)
 
 figure; hold on
-imshow('MATLABTask\Background_wg.png')
+imshow('Background_wg.png')
 hold on
 
 for t = 1:height(data)
