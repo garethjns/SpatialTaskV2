@@ -44,15 +44,40 @@ for d = 1:nDiff
    
     % A resp
     dIdxAV = AVDiffs == diffs(d);
+    % Get data subsets using dIdx and pIdx
     subsetA = allData(pIdxA & dIdxAV,:);
-    matA = cell2mat(subsetA.diffAngle);
-    dataA(1:length(matA)/2,d) = matA(1:2:end);
     
-    % V Resp
+    % Recalculate diffAngle so -means back towards midline
+    % Need to fold around position, which are in absolute space
+    % Difference between resp and response:
+    %  pos - resp      |   abs(pos) - abs(resp):
+    % -40 - -30 = -70  |  0-(abs(-40) - abs(-30)) = -10
+    % -40 - -50 = -90  |  0-(abs(-40) - abs(-50)) = 10
+    % 40 - 30 = 10     |  0-(abs(40) - abs(30)) = 10
+    % 40 - 50 = -10    |  0-(abs(40) - abs(50)) = -10
+    % So do:
+    % abs(resp) - abs(pos)
+    % Get angle responses. This is {:}[2x1].
+    % Convert to mat - appends all together
+    matA = cell2mat(subsetA.Angle);
+    % Drop the visual responses
+    matA = matA(1:2:end);
+    % And calculate the diffAngle
+    diffAngle = abs(matA) - abs(subsetA.Position(:,1));
+    % Note that this is DIFFERENT from the .diffAngle column.
+    % .diffAngle is simply pos - resp, so sign flips depending on side.
+    
+    % Add to matrix
+    dataA(1:length(diffAngle),d) = diffAngle;
+    
+    
+    % Same for visual V Resp
     dIdxVA =  VADiffs == diffs(d);
     subsetV = allData(pIdxV & dIdxVA,:);
-    matV = cell2mat(subsetV.diffAngle);
-    dataV(1:length(matV)/2,d) = matV(1:2:end);
+    matV = cell2mat(subsetV.Angle);
+    matV = matV(2:2:end);
+    diffAngle = abs(matV) - abs(subsetV.Position(:,2));
+    dataV(1:length(diffAngle),d) = diffAngle;
     
 end
 
@@ -66,13 +91,12 @@ dataV = dataV(~all(isnan(dataV),2),:);
 % pIdxAV = AVDiffs==0;
 % pIdxVGood = AVDiffs==-15;
 %
-% Get data subsets using dIdx and pIdx
+
 % subsetPoor = allData(pIdxAud & pIdxVPoor,:);
 % subsetAV = allData(pIdxAud & pIdxAV,:);
 % subsetGood = allData(pIdxAud & pIdxVGood,:);
 %
-% Extract the diff angle column. This is {:}[2x1].
-% Convert to mat - appends all together
+
 % matPoor = cell2mat(subsetPoor.diffAngle);
 % matAV = cell2mat(subsetAV.diffAngle);
 % matGood = cell2mat(subsetGood.diffAngle);

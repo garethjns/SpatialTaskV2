@@ -181,11 +181,16 @@ for e = 1:eN
         a.stimLog.VCorrect(r,1) = all(a.stimLog.respBinAN{r,1}(2,:) ...
             ==  a.stimLog.PosBinLog{r,1}(2,:));
         
-        a.stimLog.AError(r,1) = (find( a.stimLog.respBinAN{r,1}(1,:)) ...
+        a.stimLog.AError(r,1) = (find(a.stimLog.respBinAN{r,1}(1,:)) ...
             - find(a.stimLog.PosBinLog{r,1}(1,:))) * 15;
-        a.stimLog.VError(r,1) = (find( a.stimLog.respBinAN{r,1}(2,:)) ...
+        a.stimLog.VError(r,1) = (find(a.stimLog.respBinAN{r,1}(2,:)) ...
             - find(a.stimLog.PosBinLog{r,1}(2,:))) * 15;
     end
+    
+    % Also apply rate filter - temp
+    % rate = 5;
+    % rateIdx = a.stimLog.nEvents == rate;
+    % a.stimLog = a.stimLog(rateIdx,:);
     
     % Save subject data in structre and append to allData table
     data.(['s', num2str(e)]) = a.stimLog;
@@ -236,6 +241,7 @@ for e = 1:eN
         eyeIndex(data.(fieldName), osp, thresh1, thresh2);
     
     dataFilt.(fieldName) = data.(fieldName)(data.(fieldName).onSurf,:);
+    
     % Lazy
     allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
     

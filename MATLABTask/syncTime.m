@@ -1,5 +1,7 @@
 function [PTBTime, pyTime, delayTime, matTime] = ...
     syncTime(params)
+% Connect to TCP server running on EyeTracker computer and exchange time.
+% Requires PsychToolBox.
 % Input time should be string
 % Outputs are nums
 
@@ -23,15 +25,16 @@ disp('Waiting for time sync...')
 d1 = GetSecs;
 while t.BytesAvailable==0   
 end
+
 % Get pyTime in reply
-ti = fread(t,t.BytesAvailable);
+ti = fread(t, t.BytesAvailable);
 % Record the delay
 delayTime = GetSecs-d1;
 
 % Tell py to close
 % Python is now expecting 100 chars - ie. more than could have been in the
 % first buffer. Send more than enough data.
-fwrite(t, repmat('1',1,101))
+fwrite(t, repmat('1', 1, 101))
 
 % Convert to num
 pyTime = str2double(native2unicode(ti'));
