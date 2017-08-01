@@ -10,6 +10,7 @@ dirs.startTime = params.startTime;
 mParams = setParams('MOTU');
 AO = initMOTU(mParams);
 
+
 %% Cycle speakers
 
 csParams = setParams('QuickTone');
@@ -21,6 +22,7 @@ csParams.indicateLED = 1;
 plot(t, tone)
 
 outputCycleSpeakers(AO, csParams, tone);
+
 
 %% Cycle speakers - mirrored
 

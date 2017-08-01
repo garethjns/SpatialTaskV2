@@ -1,4 +1,11 @@
-function stats = fitGLM4(allData)
+function stats = fitGLM4(allData, normX, normY)
+
+if ~exist('normX', 'var')
+    normX = false;
+end
+if ~exist('normY', 'var')
+    normY = false;
+end
 
 % AResp = a+ b*ALoc + c*Vloc
 if ~isempty(allData)
@@ -27,10 +34,20 @@ if ~isempty(allData)
         data.VResp(r,1) = find(respBin)*15+7.5;
     end
     
+    % Y
     data.APos = abs(allData.Position(:,1));
     data.VPos = abs(allData.Position(:,2));
     
+    if normX
+        data.AResp = zscore(data.AResp);
+        data.VResp = zscore(data.VResp);
+    end
     
+    if normY
+        data.APos = zscore(data.APos);
+        data.VPos = zscore(data.VPos);
+    end
+
     % CorAud = a + b*ALoc + c*VLoc + d*ALoc*VLoc
     mdlSpec = 'AResp ~ APos*VPos';
     mdl1 = fitglm(data, mdlSpec, 'Distribution', 'normal');

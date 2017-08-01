@@ -24,7 +24,6 @@ set(figs.resp, 'ToolBar', 'none');
 % Ie. find on axes value of each poisitions
 % NB: Image loaded into 0 -> width, 0 -> -height space
 
-
 if params.screenCalib.do
     OK = 0;
     while ~OK
@@ -57,7 +56,7 @@ if params.screenCalib.do
     end
     
 else % No clibration
-    % Load preset values accutate to a ~1/10th of a hydrogen atom:
+    % Load preset values accurate to a ~1/10th of a hydrogen atom:
     x = [128.810442678774;155.517593643587;203.125993189557; ...
         276.280363223610;365.691259931896;460.908059023837; ...
         561.930760499432;662.953461975028;747.719636776390; ...

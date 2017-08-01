@@ -92,7 +92,7 @@ for d = 1:nDiff
     end
     
     % Get density and aixs
-    [line, x] = ksdensity(data(:,d));
+    [line, x] = ksdensity(data(:,d), 'bandwidth', 2);
     
     % Plot with selected line style
     plot(x, line, 'Color', colours(d+cShift,:), ...

@@ -111,6 +111,45 @@ for e = 1:eN
     n = height(a.stimLog);
     disp(['Loaded ', num2str(n), ' trials'])
     
+    % For all data, correct angle calculation from raw response
+    newAngles = cellfun(@calcAngle, a.stimLog.RawResponse, ...
+        'UniformOutput', false);
+    
+    % And recalc diff angle
+    da = cell2mat(a.stimLog.diffAngle);
+    pos = mat2cell(a.stimLog.Position, ones(height(a.stimLog),1), 2);
+    newDiffAngles = cellfun(@diffAngle, pos, newAngles, ...
+        'UniformOutput', false);
+    
+    % And respBinAn
+    newRespBinAn = cellfun(@calcRespBinAn, newAngles, ...
+        'UniformOutput', false);
+    
+    if 0 % Debug plots
+        avNew = cell2mat(newAngles);
+        av = cell2mat(a.stimLog.Angle);
+        
+        aNew = avNew(1:2:end);
+        vNew = avNew(2:2:end);
+        aOld = av(1:2:end);
+        vOld = av(2:2:end);
+        
+        figure
+        subplot(2,1,1)
+        ksdensity(aOld, 'bandwidth', 3)
+        hold on
+        ksdensity(aNew, 'bandwidth', 3)
+        subplot(2,1,2)
+        ksdensity(vOld, 'bandwidth', 3)
+        hold on
+        ksdensity(vNew, 'bandwidth', 3)
+    end
+    
+    % Sabe new values
+    a.stimLog.diffAngle = newDiffAngles;
+    a.stimLog.respBinAn = newRespBinAn;
+    a.stimLog.Angle = newAngles;
+
     % Process data according to version subject was run on
     % (swithces not mutually exclusive)
     % V1: S1 and S2
@@ -977,6 +1016,9 @@ gatherGLMCoeffs(GLMStats.LinearResp, {'AResp', 'VResp'})
 
 close all
 
+normX = false;
+normY = false;
+
 % On each subject
 for e = 1:eN
     fieldName = ['s', num2str(e)];
@@ -984,30 +1026,11 @@ for e = 1:eN
     tit = ['S', num2str(e), ...
         ': GLM Fits'];
     % Get the data/stats for the plot:
-    GLMStats.NonLinearResp.(fieldName) = fitGLM4(data.(fieldName));
+    GLMStats.NonLinearResp.(fieldName) = fitGLM4(data.(fieldName), ...
+        normX, normY);
 end
 
 % Gather and plot coeffs
 % statsP10 =
 gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
 
-
-%% Is auditory response influenced by A, V, A*V locs?
-% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
-% Only including data with 15o incongruency
-
-% close all
-%
-% % On each subject
-% for e = 1:eN
-%     fieldName = ['s', num2str(e)];
-%     % Title for the graph:
-%     tit = ['S', num2str(e), ...
-%         ': GLM Fits'];
-%     % Get the data/stats for the plot:
-%     GLMStats.NonLinearResp.(fieldName) = fitGLM5(data.(fieldName));
-% end
-%
-% % Gather and plot coeffs
-% % statsP10 =
-% gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
