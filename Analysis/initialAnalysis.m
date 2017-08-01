@@ -89,6 +89,9 @@ eye.(['s', num2str(s)]) = ''; s=s+1; % 14 - space issues
 eye.(['s', num2str(s)]) = ... 15
     [dPath, '15SI\07-Apr-2017 16_08_46\15SI.mat']; s=s+1;
 
+
+%% Import 
+
 eN = numel(fields(exp));
 
 allData = [];
@@ -125,7 +128,7 @@ for e = 1:eN
     newRespBinAn = cellfun(@calcRespBinAn, newAngles, ...
         'UniformOutput', false);
     
-    if 0 % Debug plots
+    if 1 % Debug plots
         avNew = cell2mat(newAngles);
         av = cell2mat(a.stimLog.Angle);
         
@@ -143,12 +146,21 @@ for e = 1:eN
         ksdensity(vOld, 'bandwidth', 3)
         hold on
         ksdensity(vNew, 'bandwidth', 3)
+        suptitle(['Subject: ', num2str(e), ' Corrected angle plot'])
     end
     
     % Sabe new values
     a.stimLog.diffAngle = newDiffAngles;
     a.stimLog.respBinAn = newRespBinAn;
     a.stimLog.Angle = newAngles;
+    
+    % TO DO: 
+    % Check respBinED 
+    % Seems to be same as respBinAn before angle correction??
+    % Check calculation in task code
+    % It's not generally used anyway
+    % But in case, for now, set to be same as respBinAn
+    a.stimLog.respBinED = newRespBinAn;
 
     % Process data according to version subject was run on
     % (swithces not mutually exclusive)
@@ -492,6 +504,56 @@ tit = 'AllData : Response accuracy - not folded';
 plotHeatmaps(hmAAll, hmVAll, ax, tit);
 
 
+%% Response histograms
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': folded response hist'];
+    
+    fold = true;
+    plotRespHist(data.(fieldName), fold, tit)
+    
+    tit = ['S', num2str(e), ...
+        ': unfolded response hist'];
+    
+    fold = false;
+    plotRespHist(data.(fieldName), fold, tit)
+end
+
+tit = 'All data: Folded response hist';
+
+fold = true;
+plotRespHist(allData, fold, tit)
+
+tit = 'All data: Unfolded response hist';
+
+fold = false;
+plotRespHist(allData, fold, tit)
+
+
+%% Binned response histograms (respBinAn)
+
+close all
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    
+    tit = ['S', num2str(e), ...
+        ': unfolded binned response hist'];
+    
+    fold = false;
+    plotBinnedRespHist(data.(fieldName), fold, tit)
+end
+
+
+tit = 'All data: Binned unfolded response hist';
+
+fold = false;
+plotBinnedRespHist(allData, fold, tit)
+
+
 %% Response deviation histograms
 % See
 % http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002073
@@ -501,21 +563,6 @@ plotHeatmaps(hmAAll, hmVAll, ax, tit);
 % For each disparity, histogram of response error
 
 close all
-% rel = false;
-% binned = false;
-% 
-% pInc = [];
-% 
-% close all
-% for e = 1:eN
-%     fieldName = ['s', num2str(e)];
-%     e=12
-%     
-%     [dataA, dataV, pAx, dAx] = ...
-%         gatherDispHists(data.(fieldName), rel, binned, pInc);
-%     plotDispHists(dataA, dataV, pAx, dAx, false)
-%     
-% end
 binned = false;
 pInc = [];
 
@@ -1033,4 +1080,39 @@ end
 % Gather and plot coeffs
 % statsP10 =
 gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
+
+
+
+%% Is auditory response influenced by A, V, A*V locs? - Limited range
+% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
+% As above, but limits data to where either position is 37.5 or -37.5 to
+% avoid edge effects?
+% And over positions where iteration is and isn't important.
+
+
+close all
+
+normX = false;
+normY = false;
+
+% On each subject
+for e = 1:eN
+    fieldName = ['s', num2str(e)];
+    % Title for the graph:
+    tit = ['S', num2str(e), ...
+        ': GLM Fits'];
+    
+    % Limit to data where either position is 37.5 or -37.5
+    subData = ...
+        data.(fieldName)(any(abs(data.(fieldName).Position)==37.5,2),:);
+    
+    % Get the data/stats for the plot:
+    GLMStats.NonLinearResp.(fieldName) = fitGLM4(subData, ...
+        normX, normY);
+end
+
+% Gather and plot coeffs
+% statsP10 =
+gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
+
 
