@@ -139,14 +139,32 @@ for e = 1:eN
         
         figure
         subplot(2,1,1)
-        ksdensity(aOld, 'bandwidth', 3)
+        [yAOld, xAOld] = ksdensity(aOld, 'bandwidth', 2);
+        plot(xAOld, yAOld)
         hold on
-        ksdensity(aNew, 'bandwidth', 3)
+        [yANew, xANew] = ksdensity(aNew, 'bandwidth', 2);
+        plot(xANew, yANew)
+        title('Auditory responses')
+        legend({'Uncorrected', 'Corrected'})
         subplot(2,1,2)
-        ksdensity(vOld, 'bandwidth', 3)
+        [yVOld, xVOld]=ksdensity(vOld, 'bandwidth', 2);
+        plot(xVOld, yVOld)
         hold on
-        ksdensity(vNew, 'bandwidth', 3)
+        [yVNew, xVNew] = ksdensity(vNew, 'bandwidth', 2);
+        plot(xVNew, yVNew)
+        title('Visual responses')
         suptitle(['Subject: ', num2str(e), ' Corrected angle plot'])
+        
+        figure
+        subplot(2,1,1)
+        plot180FFT(xAOld, yAOld)
+        hold on
+        plot180FFT(xANew, yANew, 'Auditory responses')
+        subplot(2,1,2)
+        plot180FFT(xVOld, yVOld)
+        hold on
+        plot180FFT(xVNew, yVNew, 'Visual responses')
+        suptitle(['Subject: ', num2str(e), ' Response angle regularity'])
     end
     
     % Sabe new values
@@ -1082,7 +1100,6 @@ end
 gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
 
 
-
 %% Is auditory response influenced by A, V, A*V locs? - Limited range
 % AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
 % As above, but limits data to where either position is 37.5 or -37.5 to
@@ -1090,6 +1107,8 @@ gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
 % And over positions where iteration is and isn't important.
 
 
+
+clear abs
 close all
 
 normX = false;
@@ -1102,9 +1121,18 @@ for e = 1:eN
     tit = ['S', num2str(e), ...
         ': GLM Fits'];
     
+    useIdx = any([abs(data.(fieldName).Position)==37.5, ...
+        abs(data.(fieldName).Position)==22.5, ...
+        abs(data.(fieldName).Position)==67.5], 2);
+    
+    useIdx = any([abs(data.(fieldName).Position)==37.5, ...
+        abs(data.(fieldName).Position)==22.5], 2);
+    
+    useIdx = any([abs(data.(fieldName).Position)==37.5], 2);
+    
     % Limit to data where either position is 37.5 or -37.5
     subData = ...
-        data.(fieldName)(any(abs(data.(fieldName).Position)==37.5,2),:);
+        data.(fieldName)(useIdx,:);
     
     % Get the data/stats for the plot:
     GLMStats.NonLinearResp.(fieldName) = fitGLM4(subData, ...
@@ -1114,5 +1142,4 @@ end
 % Gather and plot coeffs
 % statsP10 =
 gatherGLMCoeffs(GLMStats.NonLinearResp, {'AResp', 'VResp'})
-
 

@@ -24,6 +24,7 @@ xlabel('Auditory response error magnitude, deg')
 ylabel('Proportion')
 title('Auditory at 37.5^o')
 
+% If normX (set static axis for this subplot and below)
 if normX
     if absX
         xlim([0, 50])
@@ -40,6 +41,7 @@ hLeg = legend({'-30', '-15', '0', '15', '30'});
 hLeg.Title.String = 'Auditory disparity, deg';
 xlabel('Visual response error magnitude, deg')
 title('Visual at 37.5^o')
+% If normX (set static axis for this subplot as well)
 if normX
     if absX
         xlim([0, 50])
@@ -48,6 +50,7 @@ if normX
     end
 end
 
+% If normY (match y axis on both subplots)
 if normY
     subplot(2,1,1)
     ylim([0, yLim+yLim*.1])
@@ -55,7 +58,7 @@ if normY
     ylim([0, yLim+yLim*.1])
 end
 
-
+% Title
 if exist('tit', 'var')
     suptitle(tit);
 end
@@ -92,7 +95,7 @@ for d = 1:nDiff
     end
     
     % Get density and aixs
-    [line, x] = ksdensity(data(:,d), 'bandwidth', 2);
+    [line, x] = ksdensity(data(:,d), 'bandwidth', 1);
     
     % Plot with selected line style
     plot(x, line, 'Color', colours(d+cShift,:), ...

@@ -19,6 +19,20 @@
   <defs
      id="defs4">
     <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4941"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
        inkscape:stockid="StopL"
        orient="auto"
        refY="0.0"
@@ -331,6 +345,36 @@
          stdDeviation="1.781747"
          id="feGaussianBlur5671" />
     </filter>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4941-8"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-9-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4941-8-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -339,9 +383,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748738"
-     inkscape:cx="2621.6527"
-     inkscape:cy="1278.9944"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="6169.9055"
+     inkscape:cy="5352.3964"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -351,7 +395,8 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:measure-start="547.273,109.552"
-     inkscape:measure-end="161.73,269.701" />
+     inkscape:measure-end="161.73,269.701"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -1491,467 +1536,3202 @@
        id="rect4638-1-6"
        width="1328.2418"
        height="841.73865"
-       x="2028.2513"
-       y="-648.87549"
-       ry="2.8057957" />
+       x="3264.082"
+       y="-4601.3003"
+       ry="2.8057957"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <rect
        style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4638-1"
        width="1024"
        height="600"
-       x="2173.7432"
-       y="-535.58228"
-       ry="2" />
+       x="3409.574"
+       y="-4488.0068"
+       ry="2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <path
-       style="opacity:0.329;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5669)"
+       style="opacity:0.32900002;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5669)"
        id="path4640-5"
        sodipodi:type="arc"
-       sodipodi:cx="2685.7432"
-       sodipodi:cy="-39.268349"
+       sodipodi:cx="3921.574"
+       sodipodi:cy="-3991.6929"
        sodipodi:rx="388.74405"
        sodipodi:ry="388.74405"
        sodipodi:start="3.1415927"
        sodipodi:end="0"
-       d="m 2296.9991,-39.268367 a 388.74405,388.74405 0 0 1 388.7441,-388.744033 388.74405,388.74405 0 0 1 388.744,388.744051"
-       sodipodi:open="true" />
+       d="m 3532.8299,-3991.6929 a 388.74405,388.74405 0 0 1 388.7441,-388.744 388.74405,388.74405 0 0 1 388.744,388.744"
+       sodipodi:open="true"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5665)"
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5665)"
        id="circle4642-6"
-       cx="2327.4043"
-       cy="-187.19977"
-       r="10.259837" />
+       cx="3563.2351"
+       cy="-4139.6245"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-187.19977"
-       cx="3045.2615"
+       cy="-4139.6245"
+       cx="4281.0923"
        id="circle4644-3"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5661)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5661)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-275.14105"
-       cx="2377.793"
+       cy="-4227.5654"
+       cx="3613.6238"
        id="circle4646-3"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5657)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5657)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5653)"
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5653)"
        id="circle4648-5"
-       cx="2995.6501"
-       cy="-275.14105"
-       r="10.259837" />
+       cx="4231.481"
+       cy="-4227.5654"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-346.12769"
-       cx="2448.9575"
+       cy="-4298.5522"
+       cx="3684.7883"
        id="circle4650-4"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5649)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5649)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-397.55627"
-       cx="2538.9575"
+       cy="-4349.981"
+       cx="3774.7883"
        id="circle4652-0"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5645)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5645)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-425.41345"
-       cx="2636.1003"
+       cy="-4377.8379"
+       cx="3871.9312"
        id="circle4654-9"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5641)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5641)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-425.41345"
-       cx="2738.1873"
+       cy="-4377.8379"
+       cx="3974.0181"
        id="circle4656-4"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5637)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5637)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-397.55627"
-       cx="2836.1001"
+       cy="-4349.981"
+       cx="4071.9309"
        id="circle4658-6"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5633)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5633)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-346.12769"
-       cx="2923.2432"
+       cy="-4298.5522"
+       cx="4159.0742"
        id="circle4660-1"
-       style="opacity:0.329;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5629)" />
+       style="opacity:0.32900002;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5629)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
        r="10.259837"
-       cy="-93.255592"
-       cx="2300.6187"
+       cy="-4045.6802"
+       cx="3536.4495"
        id="circle4714-1"
-       style="opacity:0.329;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5625)" />
+       style="opacity:0.32900002;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5625)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
-       style="opacity:0.329;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5621)"
+       style="opacity:0.32900002;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5621)"
        id="circle4716-1"
-       cx="3071.5254"
-       cy="-93.255592"
-       r="10.259837" />
+       cx="4307.3564"
+       cy="-4045.6802"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-346.5036"
-       cx="2448.8621"
+       cy="-4298.9282"
+       cx="3684.6929"
        id="circle4730-6"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5617)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5617)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-275.38251"
-       cx="2377.5515"
+       cy="-4227.8071"
+       cx="3613.3823"
        id="circle4732-8"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5613)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5613)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-186.67853"
-       cx="2327.1069"
+       cy="-4139.103"
+       cx="3562.9377"
        id="circle4734-5"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5609)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5609)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-397.61096"
-       cx="2538.1658"
+       cy="-4350.0356"
+       cx="3773.9966"
        id="circle4744-6"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5605)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5605)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-425.51648"
-       cx="2635.6455"
+       cy="-4377.9409"
+       cx="3871.4763"
        id="circle4746-6"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5601)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5601)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-425.51648"
-       cx="2738.0281"
+       cy="-4377.9409"
+       cx="3973.8589"
        id="circle4768-3"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5597)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5597)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-397.43945"
-       cx="2835.6001"
+       cy="-4349.8643"
+       cx="4071.4309"
        id="circle4770-5"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5593)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5593)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-346.21948"
-       cx="2922.5288"
+       cy="-4298.644"
+       cx="4158.3599"
        id="circle4772-4"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5589)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5589)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-274.75116"
-       cx="2995.2598"
+       cy="-4227.1758"
+       cx="4231.0908"
        id="circle4774-1"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5585)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5585)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <circle
-       inkscape:export-ydpi="89.700996"
-       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="60.928268"
+       inkscape:export-xdpi="60.928268"
        r="0.59977806"
-       cy="-186.23657"
-       cx="3045.1362"
+       cy="-4138.6611"
+       cx="4280.9673"
        id="circle4776-8"
-       style="opacity:0.329;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014000000000;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5581)" />
+       style="opacity:0.32900002;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5581)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png" />
     <path
        style="fill:none;stroke:#000000;stroke-width:4.6875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#StopL)"
        d="M 2219.8102,437.74752 H 3229.3315"
        id="path4131"
        inkscape:connector-curvature="0" />
     <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4638-1-6-9"
+       width="1030.38"
+       height="606.61682"
+       x="3634.1272"
+       y="-2704.4146"
+       ry="2.0220563" />
+    <rect
        style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4638-1-1"
        width="1024"
        height="600"
-       x="406.60745"
-       y="-1158.7201"
+       x="3636.9646"
+       y="-2701.5771"
        ry="2" />
     <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4640-5-4"
        sodipodi:type="arc"
-       sodipodi:cx="918.60748"
-       sodipodi:cy="-662.40619"
+       sodipodi:cx="4148.9648"
+       sodipodi:cy="-2205.2634"
        sodipodi:rx="388.74408"
        sodipodi:ry="388.74408"
        sodipodi:start="3.1415927"
        sodipodi:end="0"
-       d="m 529.8634,-662.40621 a 388.74408,388.74408 0 0 1 388.74409,-388.74409 388.74408,388.74408 0 0 1 388.74411,388.74411"
+       d="m 3760.2208,-2205.2634 a 388.74408,388.74408 0 0 1 388.7441,-388.7441 388.74408,388.74408 0 0 1 388.744,388.7441"
        sodipodi:open="true" />
     <circle
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle4642-6-5"
-       cx="560.26862"
-       cy="-810.33765"
+       cx="3790.6257"
+       cy="-2353.1948"
        r="10.259837" />
     <circle
        r="10.259837"
-       cy="-810.33765"
-       cx="1278.1257"
+       cy="-2353.1948"
+       cx="4508.4829"
        id="circle4644-3-1"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-898.27893"
-       cx="610.65729"
+       cy="-2441.136"
+       cx="3841.0144"
        id="circle4646-3-9"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle4648-5-9"
-       cx="1228.5144"
-       cy="-898.27893"
+       cx="4458.8716"
+       cy="-2441.136"
        r="10.259837" />
     <circle
        r="10.259837"
-       cy="-969.26556"
-       cx="681.82184"
+       cy="-2512.1228"
+       cx="3912.179"
        id="circle4650-4-4"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-1020.6942"
-       cx="771.82184"
+       cy="-2563.5513"
+       cx="4002.179"
        id="circle4652-0-2"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-1048.5513"
-       cx="868.96466"
+       cy="-2591.4084"
+       cx="4099.3218"
        id="circle4654-9-4"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-1048.5513"
-       cx="971.05157"
+       cy="-2591.4084"
+       cx="4201.4087"
        id="circle4656-4-6"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-1020.6942"
-       cx="1068.9644"
+       cy="-2563.5513"
+       cx="4299.3213"
        id="circle4658-6-2"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-969.26556"
-       cx="1156.1075"
+       cy="-2512.1228"
+       cx="4386.4648"
        id="circle4660-1-3"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="10.259837"
-       cy="-716.39343"
-       cx="533.48297"
+       cy="-2259.2505"
+       cx="3763.8401"
        id="circle4714-1-2"
        style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle4716-1-3"
-       cx="1304.3896"
-       cy="-716.39343"
+       cx="4534.7466"
+       cy="-2259.2505"
        r="10.259837" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-969.64142"
-       cx="681.72638"
+       cy="-2512.4985"
+       cx="3912.0835"
        id="circle4730-6-0"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-898.52039"
-       cx="610.41583"
+       cy="-2441.3774"
+       cx="3840.7729"
        id="circle4732-8-0"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-809.81635"
-       cx="559.97125"
+       cy="-2352.6736"
+       cx="3790.3284"
        id="circle4734-5-4"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-1020.7488"
-       cx="771.03009"
+       cy="-2563.606"
+       cx="4001.3872"
        id="circle4744-6-8"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-1048.6543"
-       cx="868.50983"
+       cy="-2591.5115"
+       cx="4098.8672"
        id="circle4746-6-9"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-1048.6543"
-       cx="970.8924"
+       cy="-2591.5115"
+       cx="4201.2495"
        id="circle4768-3-5"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-1020.5773"
-       cx="1068.4644"
+       cy="-2563.4343"
+       cx="4298.8213"
        id="circle4770-5-1"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-969.35736"
-       cx="1155.3931"
+       cy="-2512.2146"
+       cx="4385.75"
        id="circle4772-4-0"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-897.88904"
-       cx="1228.1241"
+       cy="-2440.7461"
+       cx="4458.4814"
        id="circle4774-1-6"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        inkscape:export-ydpi="89.700996"
        inkscape:export-xdpi="89.700996"
        r="0.59977812"
-       cy="-809.37445"
-       cx="1278.0005"
+       cy="-2352.2317"
+       cx="4508.3574"
        id="circle4776-8-2"
        style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:65.53033447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.04782295"
-       x="2568.6311"
-       y="-571.3645"
-       id="text5675"><tspan
+       x="3804.4619"
+       y="-4523.7891"
+       id="text5675"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5673"
-         x="2568.6311"
-         y="-571.3645"
+         x="3804.4619"
+         y="-4523.7891"
          style="stroke-width:2.04782295">FIGURE</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:207.99046326px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.49970198"
-       x="2428.2231"
-       y="-147.41121"
-       id="text5675-2"><tspan
+       x="3664.054"
+       y="-4099.8359"
+       id="text5675-2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5673-1"
-         x="2428.2231"
-         y="-147.41121"
+         x="3664.054"
+         y="-4099.8359"
          style="stroke-width:6.49970198">Axes</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="2143.4385"
-       y="-548.84052"
-       id="text5697"><tspan
+       x="3368.5549"
+       y="-4493.2295"
+       id="text5697"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695"
-         x="2143.4385"
-         y="-548.84052"
+         x="3368.5549"
+         y="-4493.2295"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="2136.991"
-       y="92.888718"
-       id="text5697-9"><tspan
+       x="3372.8218"
+       y="-3859.5359"
+       id="text5697-9"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-6"
-         x="2136.991"
-         y="92.888718"
+         x="3372.8218"
+         y="-3859.5359"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,600)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="3140.3364"
-       y="96.676796"
-       id="text5697-9-0"><tspan
+       x="4327.9531"
+       y="-3861.105"
+       id="text5697-9-0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-6-6"
-         x="3140.3364"
-         y="96.676796"
+         x="4327.9531"
+         y="-3861.105"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(1024,600)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="3096.98"
-       y="-545.40143"
-       id="text5697-9-0-4"><tspan
+       x="4332.811"
+       y="-4497.8262"
+       id="text5697-9-0-4"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-6-6-9"
-         x="3096.98"
-         y="-545.40143"
+         x="4332.811"
+         y="-4497.8262"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(1024,0)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="1979.786"
-       y="-664.72571"
-       id="text5697-96"><tspan
+       x="3188.0464"
+       y="-4616.231"
+       id="text5697-96"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-4"
-         x="1979.786"
-         y="-664.72571"
+         x="3188.0464"
+         y="-4616.231"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(-50,-50)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="1964.8782"
-       y="227.36526"
-       id="text5697-96-1"><tspan
+       x="3200.7087"
+       y="-3725.0593"
+       id="text5697-96-1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-4-4"
-         x="1964.8782"
-         y="227.36526"
+         x="3200.7087"
+         y="-3725.0593"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(-50,-650)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="3269.8691"
-       y="-659.04358"
-       id="text5697-96-2"><tspan
+       x="4505.7002"
+       y="-4611.4683"
+       id="text5697-96-2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-4-9"
-         x="3269.8691"
-         y="-659.04358"
+         x="4505.7002"
+         y="-4611.4683"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(1074,-50)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-       x="3263.3242"
-       y="227.36526"
-       id="text5697-96-2-4"><tspan
+       x="4499.1553"
+       y="-3725.0593"
+       id="text5697-96-2-4"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
          sodipodi:role="line"
          id="tspan5695-4-9-3"
-         x="3263.3242"
-         y="227.36526"
+         x="4499.1553"
+         y="-3725.0593"
          style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(1074,-650)</tspan></text>
+    <g
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       transform="translate(2894.8809,-406.81313)"
+       id="g4636-0">
+      <rect
+         ry="2"
+         y="-942.35089"
+         x="933.67291"
+         height="600"
+         width="1024"
+         id="rect4638-3"
+         style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:open="true"
+         d="m 1056.9289,-446.03697 a 388.74405,388.74405 0 0 1 388.7441,-388.74404 388.74405,388.74405 0 0 1 388.744,388.74405"
+         sodipodi:end="0"
+         sodipodi:start="3.1415927"
+         sodipodi:ry="388.74405"
+         sodipodi:rx="388.74405"
+         sodipodi:cy="-446.03696"
+         sodipodi:cx="1445.673"
+         sodipodi:type="arc"
+         id="path4640-3"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="10.259837"
+         cy="-593.96838"
+         cx="1087.3341"
+         id="circle4642-3"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4644-9"
+         cx="1805.1913"
+         cy="-593.96838"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4646-7"
+         cx="1137.7228"
+         cy="-681.90967"
+         r="10.259837" />
+      <circle
+         r="10.259837"
+         cy="-681.90967"
+         cx="1755.5798"
+         id="circle4648-8"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4650-3"
+         cx="1208.8872"
+         cy="-752.8963"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4652-5"
+         cx="1298.8872"
+         cy="-804.32489"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4654-6"
+         cx="1396.0302"
+         cy="-832.18207"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4656-1"
+         cx="1498.1171"
+         cy="-832.18207"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4658-2"
+         cx="1596.0299"
+         cy="-804.32489"
+         r="10.259837" />
+      <circle
+         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4660-0"
+         cx="1683.173"
+         cy="-752.8963"
+         r="10.259837" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-9"
+         d="m 1446.3673,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1497.5686,-832.22906 -51.21,388.9782"
+         id="path4664-6"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4666-3"
+         d="m 1596.4301,-805.97663 -150.14,362.46996"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1684.9959,-754.99602 -238.8382,311.26"
+         id="path4668-8"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4670-8"
+         d="m 1757.2304,-682.76148 -311.26,238.8382"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1808.2111,-594.19566 -362.47,150.13996"
+         id="path4672-6"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4674-0"
+         d="m 1394.9376,-832.22906 51.21,388.9782"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1296.0761,-805.97663 150.14,362.46996"
+         id="path4676-4"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4678-7"
+         d="m 1207.5103,-754.99602 238.8382,311.26"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1135.2758,-682.76148 311.26,238.8382"
+         id="path4680-9"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4682-6"
+         d="m 1084.2951,-594.19566 362.47,150.13996"
+         style="fill:none;fill-rule:evenodd;stroke:#80b3ff;stroke-width:2.02893806;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.11575222, 4.05787611;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1044.1286,-593.45395 804.4773,-6e-4"
+         id="path4684-5"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4686-2"
+         d="m 1044.1286,-682.73966 804.4773,-6e-4"
+         style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1044.1286,-753.57649 804.4773,-6e-4"
+         id="path4688-1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4690-3"
+         d="m 1044.1286,-804.62254 804.4773,-6e-4"
+         style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#cccccc;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1044.1286,-832.73966 804.4773,-6e-4"
+         id="path4692-2"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1086.3673,-884.73884 v 441.62039"
+         id="path4694-6"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4696-7"
+         d="m 1136.3673,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1208.8673,-884.73884 v 441.62039"
+         id="path4698-7"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4700-5"
+         d="m 1298.5102,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1395.4848,-884.73884 v 441.62039"
+         id="path4702-6"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4704-1"
+         d="m 1498.0153,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1596.0001,-884.73884 v 441.62039"
+         id="path4706-0"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4708-8"
+         d="m 1682.8732,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1755.6042,-884.73884 v 441.62039"
+         id="path4710-3"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4712-7"
+         d="m 1805.1017,-884.73884 v 441.62039"
+         style="fill:none;fill-rule:evenodd;stroke:#5fd3bc;stroke-width:2.15260816;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8.61043297, 4.30521649;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4714-0"
+         cx="1060.5483"
+         cy="-500.0242"
+         r="10.259837" />
+      <circle
+         r="10.259837"
+         cy="-500.0242"
+         cx="1831.4552"
+         id="circle4716-9"
+         style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       id="text4718-3"
+       y="-1012.7521"
+       x="3916.5105"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px"
+         y="-1012.7521"
+         x="3916.5105"
+         id="tspan4720-7"
+         sodipodi:role="line">153 x 251</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="3968.0283"
+       y="-1101.1405"
+       id="text4722-6"><tspan
+         sodipodi:role="line"
+         id="tspan4724-6"
+         x="3968.0283"
+         y="-1101.1405"
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px">204 x 339</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       id="text4726-4"
+       y="-1172.8615"
+       x="4040.2542"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px"
+         y="-1172.8615"
+         x="4040.2542"
+         id="tspan4728-1"
+         sodipodi:role="line">276 x 411</tspan></text>
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1160.0853"
+       cx="4103.6729"
+       id="circle4730-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1088.964"
+       cx="4032.3621"
+       id="circle4732-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1000.2601"
+       cx="3981.9175"
+       id="circle4734-0"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4128.1377"
+       y="-1220.8436"
+       id="text4736-2"><tspan
+         sodipodi:role="line"
+         id="tspan4738-5"
+         x="4128.1377"
+         y="-1220.8436"
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px">365 x 462</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       id="text4740-2"
+       y="-1249.6761"
+       x="4227.2197"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px"
+         y="-1249.6761"
+         x="4227.2197"
+         id="tspan4742-6"
+         sodipodi:role="line">462 x 490</tspan></text>
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1211.1925"
+       cx="4192.9766"
+       id="circle4744-0"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1239.098"
+       cx="4290.4565"
+       id="circle4746-4"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4404.7197"
+       y="-1249.6761"
+       id="text4748-7"><tspan
+         sodipodi:role="line"
+         id="tspan4750-7"
+         x="4404.7197"
+         y="-1249.6761"
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px">565 x 490</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       id="text4752-3"
+       y="-1218.2477"
+       x="4501.8628"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px"
+         y="-1218.2477"
+         x="4501.8628"
+         id="tspan4754-8"
+         sodipodi:role="line">662 x 462</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4586.5059"
+       y="-1168.2477"
+       id="text4756-9"><tspan
+         sodipodi:role="line"
+         id="tspan4758-7"
+         x="4586.5059"
+         y="-1168.2477"
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px">749 x 411</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       id="text4760-7"
+       y="-1095.7477"
+       x="4663.2915"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px"
+         y="-1095.7477"
+         x="4663.2915"
+         id="tspan4762-8"
+         sodipodi:role="line">822 x 339</tspan></text>
+    <text
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4711.1484"
+       y="-1010.0333"
+       id="text4764-5"><tspan
+         sodipodi:role="line"
+         id="tspan4766-7"
+         x="4711.1484"
+         y="-1010.0333"
+         style="font-weight:bold;font-size:10px;line-height:1.25;stroke-width:1px">872 x 251</tspan></text>
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1239.098"
+       cx="4392.8394"
+       id="circle4768-9"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1211.0211"
+       cx="4490.4116"
+       id="circle4770-6"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1159.8011"
+       cx="4577.3398"
+       id="circle4772-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-1088.3326"
+       cx="4650.0708"
+       id="circle4774-10"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977806"
+       cy="-999.81824"
+       cx="4699.9473"
+       id="circle4776-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000027, 4.00000014;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="4298.4565"
+       y="-826.75891"
+       id="text5697-90"><tspan
+         sodipodi:role="line"
+         id="tspan5695-3"
+         x="4298.4565"
+         y="-826.75891"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="3602.5154"
+       y="-4298.4614"
+       id="text5697-963"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\1.png"
+       inkscape:export-xdpi="60.928268"
+       inkscape:export-ydpi="60.928268"><tspan
+         sodipodi:role="line"
+         id="tspan5695-31"
+         x="3602.5154"
+         y="-4298.4614"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(275,189)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="2708.0024"
+       y="-3172.4294"
+       id="text5697-963-5"><tspan
+         sodipodi:role="line"
+         id="tspan5695-31-7"
+         x="2708.0024"
+         y="-3172.4294"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(275,189)</tspan></text>
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4638-1-1-1"
+       width="1024"
+       height="600"
+       x="6072.8916"
+       y="-1608.2025"
+       ry="2" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4640-5-4-0"
+       sodipodi:type="arc"
+       sodipodi:cx="6585.8389"
+       sodipodi:cy="-1111.8885"
+       sodipodi:rx="388.74411"
+       sodipodi:ry="388.74411"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       d="m 6197.0948,-1111.8886 a 388.74411,388.74411 0 0 1 388.7441,-388.7441 388.74411,388.74411 0 0 1 388.7441,388.7442"
+       sodipodi:open="true" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4642-6-5-0"
+       cx="6227.5"
+       cy="-1259.8202"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-1259.8202"
+       cx="6945.3574"
+       id="circle4644-3-1-5"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1347.7614"
+       cx="6277.8887"
+       id="circle4646-3-9-2"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4648-5-9-8"
+       cx="6895.7461"
+       cy="-1347.7614"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-1418.7479"
+       cx="6349.0532"
+       id="circle4650-4-4-7"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1470.1766"
+       cx="6439.0532"
+       id="circle4652-0-2-9"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1498.0338"
+       cx="6536.1963"
+       id="circle4654-9-4-3"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1498.0338"
+       cx="6638.2832"
+       id="circle4656-4-6-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1470.1766"
+       cx="6736.1958"
+       id="circle4658-6-2-5"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1418.7479"
+       cx="6823.3389"
+       id="circle4660-1-3-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-1165.8759"
+       cx="6200.7144"
+       id="circle4714-1-2-0"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4716-1-3-9"
+       cx="6971.6211"
+       cy="-1165.8759"
+       r="10.259837" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1419.1239"
+       cx="6348.958"
+       id="circle4730-6-0-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1348.0028"
+       cx="6277.6475"
+       id="circle4732-8-0-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1259.2987"
+       cx="6227.2026"
+       id="circle4734-5-4-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1470.2313"
+       cx="6438.2617"
+       id="circle4744-6-8-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1498.1368"
+       cx="6535.7412"
+       id="circle4746-6-9-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1498.1368"
+       cx="6638.124"
+       id="circle4768-3-5-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1470.0597"
+       cx="6735.6958"
+       id="circle4770-5-1-9"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1418.8397"
+       cx="6822.6245"
+       id="circle4772-4-0-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1347.3715"
+       cx="6895.3555"
+       id="circle4774-1-6-1"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-1258.8568"
+       cx="6945.2319"
+       id="circle4776-8-2-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6552.2646"
+       y="-1077.2743"
+       id="text5697-90-5"><tspan
+         sodipodi:role="line"
+         id="tspan5695-3-8"
+         x="6552.2646"
+         y="-1077.2743"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.47398376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.94796764, 2.47398383;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6582.0506,-1496.6589 v 385.4362"
+       id="path6196"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.90065026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.80130072, 2.90065036;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6189.9852,-1106.4876 h 394.9065"
+       id="path6198"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500001, 2.81250001;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6350.2232,-1417.9502 234.6685,311.4626"
+       id="path6215"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.6250002, 2.8125001;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6584.8917,-1106.4876 234.6685,-311.4626"
+       id="path6215-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.90065026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.80130091, 2.90065046;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6584.8917,-1106.4876 h 394.9066"
+       id="path6198-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-miterlimit:4;stroke-dasharray:5.62500001, 2.81250001;stroke-dashoffset:0"
+       id="path6249-0"
+       sodipodi:type="arc"
+       sodipodi:cx="1174.3317"
+       sodipodi:cy="6572.3545"
+       sodipodi:rx="107.88764"
+       sodipodi:ry="107.88764"
+       sodipodi:start="0"
+       sodipodi:end="0.65449847"
+       d="m 1282.2193,6572.3545 a 107.88764,107.88764 0 0 1 -22.2946,65.6778 l -85.593,-65.6778 z"
+       transform="rotate(-89.438228)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6479.0718"
+       y="-1256.2413"
+       id="text6268"><tspan
+         sodipodi:role="line"
+         id="tspan6266"
+         x="6479.0718"
+         y="-1256.2413"
+         style="stroke-width:0.9375">-37.5<tspan
+   style="font-size:60.9375%;baseline-shift:super"
+   id="tspan6316">o</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6272.5449"
+       y="-1439.3788"
+       id="text6272"><tspan
+         sodipodi:role="line"
+         id="tspan6270"
+         x="6272.5449"
+         y="-1439.3788"
+         style="stroke-width:0.9375">-37.5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6836.3843"
+       y="-1428.6647"
+       id="text6276"><tspan
+         sodipodi:role="line"
+         id="tspan6274"
+         x="6836.3843"
+         y="-1428.6647"
+         style="stroke-width:0.9375">37.5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6603.252"
+       y="-1255.0355"
+       id="text6268-7"><tspan
+         sodipodi:role="line"
+         id="tspan6266-0"
+         x="6603.252"
+         y="-1255.0355"
+         style="stroke-width:0.9375">37.5<tspan
+   style="font-size:60.9375%;baseline-shift:super"
+   id="tspan6318">o</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6565.7246"
+       y="-1519.5446"
+       id="text6268-73"><tspan
+         sodipodi:role="line"
+         id="tspan6266-1"
+         x="6565.7246"
+         y="-1519.5446"
+         style="stroke-width:0.9375">0<tspan
+   style="font-size:60.9375%;baseline-shift:super"
+   id="tspan6314">o</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="3587.759"
+       y="-2714.7053"
+       id="text5697-6"><tspan
+         sodipodi:role="line"
+         id="tspan5695-9"
+         x="3587.759"
+         y="-2714.7053"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <rect
+       ry="2.0220563"
+       y="-2704.4146"
+       x="5428.77"
+       height="606.61682"
+       width="1030.38"
+       id="rect6353"
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       ry="2"
+       y="-2701.5771"
+       x="5431.6074"
+       height="600"
+       width="1024"
+       id="rect6355"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       sodipodi:open="true"
+       d="m 5554.8638,-2205.2634 a 388.74408,388.74408 0 0 1 388.7441,-388.7441 388.74408,388.74408 0 0 1 388.7441,388.7441"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="388.74408"
+       sodipodi:rx="388.74408"
+       sodipodi:cy="-2205.2634"
+       sodipodi:cx="5943.6079"
+       sodipodi:type="arc"
+       id="path6357"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2353.1948"
+       cx="5585.2686"
+       id="circle6359"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6361"
+       cx="6303.126"
+       cy="-2353.1948"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6363"
+       cx="5635.6572"
+       cy="-2441.136"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2441.136"
+       cx="6253.5146"
+       id="circle6365"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6367"
+       cx="5706.8218"
+       cy="-2512.1228"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6369"
+       cx="5796.8218"
+       cy="-2563.5513"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6371"
+       cx="5893.9648"
+       cy="-2591.4084"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6373"
+       cx="5996.0518"
+       cy="-2591.4084"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6375"
+       cx="6093.9644"
+       cy="-2563.5513"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6377"
+       cx="6181.1079"
+       cy="-2512.1228"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6379"
+       cx="5558.4829"
+       cy="-2259.2505"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2259.2505"
+       cx="6329.3896"
+       id="circle6381"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6383"
+       cx="5706.7266"
+       cy="-2512.4985"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6385"
+       cx="5635.416"
+       cy="-2441.3774"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6387"
+       cx="5584.9712"
+       cy="-2352.6736"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6389"
+       cx="5796.0303"
+       cy="-2563.606"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6391"
+       cx="5893.5103"
+       cy="-2591.5115"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6393"
+       cx="5995.8926"
+       cy="-2591.5115"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6395"
+       cx="6093.4644"
+       cy="-2563.4343"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6397"
+       cx="6180.3931"
+       cy="-2512.2146"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6399"
+       cx="6253.1245"
+       cy="-2440.7461"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000054, 4.00000028;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6401"
+       cx="6303.0005"
+       cy="-2352.2317"
+       r="0.59977812"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       id="text6405"
+       y="-2065.1519"
+       x="5344.9019"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375"
+         y="-2065.1519"
+         x="5344.9019"
+         id="tspan6403"
+         sodipodi:role="line">(0,0)</tspan></text>
+    <rect
+       ry="2.0220563"
+       y="-2698.3538"
+       x="6965.8975"
+       height="606.61688"
+       width="1030.38"
+       id="rect6353-0"
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       ry="2"
+       y="-2695.5164"
+       x="6968.7349"
+       height="600"
+       width="1024"
+       id="rect6355-0"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       sodipodi:open="true"
+       d="m 7091.9912,-2199.2027 a 388.74411,388.74411 0 0 1 388.7442,-388.744 388.74411,388.74411 0 0 1 388.7441,388.7441"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="388.74411"
+       sodipodi:rx="388.74411"
+       sodipodi:cy="-2199.2026"
+       sodipodi:cx="7480.7354"
+       sodipodi:type="arc"
+       id="path6357-0"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2347.134"
+       cx="7122.396"
+       id="circle6359-9"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6361-7"
+       cx="7840.2534"
+       cy="-2347.134"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6363-7"
+       cx="7172.7847"
+       cy="-2435.0752"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2435.0752"
+       cx="7790.6421"
+       id="circle6365-9"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6367-2"
+       cx="7243.9492"
+       cy="-2506.062"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6369-4"
+       cx="7333.9492"
+       cy="-2557.4905"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6371-9"
+       cx="7431.0923"
+       cy="-2585.3477"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6373-2"
+       cx="7533.1792"
+       cy="-2585.3477"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6375-9"
+       cx="7631.0918"
+       cy="-2557.4905"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6377-7"
+       cx="7718.2354"
+       cy="-2506.062"
+       r="10.259837" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6379-2"
+       cx="7095.6104"
+       cy="-2253.1897"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2253.1897"
+       cx="7866.5171"
+       id="circle6381-4"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6383-4"
+       cx="7243.854"
+       cy="-2506.4377"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6385-8"
+       cx="7172.5435"
+       cy="-2435.3167"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6387-8"
+       cx="7122.0986"
+       cy="-2346.6128"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6389-9"
+       cx="7333.1577"
+       cy="-2557.5452"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6391-8"
+       cx="7430.6377"
+       cy="-2585.4507"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6393-3"
+       cx="7533.02"
+       cy="-2585.4507"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6395-1"
+       cx="7630.5918"
+       cy="-2557.3735"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6397-9"
+       cx="7717.5205"
+       cy="-2506.1538"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6399-9"
+       cx="7790.252"
+       cy="-2434.6853"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6401-2"
+       cx="7840.1279"
+       cy="-2346.1709"
+       r="0.59977818"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       id="text6405-5"
+       y="-2172.5312"
+       x="7437.5762"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375"
+         y="-2172.5312"
+         x="7437.5762"
+         id="tspan6403-2"
+         sodipodi:role="line">(0,0)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.47398376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.9479678, 2.47398392;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 7483.2864,-2587.8768 v 385.4362"
+       id="path6196-9"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7466.9604"
+       y="-2610.7627"
+       id="text6268-73-0"><tspan
+         sodipodi:role="line"
+         id="tspan6266-1-2"
+         x="7466.9604"
+         y="-2610.7627"
+         style="stroke-width:0.9375">0<tspan
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375"
+   id="tspan6314-3">o</tspan></tspan></text>
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6524"
+       width="1030.38"
+       height="606.61688"
+       x="8412.9414"
+       y="-2698.3538"
+       ry="2.0220563" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6526"
+       width="1024"
+       height="600"
+       x="8415.7783"
+       y="-2695.5164"
+       ry="2" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path6528"
+       sodipodi:type="arc"
+       sodipodi:cx="8927.7793"
+       sodipodi:cy="-2199.2026"
+       sodipodi:rx="388.74411"
+       sodipodi:ry="388.74411"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       d="m 8539.0352,-2199.2027 a 388.74411,388.74411 0 0 1 388.7441,-388.744 388.74411,388.74411 0 0 1 388.7441,388.7441"
+       sodipodi:open="true" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6530"
+       cx="8569.4395"
+       cy="-2347.134"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2347.134"
+       cx="9287.2969"
+       id="circle6532"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2435.0752"
+       cx="8619.8281"
+       id="circle6534"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6536"
+       cx="9237.6855"
+       cy="-2435.0752"
+       r="10.259837" />
+    <circle
+       r="10.259837"
+       cy="-2506.062"
+       cx="8690.9932"
+       id="circle6538"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2557.4905"
+       cx="8780.9932"
+       id="circle6540"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2585.3477"
+       cx="8878.1357"
+       id="circle6542"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2585.3477"
+       cx="8980.2227"
+       id="circle6544"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2557.4905"
+       cx="9078.1357"
+       id="circle6546"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2506.062"
+       cx="9165.2793"
+       id="circle6548"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       r="10.259837"
+       cy="-2253.1897"
+       cx="8542.6543"
+       id="circle6550"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6552"
+       cx="9313.5605"
+       cy="-2253.1897"
+       r="10.259837" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2506.4377"
+       cx="8690.8975"
+       id="circle6554"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2435.3167"
+       cx="8619.5869"
+       id="circle6556"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2346.6128"
+       cx="8569.1426"
+       id="circle6558"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2557.5452"
+       cx="8780.2012"
+       id="circle6560"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2585.4507"
+       cx="8877.6816"
+       id="circle6562"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2585.4507"
+       cx="8980.0635"
+       id="circle6564"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2557.3735"
+       cx="9077.6357"
+       id="circle6566"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2506.1538"
+       cx="9164.5645"
+       id="circle6568"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2434.6853"
+       cx="9237.2959"
+       id="circle6570"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-2346.1709"
+       cx="9287.1719"
+       id="circle6572"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="8884.6201"
+       y="-2062.6772"
+       id="text6576"><tspan
+         sodipodi:role="line"
+         id="tspan6574"
+         x="8884.6201"
+         y="-2062.6772"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path6578"
+       d="m 8930.3299,-2587.8768 v 487.7141"
+       style="fill:none;stroke:#000000;stroke-width:2.78293633;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.56587297, 2.78293651;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text6584"
+       y="-2610.7627"
+       x="8914.0039"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.9375"
+         y="-2610.7627"
+         x="8914.0039"
+         id="tspan6582"
+         sodipodi:role="line">0<tspan
+   id="tspan6580"
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375">o</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500037, 2.81250019;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 8931.4217,-2098.8546 232.7768,-405.2949"
+       id="path6215-8-8"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6601"
+       d="m 8932.1791,-2096.9606 -232.7768,-405.2949"
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500037, 2.81250019;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-miterlimit:4;stroke-dasharray:5.62500016, 2.81250009;stroke-dashoffset:0"
+       id="path6249-0-2"
+       sodipodi:type="arc"
+       sodipodi:cx="2188.6404"
+       sodipodi:cy="8910.3828"
+       sodipodi:rx="134.71318"
+       sodipodi:ry="135.39645"
+       sodipodi:start="0"
+       sodipodi:end="0.50614548"
+       d="m 2323.3536,8910.3828 a 134.71318,135.39645 0 0 1 -16.8904,65.6415 l -117.8228,-65.6415 z"
+       transform="matrix(0.00985435,-0.99995144,0.99995242,0.00975513,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="8950.4082"
+       y="-2253.6931"
+       id="text6268-7-4"><tspan
+         sodipodi:role="line"
+         id="tspan6266-0-8"
+         x="8950.4082"
+         y="-2253.6931"
+         style="stroke-width:0.9375">29<tspan
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375"
+   id="tspan6318-5">o</tspan></tspan></text>
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6526-2-8"
+       width="1024"
+       height="600"
+       x="9649.5039"
+       y="-4444.8726"
+       ry="2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <g
+       id="g6716"
+       transform="translate(1249.1271,-2691.8487)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996">
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500037, 2.81250019;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 8931.4217,-1205.8166 232.7768,-405.2949"
+         id="path6648"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6650"
+         d="m 8932.1791,-1203.9226 -232.7768,-405.2949"
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500037, 2.81250019;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500042, 2.81250022;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 8932.0211,-1204.0079 -357.4668,-250.7604"
+         id="path6652"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500029, 2.81250015;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 8932.408,-1203.8786 -52.3542,-484.9323"
+         id="path6654"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6656"
+         d="m 8935.0487,-1203.8762 43.6947,-488.7252"
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500029, 2.81250015;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500025, 2.81250012;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 8941.659,-1204.284 347.7236,-251.155"
+         id="path6658"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.47398376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.9479678, 2.47398392;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 10177.16,-4381.1153 v 385.4362"
+       id="path6196-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.6250002, 2.8125001;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 9945.3324,-4302.4066 234.6686,311.4626"
+       id="path6215-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500039, 2.81250019;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 10180.001,-3990.944 234.668,-311.4626"
+       id="path6215-8-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6669-4"
+       d="m 9827.0295,-4143.2418 352.8965,152.232"
+       style="fill:none;stroke:#000000;stroke-width:2.81249976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.6250001, 2.81250006;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.81249976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500013, 2.81250007;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 10129.378,-4384.0325 50.298,392.3238"
+       id="path6671-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6673-1"
+       d="m 10229.864,-4380.2413 -47.449,388.5295"
+       style="fill:none;stroke:#000000;stroke-width:2.81249976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500014, 2.81250008;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.81249976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500016, 2.81250009;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 10531.971,-4144.2409 -343.882,152.3362"
+       id="path6675-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\6.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4638-1-6-9-2"
+       width="1030.38"
+       height="606.61688"
+       x="5232.8618"
+       y="-4479.5513"
+       ry="2.0220563"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4638-1-1-10"
+       width="1024"
+       height="600"
+       x="5235.6992"
+       y="-4476.7139"
+       ry="2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4640-5-4-9"
+       sodipodi:type="arc"
+       sodipodi:cx="5747.6997"
+       sodipodi:cy="-3980.4004"
+       sodipodi:rx="388.74411"
+       sodipodi:ry="388.74411"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       d="m 5358.9556,-3980.4004 a 388.74411,388.74411 0 0 1 388.7441,-388.7441 388.74411,388.74411 0 0 1 388.7441,388.7441"
+       sodipodi:open="true"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4642-6-5-05"
+       cx="5389.3604"
+       cy="-4128.3315"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4128.3315"
+       cx="6107.2178"
+       id="circle4644-3-1-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4216.2729"
+       cx="5439.749"
+       id="circle4646-3-9-0"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4648-5-9-7"
+       cx="6057.6064"
+       cy="-4216.2729"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4287.2598"
+       cx="5510.9136"
+       id="circle4650-4-4-3"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4338.688"
+       cx="5600.9136"
+       id="circle4652-0-2-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4366.5454"
+       cx="5698.0566"
+       id="circle4654-9-4-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4366.5454"
+       cx="5800.1436"
+       id="circle4656-4-6-9"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4338.688"
+       cx="5898.0562"
+       id="circle4658-6-2-7"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4287.2598"
+       cx="5985.1997"
+       id="circle4660-1-3-7"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4034.3875"
+       cx="5362.5747"
+       id="circle4714-1-2-8"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4716-1-3-4"
+       cx="6133.4814"
+       cy="-4034.3875"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4287.6353"
+       cx="5510.8184"
+       id="circle4730-6-0-6"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4216.5142"
+       cx="5439.5078"
+       id="circle4732-8-0-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4127.8105"
+       cx="5389.063"
+       id="circle4734-5-4-7"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4338.7427"
+       cx="5600.1221"
+       id="circle4744-6-8-6"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4366.6484"
+       cx="5697.6021"
+       id="circle4746-6-9-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4366.6484"
+       cx="5799.9844"
+       id="circle4768-3-5-6"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4338.5713"
+       cx="5897.5562"
+       id="circle4770-5-1-0"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4287.3516"
+       cx="5984.4849"
+       id="circle4772-4-0-7"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4215.8828"
+       cx="6057.2163"
+       id="circle4774-1-6-9"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4127.3687"
+       cx="6107.0923"
+       id="circle4776-8-2-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000081, 4.00000042;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5186.4937"
+       y="-4489.8423"
+       id="text5697-6-3"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan5695-9-6"
+         x="5186.4937"
+         y="-4489.8423"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 5231.9196,-4454.7871 v 544.0125"
+       id="path6817"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5178.8306"
+       y="-3857.116"
+       id="text5697-6-3-3"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan5695-9-6-4"
+         x="5178.8306"
+         y="-3857.116"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-9)"
+       d="m 5234.9384,-3881.2933 448.7649,3.5956"
+       id="path6817-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5709.1875"
+       y="-3996.4016"
+       id="text5697-6-3-3-8"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan5695-9-6-4-7"
+         x="5709.1875"
+         y="-3996.4016"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5049.1074"
+       y="-4488.2627"
+       id="text7342"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan7340"
+         x="5049.1074"
+         y="-4488.2627"
+         style="stroke-width:0.9375;font-weight:bold">ginput</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="4952.6787"
+       y="-3857.4592"
+       id="text7346"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan7344"
+         x="4952.6787"
+         y="-3857.4592"
+         style="stroke-width:0.9375;font-weight:bold">image origin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5836.6069"
+       y="-3998.0842"
+       id="text7350"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan7348"
+         x="5836.6069"
+         y="-3998.0842"
+         style="stroke-width:0.9375;font-weight:bold">circle centre</tspan></text>
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4638-1-1-1-4"
+       width="1024"
+       height="600"
+       x="6714.7856"
+       y="-4454.7808"
+       ry="2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4640-5-4-0-8"
+       sodipodi:type="arc"
+       sodipodi:cx="7227.7329"
+       sodipodi:cy="-3958.4666"
+       sodipodi:rx="388.74414"
+       sodipodi:ry="388.74414"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       d="m 6838.9888,-3958.4666 a 388.74414,388.74414 0 0 1 388.7441,-388.7441 388.74414,388.74414 0 0 1 388.7442,388.7441"
+       sodipodi:open="true"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4642-6-5-0-7"
+       cx="6869.394"
+       cy="-4106.3984"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4106.3984"
+       cx="7587.2515"
+       id="circle4644-3-1-5-4"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4194.3394"
+       cx="6919.7827"
+       id="circle4646-3-9-2-5"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4648-5-9-8-2"
+       cx="7537.6401"
+       cy="-4194.3394"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4265.3262"
+       cx="6990.9473"
+       id="circle4650-4-4-7-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4316.7549"
+       cx="7080.9473"
+       id="circle4652-0-2-9-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4344.6118"
+       cx="7178.0903"
+       id="circle4654-9-4-3-7"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4344.6118"
+       cx="7280.1772"
+       id="circle4656-4-6-6-0"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4316.7549"
+       cx="7378.0898"
+       id="circle4658-6-2-5-2"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4265.3262"
+       cx="7465.2329"
+       id="circle4660-1-3-6-0"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4012.4539"
+       cx="6842.6084"
+       id="circle4714-1-2-0-1"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4716-1-3-9-7"
+       cx="7613.5151"
+       cy="-4012.4539"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4265.7021"
+       cx="6990.8521"
+       id="circle4730-6-0-8-4"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4194.5811"
+       cx="6919.5415"
+       id="circle4732-8-0-3-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4105.877"
+       cx="6869.0967"
+       id="circle4734-5-4-5-4"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4316.8096"
+       cx="7080.1558"
+       id="circle4744-6-8-8-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4344.7148"
+       cx="7177.6353"
+       id="circle4746-6-9-8-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4344.7148"
+       cx="7280.0181"
+       id="circle4768-3-5-8-6"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4316.6377"
+       cx="7377.5898"
+       id="circle4770-5-1-9-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4265.418"
+       cx="7464.5186"
+       id="circle4772-4-0-2-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4193.9497"
+       cx="7537.2495"
+       id="circle4774-1-6-1-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4105.4351"
+       cx="7587.126"
+       id="circle4776-8-2-8-4"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7194.1587"
+       y="-3923.8523"
+       id="text5697-90-5-7"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan5695-3-8-9"
+         x="7194.1587"
+         y="-3923.8523"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.47398376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.9479678, 2.47398392;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 7223.9447,-4343.237 v 385.4362"
+       id="path6196-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.90065026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.80130091, 2.90065046;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6831.8793,-3953.0657 h 394.9065"
+       id="path6198-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.6250002, 2.8125001;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 6992.1173,-4264.5283 234.6685,311.4626"
+       id="path6215-85"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.90065026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.80130111, 2.90065055;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 7226.7858,-3953.0657 h 394.9066"
+       id="path6198-8-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-miterlimit:4;stroke-dasharray:5.62500004, 2.81250003;stroke-dashoffset:0"
+       id="path6249-0-5"
+       sodipodi:type="arc"
+       sodipodi:cx="3892.9868"
+       sodipodi:cy="-7260.9263"
+       sodipodi:rx="107.88763"
+       sodipodi:ry="107.88763"
+       sodipodi:start="0"
+       sodipodi:end="0.65449847"
+       d="m 4000.8744,-7260.9263 a 107.88763,107.88763 0 0 1 -22.2946,65.6779 l -85.593,-65.6779 z"
+       transform="matrix(-0.00980461,-0.99995193,-0.99995193,0.00980461,0,0)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7120.9658"
+       y="-4102.8193"
+       id="text6268-9"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6266-19"
+         x="7120.9658"
+         y="-4102.8193"
+         style="stroke-width:0.9375">-37.5<tspan
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375"
+   id="tspan6316-5">o</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="6914.439"
+       y="-4285.957"
+       id="text6272-3"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6270-3"
+         x="6914.439"
+         y="-4285.957"
+         style="stroke-width:0.9375">-37.5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7478.2783"
+       y="-4275.2427"
+       id="text6276-5"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6274-1"
+         x="7478.2783"
+         y="-4275.2427"
+         style="stroke-width:0.9375">37.5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7207.6187"
+       y="-4366.1226"
+       id="text6268-73-1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6266-1-1"
+         x="7207.6187"
+         y="-4366.1226"
+         style="stroke-width:0.9375">0<tspan
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375"
+   id="tspan6314-7">o</tspan></tspan></text>
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:2.01725268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6524-7"
+       width="1030.38"
+       height="606.61694"
+       x="8066.9526"
+       y="-4453.7036"
+       ry="2.0220563"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6526-2"
+       width="1024"
+       height="600"
+       x="8069.7896"
+       y="-4450.8662"
+       ry="2"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.76784992;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path6528-0"
+       sodipodi:type="arc"
+       sodipodi:cx="8581.791"
+       sodipodi:cy="-3954.5525"
+       sodipodi:rx="388.74414"
+       sodipodi:ry="388.74414"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       d="m 8193.0469,-3954.5525 a 388.74414,388.74414 0 0 1 388.7441,-388.7441 388.74414,388.74414 0 0 1 388.7442,388.7441"
+       sodipodi:open="true"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6530-8"
+       cx="8223.4512"
+       cy="-4102.4839"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4102.4839"
+       cx="8941.3086"
+       id="circle6532-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4190.4253"
+       cx="8273.8398"
+       id="circle6534-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6536-0"
+       cx="8891.6973"
+       cy="-4190.4253"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4261.4121"
+       cx="8345.0049"
+       id="circle6538-2"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4312.8403"
+       cx="8435.0049"
+       id="circle6540-4"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4340.6978"
+       cx="8532.1475"
+       id="circle6542-6"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4340.6978"
+       cx="8634.2344"
+       id="circle6544-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4312.8403"
+       cx="8732.1475"
+       id="circle6546-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4261.4121"
+       cx="8819.291"
+       id="circle6548-1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       r="10.259837"
+       cy="-4008.5393"
+       cx="8196.666"
+       id="circle6550-9"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle6552-3"
+       cx="8967.5723"
+       cy="-4008.5393"
+       r="10.259837"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4261.7876"
+       cx="8344.9092"
+       id="circle6554-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4190.6665"
+       cx="8273.5986"
+       id="circle6556-1"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4101.9624"
+       cx="8223.1543"
+       id="circle6558-3"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4312.895"
+       cx="8434.2129"
+       id="circle6560-8"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4340.8008"
+       cx="8531.6934"
+       id="circle6562-5"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4340.8008"
+       cx="8634.0752"
+       id="circle6564-7"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4312.7236"
+       cx="8731.6475"
+       id="circle6566-4"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4261.5039"
+       cx="8818.5762"
+       id="circle6568-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4190.0352"
+       cx="8891.3076"
+       id="circle6570-9"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <circle
+       inkscape:export-ydpi="89.700996"
+       inkscape:export-xdpi="89.700996"
+       r="0.59977818"
+       cy="-4101.5205"
+       cx="8941.1836"
+       id="circle6572-2"
+       style="opacity:1;fill:#d42aff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:8.00000108, 4.00000056;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="8538.6318"
+       y="-3818.0269"
+       id="text6576-3"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6574-6"
+         x="8538.6318"
+         y="-3818.0269"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path6578-8"
+       d="m 8584.3413,-4343.2267 v 487.7141"
+       style="fill:none;stroke:#000000;stroke-width:2.78293657;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.56587316, 2.7829366;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       id="text6584-2"
+       y="-4366.1128"
+       x="8568.0156"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       xml:space="preserve"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         style="stroke-width:0.9375"
+         y="-4366.1128"
+         x="8568.0156"
+         id="tspan6582-3"
+         sodipodi:role="line">0<tspan
+   id="tspan6580-7"
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375">o</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500056, 2.81250029;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 8585.4331,-3854.2044 232.7768,-405.295"
+       id="path6215-8-8-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6601-9"
+       d="m 8586.1905,-3852.3104 -232.7768,-405.295"
+       style="fill:none;stroke:#000000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.62500056, 2.81250029;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-miterlimit:4;stroke-dasharray:5.62500021, 2.81250012;stroke-dashoffset:0"
+       id="path6249-0-2-4"
+       sodipodi:type="arc"
+       sodipodi:cx="3940.5315"
+       sodipodi:cy="8547.1123"
+       sodipodi:rx="134.71318"
+       sodipodi:ry="135.39645"
+       sodipodi:start="0"
+       sodipodi:end="0.50614548"
+       d="m 4075.2447,8547.1123 a 134.71318,135.39645 0 0 1 -16.8904,65.6415 l -117.8228,-65.6415 z"
+       transform="matrix(0.00985435,-0.99995144,0.99995242,0.00975513,0,0)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="8604.4199"
+       y="-4009.0427"
+       id="text6268-7-4-8"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\5.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan6266-0-8-1"
+         x="8604.4199"
+         y="-4009.0427"
+         style="stroke-width:0.9375">29<tspan
+   style="font-size:18.28125px;baseline-shift:super;stroke-width:0.9375"
+   id="tspan6318-5-1">o</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-9-4)"
+       d="m 5749.7441,-3875.8534 0.1048,-104.6145"
+       id="path6817-6-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5706.7754"
+       y="-3848.6003"
+       id="text5697-6-3-3-8-0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan5695-9-6-4-7-5"
+         x="5706.7754"
+         y="-3848.6003"
+         style="font-weight:bold;fill:#ff0000;stroke-width:0.9375">(0,0)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5823.2139"
+       y="-3844.6677"
+       id="text8151"><tspan
+         sodipodi:role="line"
+         id="tspan8149"
+         x="5823.2139"
+         y="-3817.2979"
+         style="stroke-width:0.9375" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5824.0518"
+       y="-3841.9851"
+       id="text7350-3"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan7348-4"
+         x="5824.0518"
+         y="-3841.9851"
+         style="stroke-width:0.9375;font-weight:bold">circle verticle centre</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 7223.4375,-4264.6021 h -228.3483 v 310.0447"
+       id="path8234"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="7076.4331"
+       y="-4229.5146"
+       id="text8238"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan8236"
+         x="7076.4331"
+         y="-4229.5146"
+         style="stroke-width:0.9375">-236</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="4065.011"
+       y="6985.5474"
+       id="text8242"
+       transform="rotate(-90)"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\3.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan8240"
+         x="4065.011"
+         y="6985.5474"
+         style="stroke-width:0.9375">301</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5039.7324"
+       y="-4204.334"
+       id="text8246"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan8244"
+         x="5039.7324"
+         y="-4204.334"
+         style="stroke-width:0.9375">-imHeight</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5355.4663"
+       y="-3829.0715"
+       id="text8246-6"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan8244-0"
+         x="5355.4663"
+         y="-3829.0715"
+         style="stroke-width:0.9375">+imWidth/2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="5805.8032"
+       y="-3917.7268"
+       id="text8268"
+       inkscape:export-filename="S:\OneDrive\Gareth\Current\AC\Conferences and talks\Lab meetings\Lab meeting 03.08.2017\2.png"
+       inkscape:export-xdpi="89.700996"
+       inkscape:export-ydpi="89.700996"><tspan
+         sodipodi:role="line"
+         id="tspan8266"
+         x="5805.8032"
+         y="-3917.7268"
+         style="stroke-width:0.9375">+offset</tspan></text>
   </g>
 </svg>
