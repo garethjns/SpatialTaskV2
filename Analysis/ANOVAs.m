@@ -15,7 +15,7 @@ X2 = allData.Diff == 0; % Congruence (binary)
     'varname', {'aPos', 'cong'});
   
 
-[c, m, h, gnames] = multcompare(stats, 'Dimension', [1, 2]);
+[c, m, h, gnames] = multcompare(stats, 'Dimension', [1,2]);
 
 
 %% 2 way anova 
@@ -41,29 +41,33 @@ X2 = X2(allData.Diff<=30,1);
     'model','interaction', 'varname', ...
     {'cong','aPos'});
 
-[c, m, h, gnames] = multcompare(stats, 'Dimension', [2]);
+[c, m, h, gnames] = multcompare(stats, 'Dimension', [1]);
 
 
 %% 2 way anova 
 % APos (unfolded)
 % Congruence (0 or 1)
 
-% diff = 0-(abs(allData.Position(:,1)) - abs(allData.Position(:,2)));
-% 
-% % Dependent variable
-% y = abs(allData.ACorrect);
-% 
-% % Independent variables
-% X1 = allData.Position(:,1);
-% X2 = diff;
-% 
-% y = y(abs(diff)<=30,1);
-% X1 = X1(abs(diff)<=30,1);
-% X2 = X2(abs(diff)<=30,1);
-% 
-% % Fit
-% [p, tbl, stats] = anovan(y, {X2, X1}, ...
-%     'model','interaction', 'varname', ...
-%     {'cong','aPos'});
-% 
-% [c, m, h, gnames] = multcompare(stats, 'Dimension', [1]);
+diff = 0-(abs(allData.Position(:,1)) - abs(allData.Position(:,2)));
+
+% Dependent variable
+y = abs(allData.ACorrect);
+
+% Independent variables
+X1 = abs(allData.Position(:,1));
+X2 = diff;
+X2(X2<0) = -1;
+X2(X2==0) = 0;
+X2(X2>0) = 1;
+
+idx = (abs(X1)>7.5) & (abs(X1)<67.5);
+y = y(idx);
+X1 = X1(idx);
+X2 = X2(idx);
+
+% Fit
+[p, tbl, stats] = anovan(y, {X2, X1}, ...
+    'model','interaction', 'varname', ...
+    {'cong','aPos'});
+
+[c, m, h, gnames] = multcompare(stats, 'Dimension', [1,2]);
