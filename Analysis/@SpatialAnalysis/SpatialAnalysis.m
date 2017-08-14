@@ -56,7 +56,8 @@ classdef SpatialAnalysis < InitialAnalysis
             % Cong vs abs incong for unfolded
             % Cong vs rel ingong for folded
             
-            %% Cong vs abs incong for unfolded:
+            %% Cong vs abs incong for unfolded
+            
             % Get vars and create temp table
             vars = {obj.expDataAll.ACorrect, 'ACorrect'; ...
                 obj.expDataAll.Position(:,1), 'aPos'; ...
@@ -77,7 +78,7 @@ classdef SpatialAnalysis < InitialAnalysis
             summaryStatsV = grpstats(t, {'Sub', 'Cong', 'vPos', 'Rate'});
 
             
-            %% Cong vs rel ingong for folded:
+            %% Cong vs rel ingong for folded
             
             % Recalc diff first
             diffAV = 0-(abs(obj.expDataAll.Position(:,1)) - ...
@@ -136,7 +137,7 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcAbs);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcAbs);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
             
             % A stats
             [p, tbl, st] = ...
@@ -186,7 +187,7 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcRel);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcRel);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
             
             
             %% Plot folded, rel (stats)
@@ -196,7 +197,7 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcFoldRel);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldRel);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
             
             % A stats
             [p, tbl, st] = ...
@@ -247,7 +248,7 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcFoldAbs);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldAbs);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
 
             
         end

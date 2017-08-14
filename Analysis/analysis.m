@@ -15,7 +15,8 @@ close all
 
 debug = false;
 eyePlot = false;
-exp = exp.import(eyePlot, debug);
+print = false;
+exp = exp.import(eyePlot, debug, print);
 
 
 %% Apply gaze threshold
@@ -23,7 +24,8 @@ exp = exp.import(eyePlot, debug);
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
 
-exp = applyGazeThresh(exp);
+print = false;
+exp = applyGazeThresh(exp, print);
 
 
 %% Average accuracy

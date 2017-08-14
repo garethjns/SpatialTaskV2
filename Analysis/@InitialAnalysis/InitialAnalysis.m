@@ -99,13 +99,16 @@ classdef InitialAnalysis
             obj.exp = ex;
         end
         
-        function obj = import(obj, eyePlot, debug)
+        function obj = import(obj, eyePlot, debug, print)
             
             if ~exist('debug', 'var')
                 debug = true;
             end
             if ~exist('eyePlot', 'var')
                 eyePlot = true;
+            end
+            if ~exist('print', 'var')
+                print = true;
             end
             
             eN = numel(fields(obj.exp));
@@ -116,7 +119,7 @@ classdef InitialAnalysis
             for e = 1:eN
                 % Get subject field
                 fn = obj.exp.(['s', num2str(e)]);
-                disp(['Loading ', fn])
+                if print; disp(['Loading ', fn]); end
                 
                 % Load psychophysics data
                 a = load(fn);
@@ -129,7 +132,7 @@ classdef InitialAnalysis
                 
                 % Get number of available trials
                 n = height(a.stimLog);
-                disp(['Loaded ', num2str(n), ' trials'])
+                if print; disp(['Loaded ', num2str(n), ' trials']); end
                 
                 % For all data, correct angle calculation from raw response
                 newAngles = cellfun(@InitialAnalysis.calcAngle, ...
@@ -268,7 +271,8 @@ classdef InitialAnalysis
                     InitialAnalysis.addEyeData2(a.stimLog, ...
                     obj.eye.(['s', num2str(e)]), ...
                     a.params, ...
-                    eyePlot);
+                    eyePlot, ...
+                    print);
                 if eyePlot
                     title(['Subject ', num2str(e)]);
                     xlabel('Time')
@@ -310,7 +314,12 @@ classdef InitialAnalysis
             obj.eyeDataS = gazeData;
         end
         
-        function obj = applyGazeThresh(obj)
+        function obj = applyGazeThresh(obj, print)
+            
+            if ~exist('print', 'var')
+                print = true;
+            end
+            
             % Reset
             data = obj.expDataS;
             allData = obj.expDataAll;
@@ -332,7 +341,8 @@ classdef InitialAnalysis
                 fieldName = ['s', num2str(e)];
                 
                 [data.(fieldName).onSurf, rs1, rs2] = ...
-                    InitialAnalysis.eyeIndex(data.(fieldName), osp, thresh1, thresh2);
+                    InitialAnalysis.eyeIndex(data.(fieldName), ...
+                    osp, thresh1, thresh2);
                 
                 dataFilt.(fieldName) = ...
                     data.(fieldName)(data.(fieldName).onSurf,:);
@@ -340,11 +350,13 @@ classdef InitialAnalysis
                 % Lazy
                 allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
                 
-                disp('----')
-                disp(fieldName)
-                disp(rs1)
-                disp(rs2)
-                disp('----')
+                if print
+                    disp('----')
+                    disp(fieldName)
+                    disp(rs1)
+                    disp(rs2)
+                    disp('----')
+                end
             end
             
             allData.onSurf = allOK;
@@ -356,7 +368,8 @@ classdef InitialAnalysis
     end
     
     methods (Static)
-        [stimLog, gaze] = addEyeData2(stimLog, eyePath, params, plotOn)
+        [stimLog, gaze] = ...
+            addEyeData2(stimLog, eyePath, params, plotOn, print)
         
         stimLog = addEyeData(stimLog, eyePath)
         

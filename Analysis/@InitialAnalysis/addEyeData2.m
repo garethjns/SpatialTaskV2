@@ -1,4 +1,5 @@
-function [stimLog, gaze] = addEyeData2(stimLog, eyePath, params, plotOn)
+function [stimLog, gaze] = ...
+    addEyeData2(stimLog, eyePath, params, plotOn, print)
 % Add eye tracker data to stimLog.
 % Handles empty eye data subjects
 % Inheriting from importEyeDataScript, using loadGaze2, which handles surf
@@ -10,13 +11,16 @@ function [stimLog, gaze] = addEyeData2(stimLog, eyePath, params, plotOn)
 % To do:
 % Add plot flag, subject name to graph titles
 
+if ~exist('print', 'var')
+    print = true;
+end
 
 %% Import data
 
 nT = height(stimLog);
 
 if ~isempty(eyePath)
-    disp('Adding eye data...')
+    if print; disp('Adding eye data...'); end
     [gaze, ~] = InitialAnalysis.loadGaze2(eyePath, ...
         {'TS', 'NP0', 'NP1', 'onSurf', 'mType'});
     
@@ -26,7 +30,7 @@ if ~isempty(eyePath)
     gaze = gaze(~isnan(gaze.onSurf),:);
     process = true;
 else
-    disp('No eye data...')
+    if print; disp('No eye data...'); end
     % No gaze data, turn off processing
     % Placeholders added below
     process = false;
