@@ -40,7 +40,6 @@ for e = 1:exp.expN
     
 end
 
-
 %% Apply gaze threshold
 % If threshold set, trials will be dropped where onSurfProp is below
 % threshold, including if no eye data is available (ie subs 1-6).

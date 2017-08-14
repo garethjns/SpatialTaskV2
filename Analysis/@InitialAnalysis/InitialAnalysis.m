@@ -99,10 +99,13 @@ classdef InitialAnalysis
             obj.exp = ex;
         end
         
-        function obj = import(obj, debug)
+        function obj = import(obj, eyePlot, debug)
             
             if ~exist('debug', 'var')
                 debug = true;
+            end
+            if ~exist('eyePlot', 'var')
+                eyePlot = true;
             end
             
             eN = numel(fields(obj.exp));
@@ -260,15 +263,17 @@ classdef InitialAnalysis
                         % - handled in addEyeData2
                 end
                 
-                plotOn = true;
+                % Add eye data
                 [a.stimLog, gaze] = ...
                     InitialAnalysis.addEyeData2(a.stimLog, ...
                     obj.eye.(['s', num2str(e)]), ...
                     a.params, ...
-                    plotOn);
-                title(['Subject ', num2str(e)]);
-                xlabel('Time')
-                ylabel('On target prop.')
+                    eyePlot);
+                if eyePlot
+                    title(['Subject ', num2str(e)]);
+                    xlabel('Time')
+                    ylabel('On target prop.')
+                end
                 
                 % All subjects
                 % Add a "correct" and "error" columns
@@ -298,14 +303,6 @@ classdef InitialAnalysis
                 
                 clear a gaze
             end
-            
-            figure
-            scatter(abs(allData.Position(:,1)), allData.AError)
-            hold on
-            scatter(abs(allData.Position(:,2)), allData.VError)
-            legend({'Auditory', ' Visual'})
-            xlabel('Position')
-            ylabel('Error')
             
             % Back up imported data
             obj.expDataS = data;

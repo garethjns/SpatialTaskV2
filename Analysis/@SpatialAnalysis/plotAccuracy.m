@@ -1,19 +1,21 @@
 function [H1, H2] = ...
-    plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit)
+    plotAccuracy(obj, summaryA, summaryV, fold, posAx, tit)
 % Plot across subject average with error bars
 % Summary is pos x diff x stat
 % Stat: 1 = % Correct, 2 = n, 3 = SD, 4 = SE
 % pos labels should be included in posAx
 % diff labels are coded in legend setting
 
+%
+
 
 %% Plot - lines/scatter
 
-% Diffs are on axis 2
-nDiff = size(summaryA, 2);
+% Detect if folded or unfolded data
+summaryA.aPos
 
 % Set diff labels for legend
-if nDiff>5
+if nPoss>5
     % Assume rel
     diffs = [-60, -45, -30, -15, ...
         0, 15, 30, 45, 60];
@@ -116,6 +118,4 @@ title('Aud')
 subplot(1,2,2)
 title('Vis')
 suptitle(tit)
-
-
 

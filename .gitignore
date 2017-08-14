@@ -35,6 +35,10 @@ Graphs/
 MATLABTask/Data/
 EyeTracker/Data/
 
+# Other
+*.rar
+*.pdf
+
 # =========================
 # Operating System Files
 # =========================

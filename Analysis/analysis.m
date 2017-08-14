@@ -14,7 +14,8 @@ exp = exp.setPaths(pwd);
 close all
 
 debug = false;
-exp = exp.import(debug);
+eyePlot = false;
+exp = exp.import(eyePlot, debug);
 
 
 %% Apply gaze threshold
@@ -26,4 +27,19 @@ exp = applyGazeThresh(exp);
 
 
 %% Average accuracy
+
+close all force
+exp = exp.accuracy();
+
+
+%% GLMs
+
+close all force
+exp = exp.GLMNonLinearCor();
+
+
+%% GLMs
+
+close all force
+exp = exp.GLMNonLinearResp();
 
