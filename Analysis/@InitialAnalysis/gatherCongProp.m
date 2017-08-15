@@ -4,7 +4,7 @@ function stats = gatherCongProp(stimLog, flag, flag2)
 % Flag == 2 Use relative instead of absolute for above
 % Flag2 == 1 When collecting proportion of congruent responses, assume V 
 % location is the actual location V came from
-% Flag2 == 2 Instead, use the "percieved" V location(ie where the response
+% Flag2 == 2 Instead, use the "perceived" V location(ie where the response
 % was) to judge if subject marked these congruent.
 % This makes more sense? Even if wrong location was pressed, subject would
 % have pressed same location on screen twice. So should include this as a
@@ -64,9 +64,8 @@ for pf = 1:nPoss % For each position...
     % Get the sub set of data (ie. the rows that correspond to the pfIdx
     % index)
     posDataSubset = stimLog(pfIdx,:);
-    
-
-    for d = 1:numel(diffs) % For each incongruency at this position...
+ 
+    for d = 1:numel(diffs) % For each disparity at this position...
         % (using whichever list of diffs calculated before first for loop)
         clear st
         
@@ -80,9 +79,7 @@ for pf = 1:nPoss % For each position...
         else % Relative: Use recalcualted allDiffs
             dIdx = allDiffs(pfIdx) == dif;
         end
-        
         % Dif == 0 is congruent condition
-        
         
         % Get the already binned data
         switch flag2
@@ -120,10 +117,8 @@ for pf = 1:nPoss % For each position...
             congLog(r) = sum(all(data{r},1));
         end
         
-        congProp = sum(congLog)/length(congLog);
-        
-        
         % Calculate proportion marked as congruent
+        congProp = sum(congLog)/length(congLog);
         
         st(1,1) = pos;
         st(2,1) = dif;
@@ -131,7 +126,6 @@ for pf = 1:nPoss % For each position...
         st(4,1) = std(congLog);
         st(5,1) = sum(congLog); 
         st(6,1) = numel(data);
-        
         
         % Save this data in to a simple matrix for plotting later
         stats(:,d,pf) = st;

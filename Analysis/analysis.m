@@ -34,6 +34,12 @@ close all force
 exp = exp.accuracy();
 
 
+%% Congruence judgements
+
+plot = true;
+exp = exp.congruence(plot);
+
+
 %% GLMs
 
 close all force
@@ -44,4 +50,14 @@ exp = exp.GLMNonLinearCor();
 
 close all force
 exp = exp.GLMNonLinearResp();
+
+
+%% Find integrators
+
+thresh = 0.05;
+exp = exp.findIntegrators('NLC', thresh);
+exp = exp.findIntegrators('NLR', thresh);
+
+
+%% Plot NLC integrators
 
