@@ -1,4 +1,4 @@
-function plotMidHist(dataA, dataV, tit, absX, normX, normY)
+function h = plotMidHist(dataA, dataV, tit, absX, normX, normY)
 
 if ~exist('normX', 'var')
     normX = true;
@@ -12,7 +12,7 @@ end
 
 yLim = 0;
 
-figure
+h = figure;
 
 % Auditory plot
 subplot(2,1,1)

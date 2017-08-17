@@ -1,71 +1,4 @@
 function handles = ng(template)
-%
-% switch template
-%     case 'Defualt'
-%         % Leave as is
-%     case 'Wide'
-%         % Change position to make figue wider
-%         % Otherwise as default
-%         fPos = [1 1 1200 600];
-%     case '800'
-%         fPos = [1 1 800 600];
-%     case '1024'
-%         fPos = [1 1 1024 768];
-%         lLineWidth = 2;
-%         lFontSize = 18;
-%         aFontSize = 18;
-%         aFontWeight = 'bold';
-%     case '1024ThinLines'
-%         fPos = [1 1 1024 768];
-%         lLineWidth = 1;
-%         lFontSize = 13;
-%         aFontSize = 13;
-%         aFontWeight = 'bold';
-%     case 'Big'
-%         % Change position to make figue wider
-%         % Otherwise as default
-%         fPos = [1 1 1200 1200];
-%     case 'AdapMetric'
-%         lLoc = 'NorthWest';
-%         fPos = [1 1 1200 600];
-%     case 'AdapMetric2'
-%         lLoc = 'SouthEast';
-%         fPos = [1 1 1200 600];
-%     case 'BigScatter'
-%         fPos = [1 1 1200 1200];
-%         lLineWidth = 3;
-%     case 'Huge'
-%         fPos = [1 1 1800 1800];
-%     case 'BigPSTH'
-%         fPos = [1 1 1200 1200];
-%         lLineWidth=0.9;
-%         aFontSize = 14;
-%         gr = 0;
-%     case 'PosterThin'
-%         fPos = [1 1 450 1200];
-%         lLineWidth = 2;
-%         aLineWidth = 2;
-%         aFontSize = 16;
-%     case 'PosterThinCC'
-%         fPos = [1 1 450 1200];
-%         lLineWidth = 2;
-%         aLineWidth = 2;
-%         aFontSize = 16;
-%     case 'ScatterCC'
-%         % Constant scatter colour, set below
-%         % Also constant scatter marker size
-%     case 'SingleBox'
-%         lLineWidth = 3;
-%     case 'Thin'
-%         fPos = [1 1 450 800];
-%         lLineWidth = 2;
-%         aLineWidth = 2;
-%     case 'ScatterLine'
-%         lLineWidth = 2;
-%         
-%     case '...' % Define new templates here
-%         
-% end
 
 if nargin==0
     template = 'Defualt';
@@ -80,7 +13,7 @@ aFontSize = 12;
 aFontWeight = 'bold';
 aTFSM = 1.25; % (TitleFontSizeMultiplier)
 % Axes lines
-aLineWidth = 1.75;
+aLineWidth = 1.5;
 
 % Line (eg. as produced by PLOT) lines
 lLineWidth = 1.3;
@@ -98,6 +31,7 @@ lFontWeight = 'bold';
 
 % Grid
 gr = 1;
+grm = 0;
 
 %% Re-set specific settings for template
 
@@ -108,31 +42,29 @@ switch template
         % Change position to make figue wider
         % Otherwise as default
         fPos = [1 1 1200 600];
-        case 'Wider'
-        % Change position to make figue wider
-        % Otherwise as default
-        fPos = [1 1 1600 600];
-    case 'Small'
-        fPos = [1 1 640 480];
     case '800'
         fPos = [1 1 800 600];
+    case 'Small'
+        fPos = [1 1 600 400];
     case '1024'
         fPos = [1 1 1024 768];
         lLineWidth = 2;
         lFontSize = 18;
         aFontSize = 18;
         aFontWeight = 'bold';
+    case '1024NE'
+        fPos = [1 1 1024 768];
+        lLineWidth = 2;
+        lFontSize = 18;
+        aFontSize = 18;
+        aFontWeight = 'bold';
+        lLoc = 'NorthEast';
     case '1024ThinLines'
         fPos = [1 1 1024 768];
         lLineWidth = 1;
         lFontSize = 13;
         aFontSize = 13;
         aFontWeight = 'bold';
-    case 'Sequences'
-        fPos = [1 1 1024 768];
-        lLoc = 'NorthWest';
-        scMarkerSize = 40;
-        lLineWidth = 3;
     case 'Big'
         % Change position to make figue wider
         % Otherwise as default
@@ -172,9 +104,10 @@ switch template
         fPos = [1 1 450 800];
         lLineWidth = 2;
         aLineWidth = 2;
-    case 'ScatterLine'
-        lLineWidth = 2;
-        
+    case 'GridMinor'
+        gr = 0;
+        grm = 1;
+        fPos = [1 1 1024 768];
     case '...' % Define new templates here
         
 end
@@ -201,9 +134,23 @@ for i=1:length(handles)
             
             % Grid
             if gr==1
+                % Turn on major grid only
                 grid(handles(i), 'On')
-            else
-                grid(handles(i), 'Off')
+            end
+            
+            if grm==1
+                % Turn on minor grid (and major)
+                handles(i).XMinorGrid = 'on';
+                % Tick labels are in
+                % handles(i).XRuler.MinorTickValues
+                if gr==0
+                    % Specifically hide the major grid, which just came
+                    % on as well
+                    % This loses labels too:
+                    % handles(i).XRuler.TickValues = [];
+                    % And this doesn't do anything??
+                    handles(i).GridAlpha = 0;
+                end
             end
             
         case 'line'
@@ -219,12 +166,11 @@ for i=1:length(handles)
             % Special case - not set in template. Fills markers.
             switch template
                 case {'ScatterCC', 'BigScatter', 'PosterThinCC'}
-                case {'ScatterLine'}
-                    handles(i).MarkerFaceColor = handles(i).CData;
                 otherwise
                     handles(i).SizeData = scMarkerSize;
-                    handles(i).MarkerFaceColor = handles(i).CData;
+                    
             end
+            handles(i).MarkerFaceColor = handles(i).CData;
             
         case 'legend'
             handles(i).FontSize = lFontSize;

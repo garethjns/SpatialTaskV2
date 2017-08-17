@@ -1,4 +1,4 @@
-classdef InitialAnalysis
+classdef InitialAnalysis < ggraph
     % Functions from initial analysis including import with corrections,
     % older version of eye data import
     
@@ -412,13 +412,9 @@ classdef InitialAnalysis
         
         gazeTrajectories(data, gazeData, tit, thresh, all, x)
         
-        hgx(varargin)
-        
         [tb, nR] = loadGaze2(fn, fields)
         
         [tb, nR] = loadGaze(fn, fields)
-        
-        handles = ng(template)
         
         plot180FFT(x, ts, tit)
         
@@ -439,7 +435,7 @@ classdef InitialAnalysis
         
         h = plotHeatmaps(statsA, statsV, uPos, tit)
         
-        plotMidHist(dataA, dataV, tit, absX, normX, normY)
+        h = plotMidHist(dataA, dataV, tit, absX, normX, normY)
         
         plotRespHist(data, fold, tit)
         

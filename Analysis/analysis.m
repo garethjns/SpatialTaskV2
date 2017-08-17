@@ -1,5 +1,5 @@
-close all
-clear
+close all force
+clear all  %#ok<CLALL> Recompile classes
 
 
 %% Set paths
@@ -11,7 +11,7 @@ exp = exp.setPaths(pwd);
 
 %% Import 
 
-close all
+close all force
 
 debug = false;
 eyePlot = false;
@@ -24,40 +24,113 @@ exp = exp.import(eyePlot, debug, print);
 % threshold, including if no eye data is available (ie subs 1-6).
 % Create indexes for allData and for data.sx
 
-print = false;
+close all force
+
+print = [true, true, true, true];
 exp = applyGazeThresh(exp, print);
 
 
 %% Average accuracy
 
 close all force
-exp = exp.accuracy();
+
+plt = [];
+exp = exp.accuracy(plt);
+
+
+%% Mid error
+
+% Remove abs plots
+
+close all force
+
+plt = [true, false, false];
+exp = exp.midError(plt);
 
 
 %% Congruence judgements
 
-plot = true;
-exp = exp.congruence(plot);
+
+% Remove abs plots
+close all force
+
+plt = [true, false];
+exp = exp.congruence(plt);
 
 
 %% GLMs
 
 close all force
-exp = exp.GLMNonLinearCor();
 
-
-%% GLMs
-
-close all force
 exp = exp.GLMNonLinearResp();
 
 
 %% Find integrators
 
+close all force
+
 thresh = 0.05;
-exp = exp.findIntegrators('NLC', thresh);
 exp = exp.findIntegrators('NLR', thresh);
 
 
-%% Plot NLC integrators
+%% Disp NLR integrators
+
+close all force
+
+exp.dispIntergrators('NLR')
+
+
+%% 
+
+% Change  Ar_useVAV = ArUseV || Ar_Use AV
+% AVr_useVAVAAV = Ar_useVAV && Vr_useAAV 
+% boxplot summaries difference between Ar_useVAV==1 and Ar_useVAV==0
+% And Vr_useAAV ==0 and Vr_useAAV==1
+
+% Normalise:
+% Eg. Ar
+% V coeff / A coeff
+% AV coeff / A coeff
+% Boxplot for two groups Ar_useVAV==1 and Ar_useVAV==0
+
+
+%% Plot single subject summary
+
+congRel = true;
+exp.plotSingleSubjectSummary(9, [], [], congRel)
+
+
+%% Plot single subject summary
+
+exp.plotSingleSubjectSummary(6, [], [], congRel)
+
+
+%% Plot group summary V_ar - accuracy
+
+close all force
+
+type = 'Accuracy';
+group = exp.integrators.NonLinearResp.V_Ar;
+
+exp = exp.plotGroupSummary(group, type);
+
+
+%% Plot group summary V_ar - midError - not finished yet
+
+close all force
+
+type = 'MidError';
+group = exp.integrators.NonLinearResp.V_Ar;
+
+exp = exp.plotGroupSummary(group, type);
+
+
+%% Plot group summary V_ar - congruence judement
+
+close all force
+
+type = 'Congruence';
+group = exp.integrators.NonLinearResp.V_Ar;
+
+exp = exp.plotGroupSummary(group, type);
 

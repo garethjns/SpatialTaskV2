@@ -3,6 +3,7 @@ classdef SpatialAnalysis < InitialAnalysis
     properties
         GLMs % Struct with various GLM fits
         stats % Struct with dumps of graph data
+        statsSubsets % Struct withs stats done on subsets
         integrators % Struct with "integrators" by model
     end
     
@@ -11,12 +12,31 @@ classdef SpatialAnalysis < InitialAnalysis
         function obj = SpatialAnalysis()
         end
         
-        function obj = accuracy(obj)
+        function obj = accuracy(obj, plt, subs)
+            % Calculate across-subject accuracy for specified subjects (or
+            % all)
+            % Note, for now, writes to and returns object - subsequent runs
+            % replace stats for previous subset if overwriting calling
+            % object.
+            % Plot input should either be empty or contain logicals for
+            % each plt - eg. [true, true, false, true]
+            
+            if isempty(plt)
+                plt = [true, true, true, true];
+            end
+            
+            % Default use all subjects
+            if ~exist('subs', 'var')
+                subs = unique(obj.expDataAll.Subject);
+            end
+            nSubs = numel(subs);
             
             % Calculate average accuracy for each subject (folded/unfolded,
             % rel/abs)
-            for e = 1:obj.expN
-                fieldName = ['s', num2str(e)];
+            for e = 1:nSubs
+                
+                s = subs(e);
+                fieldName = ['s', num2str(s)];
                 
                 rel = false;
                 fold = false;
@@ -79,7 +99,7 @@ classdef SpatialAnalysis < InitialAnalysis
             summaryStatsV = grpstats(t, {'Sub', 'Cong', 'vPos', 'Rate'});
             
             
-            %% Cong vs rel ingong for folded
+            %% Cong vs rel incong for folded
             
             % Recalc diff first
             diffAV = 0-(abs(obj.expDataAll.Position(:,1)) - ...
@@ -138,8 +158,10 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcAbs);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcAbs);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
-            
+            if plt(1)
+                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                    summaryV, posAx, tit);
+            end
             % A stats
             [p, tbl, st] = ...
                 anovan(summaryStatsA.mean_ACorrect, ...
@@ -149,12 +171,13 @@ classdef SpatialAnalysis < InitialAnalysis
                 'model', 'interaction', ...
                 'varname', {'cong', 'aPos', 'Rate'});
             % Compare on rate
-            figure;
-            multcompare(st, 'Dimension', 3);
-            % Compare on cong
-            figure;
-            multcompare(st, 'Dimension', 1);
-            
+            if plt(1)
+                figure;
+                multcompare(st, 'Dimension', 3);
+                % Compare on cong
+                figure;
+                multcompare(st, 'Dimension', 1);
+            end
             % Save
             obj.stats.accuracy.AcAbs.ANOVA.stats = st;
             obj.stats.accuracy.AcAbs.ANOVA.p = p;
@@ -175,12 +198,13 @@ classdef SpatialAnalysis < InitialAnalysis
             obj.stats.accuracy.VcAbs.ANOVA.tbl = tbl;
             
             % Compare on rate
-            figure;
-            multcompare(st, 'Dimension', 3);
-            % Compare on cong
-            figure;
-            multcompare(st, 'Dimension', 1);
-            
+            if plt(1)
+                figure;
+                multcompare(st, 'Dimension', 3);
+                % Compare on cong
+                figure;
+                multcompare(st, 'Dimension', 1);
+            end
             
             %% Plot unfolded, rel (no stats)
             tit = 'Response accuracy - unfold, rel, across subs';
@@ -188,8 +212,10 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcRel);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcRel);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
-            
+            if plt(2)
+                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                    summaryV, posAx, tit);
+            end
             
             %% Plot folded, rel (stats)
             
@@ -198,7 +224,10 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcFoldRel);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldRel);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
+            if plt(3)
+                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                    summaryV, posAx, tit);
+            end
             
             % A stats
             [p, tbl, st] = ...
@@ -210,11 +239,13 @@ classdef SpatialAnalysis < InitialAnalysis
                 'varname', {'cong', 'aPos', 'Rate'});
             
             % Compare on cong
-            figure;
-            multcompare(st, 'Dimension', 1);
-            % Compare on cong vs pos
-            figure;
-            multcompare(st, 'Dimension', [1, 2]);
+            if plt(3)
+                figure;
+                multcompare(st, 'Dimension', 1);
+                % Compare on cong vs pos
+                figure;
+                multcompare(st, 'Dimension', [1, 2]);
+            end
             
             % Save
             obj.stats.accuracy.AcFoldRel.ANOVA.stats = st;
@@ -231,11 +262,13 @@ classdef SpatialAnalysis < InitialAnalysis
                 'varname', {'cong', 'vPos', 'Rate'});
             
             % Compare on cong
-            figure;
-            multcompare(st, 'Dimension', 1);
-            % Compare on cong vs pos
-            figure;
-            multcompare(st, 'Dimension', [1, 2]);
+            if plt(3)
+                figure;
+                multcompare(st, 'Dimension', 1);
+                % Compare on cong vs pos
+                figure;
+                multcompare(st, 'Dimension', [1, 2]);
+            end
             
             % Save
             obj.stats.accuracy.VcFoldRel.ANOVA.stats = st;
@@ -249,8 +282,10 @@ classdef SpatialAnalysis < InitialAnalysis
                 obj.gatherAcrossSubjectAccuracy(statsAcFoldAbs);
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldAbs);
-            obj.plotAcrossSubjectAccuracy(summaryA, summaryV, posAx, tit);
-            
+            if plt(4)
+                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                    summaryV, posAx, tit);
+            end
             
         end
         
@@ -449,13 +484,13 @@ classdef SpatialAnalysis < InitialAnalysis
             % AV_Vr: Uses AV in V reponse
             %
             % Then create following logicals:
-            % Ar_useV: V used for aud resp - semi-V inetgrator
-            % Ar_useAV: AV used for aud resp - semi-V inetgrator
-            % Ar_useVAV: V and AV used for aud resp - full-V integrator
-            % Vr_useA: A Used for vis resp - semi-A inetgrator
-            % Vr_useAV: AV used for vis resp - semi-A inetgrator
-            % Vr_useAAV: A and AV used for vis resp - full-A inetgrator
-            % AVr_useVAVAAV: Does everything (?)
+            % Ar_useV: V used for aud resp - semi
+            % Ar_useAV: AV used for aud resp - semi
+            % Ar_useVAV: V or AV used in aud resp - full
+            % Vr_useA: A Used for vis resp - semi
+            % Vr_useAV: AV used for vis resp - sem
+            % Vr_useAAV: A or AV used for vis resp - full
+            % AVr_useVAVAAV: (A or AV used in V) and (V or AV used in A resp) 
             
             % Set significance threshold if not specified
             if ~exist('thresh', 'var')
@@ -463,44 +498,44 @@ classdef SpatialAnalysis < InitialAnalysis
             end
             
             % Get the selected model to use
-            switch mn
-                case {'NLC', 'NonLinearCorr'}
-                    mn = 'NonLinearCorr';
-                    mfn = 'Corr';
-                    mod = obj.GLMs.NonLinearCorr;
-                case {'NLR', 'NonLinearResp'}
-                    mn = 'NonLinearResp';
-                    mfn = 'Resp';
-                    mod = obj.GLMs.NonLinearResp;
-                otherwise
-                    disp('Invalid model.')
-                    return
-            end
+            [mn, mfn, mod] = obj.setMod(mn);
             
             fns = fieldnames(mod);
             nSubs = length(fns);
             
             % For each subject, mark A int, V int, AV inte
             vars = {(1:nSubs)', 'Subject', 'Subject number'; ...
-                NaN(nSubs,1), 'pA_Ar', 'Uses A in A response'; ...
-                NaN(nSubs,1), 'pV_Ar', 'Uses V in A response'; ...
-                NaN(nSubs,1), 'pAV_Ar', 'Uses AV in A reponse'; ...
-                NaN(nSubs,1), 'pA_Vr', 'Uses A in V response'; ...
-                NaN(nSubs,1), 'pV_Vr', 'Uses V in V response'; ...
-                NaN(nSubs,1), 'pAV_Vr', 'Uses AV in V reponse'; ...
+                NaN(nSubs,1), 'cA_Ar', 'Val: A stim to A resp'; ...
+                NaN(nSubs,1), 'cV_Ar', 'Val: V stim to A resp'; ...
+                NaN(nSubs,1), 'cAV_Ar', 'Val: AV inter to A resp'; ...
+                NaN(nSubs,1), 'cA_Vr', 'Val: A stim to V resp'; ...
+                NaN(nSubs,1), 'cV_Vr', 'Val: V stim to V resp'; ...
+                NaN(nSubs,1), 'cAV_Vr', 'Val: AV inter to A resp'; ...
+                NaN(nSubs,1), 'pA_Ar', 'Sig: A stim to A resp'; ...
+                NaN(nSubs,1), 'pV_Ar', 'Sig: V stim to A resp'; ...
+                NaN(nSubs,1), 'pAV_Ar', 'Sig: AV inter to A resp'; ...
+                NaN(nSubs,1), 'pA_Vr', 'Sig: A stim to V resp'; ...
+                NaN(nSubs,1), 'pV_Vr', 'Sig: V stim to V resp'; ...
+                NaN(nSubs,1), 'pAV_Vr', 'Sig: AV inter to V resp'; ...
+                NaN(nSubs,1), 'rA_A_Ar', 'Ratio:  cA_Ar  to cA_Ar (==)'; ...
+                NaN(nSubs,1), 'rV_A_Ar', 'Ratio: cV_Ar  to cA_Ar'; ...
+                NaN(nSubs,1), 'rAV_A_Ar', 'Ratio: cVA_Ar to cA_Ar'; ...
+                NaN(nSubs,1), 'rA_V_Vr', 'Ratio:  cA_Vr  to cV_Vr'; ...
+                NaN(nSubs,1), 'rV_V_Vr', 'Ratio:  cV_Vr  to cV_Vr (==)'; ...
+                NaN(nSubs,1), 'rAV_V_Vr', 'Ratio: cAV_Vr to cV_Vr'; ...
                 NaN(nSubs,1), 'A_Ar', 'Uses A in A response'; ...
                 NaN(nSubs,1), 'V_Ar', 'Uses V in A response'; ...
                 NaN(nSubs,1), 'AV_Ar', 'Uses AV in A reponse'; ...
                 NaN(nSubs,1), 'A_Vr', 'Uses A in V response'; ...
                 NaN(nSubs,1), 'V_Vr', 'Uses V in V response'; ...
                 NaN(nSubs,1), 'AV_Vr', 'Uses AV in V reponse'; ...
-                NaN(nSubs,1), 'Ar_useV', 'V used for aud resp - semi-V inetgrator'; ...
-                NaN(nSubs,1), 'Ar_useAV', 'AV used for aud resp - semi-V inetgrator'; ...
-                NaN(nSubs,1), 'Ar_useVAV', 'V and AV used for aud resp - full-V integrator'; ...
-                NaN(nSubs,1), 'Vr_useA', 'A Used for vis resp - semi-A inetgrator'; ...
-                NaN(nSubs,1), 'Vr_useAV', 'AV used for vis resp - semi-A inetgrator'; ...
-                NaN(nSubs,1), 'Vr_useAAV', 'A and AV used for vis resp - full-A inetgrator'; ...
-                NaN(nSubs,1), 'AVr_useVAVAAV', 'Does everything (?)'};
+                NaN(nSubs,1), 'Ar_useV', 'V used for aud resp'; ...
+                NaN(nSubs,1), 'Ar_useAV', 'AV used for aud resp'; ...
+                NaN(nSubs,1), 'Ar_useVAV', 'V or AV used for aud resp'; ...
+                NaN(nSubs,1), 'Vr_useA', 'A Used for vis resp '; ...
+                NaN(nSubs,1), 'Vr_useAV', 'AV used for vis respr'; ...
+                NaN(nSubs,1), 'Vr_useAAV', 'A or AV used for vis resp'; ...
+                NaN(nSubs,1), 'AVr_useVAVAAV', 'Vr_useAAV & Ar_useVAV'};
             
             t = table(vars{:,1}, ...
                 'VariableNames', vars(:,2));
@@ -509,6 +544,12 @@ classdef SpatialAnalysis < InitialAnalysis
             for s = 1:nSubs
                 
                 sIdx = t.Subject==s;
+                t.cA_Ar(sIdx) = ...
+                    mod.(fns{s}).(['A', mfn]).Coefficients.Estimate(2);
+                t.cV_Ar(sIdx) = ...
+                    mod.(fns{s}).(['A', mfn]).Coefficients.Estimate(3);
+                t.cAV_Ar(sIdx) = ...
+                    mod.(fns{s}).(['A', mfn]).Coefficients.Estimate(4);
                 t.pA_Ar(sIdx) = ...
                     mod.(fns{s}).(['A', mfn]).Coefficients.pValue(2);
                 t.pV_Ar(sIdx) = ...
@@ -516,6 +557,12 @@ classdef SpatialAnalysis < InitialAnalysis
                 t.pAV_Ar(sIdx) = ...
                     mod.(fns{s}).(['A', mfn]).Coefficients.pValue(4);
                 
+                t.cA_Vr(sIdx) = ...
+                    mod.(fns{s}).(['V', mfn]).Coefficients.Estimate(2);
+                t.cV_Vr(sIdx) = ...
+                    mod.(fns{s}).(['V', mfn]).Coefficients.Estimate(3);
+                t.cAV_Vr(sIdx) = ...
+                    mod.(fns{s}).(['V', mfn]).Coefficients.Estimate(4);
                 t.pA_Vr(sIdx) = ...
                     mod.(fns{s}).(['V', mfn]).Coefficients.pValue(2);
                 t.pV_Vr(sIdx) = ...
@@ -540,16 +587,24 @@ classdef SpatialAnalysis < InitialAnalysis
             t.Vr_useAV = t.AV_Vr;
             
             % More complex integrator definitions
-            t.Ar_useVAV = t.V_Ar & t.AV_Ar;
-            t.Vr_useAAV = t.A_Vr & t.AV_Vr;
+            t.Ar_useVAV = t.V_Ar | t.AV_Ar; % 
+            t.Vr_useAAV = t.A_Vr | t.AV_Vr;
             t.AVr_useVAVAAV = t.Ar_useVAV & t.Vr_useAAV;
+            
+            % Calculate ratios
+            t.rA_A_Ar = t.cA_Ar   ./ t.cA_Ar;
+            t.rV_A_Ar = t.cV_Ar   ./ t.cA_Ar;
+            t.rAV_A_Ar = t.cAV_Ar ./ t.cA_Ar;
+            t.rA_V_Vr = t.cA_Vr   ./ t.cV_Vr;
+            t.rV_V_Vr = t.cV_Vr   ./ t.cV_Vr;
+            t.rAV_V_Vr = t.cAV_Vr ./ t.cV_Vr;
             
             % Save table
             obj.integrators.(mn) = t;
             
         end
         
-        function obj = congruence(obj, plot)
+        function obj = congruence(obj, plt, subs)
             % Parameters are fixed here:
             % rel:
             % Relative (2) or absolute (1) disparity where everything is
@@ -572,13 +627,19 @@ classdef SpatialAnalysis < InitialAnalysis
             %
             % Output to obj.stats.congruence.[abs, rel]
             
-            if ~exist('plot', 'var')
-                plot = true;
+            if isempty(plt)
+                plt = [true, true];
             end
+                        
+            if ~exist('subs', 'var')
+                subs = 1:obj.expN;
+            end
+            nSubs = numel(subs);
             
             pec = 2;
-            for e = 1:obj.expN
-                fieldName = ['s', num2str(e)];
+            for e = 1:nSubs
+                s = subs(e);
+                fieldName = ['s', num2str(s)];
                 
                 rel = 2;
                 obj.stats.congruence.rel.(fieldName) = ...
@@ -595,8 +656,9 @@ classdef SpatialAnalysis < InitialAnalysis
             statsP4Av_tmp = NaN(6, 10, 5, obj.expN);
             statsP3Av = NaN(6, 6, 5);
             statsP4Av = NaN(6, 10, 5);
-            for e = 1:obj.expN
-                fieldName = ['s', num2str(e)];
+            for e = 1:nSubs
+                s = subs(e);
+                fieldName = ['s', num2str(s)];
                 
                 if ~isempty(obj.stats.congruence.abs.(fieldName))
                     statsP3Av_tmp(:,:,:,e) = ...
@@ -637,15 +699,350 @@ classdef SpatialAnalysis < InitialAnalysis
             obj.stats.congruence.relAV = statsP4Av;
             
             % Plot
-            if plot
+            if plt(1)
                 tit = ['Avg: Proportion congruent responses,',...
                     'abs diff between A and V'];
                 obj.plotCongProp(statsP3Av, tit);
                 
+            end
+            if plt(2)
                 tit = ['Avg: Proportion congruent responses,', ...
                     'relative diff between A and V'];
                 obj.plotCongProp(statsP4Av, tit);
             end
+        end
+        
+        function dispIntergrators(obj, mn)
+            % Plot table of integrations for model mn
+            % Plot imagesc of logicals
+            % Box plot ratios for each group
+
+            % Get the selected model (name) to use
+            [mn, ~, ~] = obj.setMod(mn);
+            
+            % Get table (rather than model)
+            t = obj.integrators.(mn);
+            
+            % Set columns to use
+            colsAr = {'Ar_useV', 'Ar_useAV', 'Ar_useVAV'};
+            colsVr = {'Vr_useA', 'Vr_useAV', 'Vr_useAAV'};
+            colsAVr = {'AVr_useVAVAAV'};
+            
+            % Print
+            disp(t(:, ['Subject', colsAr, colsVr, colsAVr]))
+            
+            %% Imacesc logicals
+            
+            figure
+            ax = subplot(1,7,1:3);
+            imagesc(t{:,colsAr})
+            ax.YTick = 1:15;
+            ax.XTick = 1:3;
+            ax.XMinorTick = 'on';
+            ax.XRuler.MinorTickValues = 0.5:2.5;
+            ax.YRuler.MinorTickValues = 0.5:14.5;
+            ax.XTickLabel = colsAr;
+            ax.XTickLabelRotation = 45;
+            ylabel('Subject')
+            title('Aud resp.')
+            
+            ax = subplot(1,7,4:6);
+            imagesc(t{:,colsVr})
+            ax.YTick = 1:15;
+            ax.XTick = 1:3;
+            ax.XMinorTick = 'on';
+            ax.XRuler.MinorTickValues = 0.5:2.5;
+            ax.YRuler.MinorTickValues = 0.5:14.5;
+            ax.XTickLabelRotation = 45;
+            title('Vis resp.')
+            
+            ax = subplot(1,7,7);
+            imagesc(t{:,colsAVr})
+            ax.YTick = 1:15;
+            ax.XTick = 1;
+            ax.XMinorTick = 'on';
+            ax.XRuler.MinorTickValues = 0.5:2.5;
+            ax.YRuler.MinorTickValues = 0.5:14.5;
+            ax.XTickLabel = colsAVr;
+            ax.XTickLabelRotation = 45;
+            title('AV resp.')
+            
+            SpatialAnalysis.ng('GridMinor');
+            
+            
+            %% Ratio boxplots
+            
+            % Aud resp
+            figure
+            subplot(1,2,1)
+            boxplot(t.rV_A_Ar, t.Ar_useVAV)
+            hold on
+            scatter(ones(sum(~t.Ar_useVAV),1), t.rV_A_Ar(~t.Ar_useVAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2])
+            scatter(ones(sum(t.Ar_useVAV),1)+1, t.rV_A_Ar(t.Ar_useVAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2], ...
+                'MarkerFaceColor', [0.8, 0.2, 0.2])
+            
+            title('Ratio: cV to cA')
+            subplot(1,2,2)
+            boxplot(t.rAV_A_Ar, t.Ar_useVAV)
+            hold on
+            scatter(ones(sum(~t.Ar_useVAV),1), t.rAV_A_Ar(~t.Ar_useVAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2])
+            scatter(ones(sum(t.Ar_useVAV),1)+1, t.rAV_A_Ar(t.Ar_useVAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2], ...
+                'MarkerFaceColor', [0.8, 0.2, 0.2])
+            title('Ratio: cAV to cA')
+            suptitle('Auditory response')
+            xlabel('Significant other-modality')
+            
+            % Vis resp
+            figure
+            subplot(1,2,1)
+            boxplot(t.rA_V_Vr, t.Vr_useAAV)
+            hold on
+            scatter(ones(sum(~t.Vr_useAAV),1), t.rA_V_Vr(~t.Vr_useAAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2])
+            scatter(ones(sum(t.Vr_useAAV),1)+1, t.rA_V_Vr(t.Vr_useAAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2], ...
+                'MarkerFaceColor', [0.8, 0.2, 0.2])
+            title('Ratio: cA to cV')
+            subplot(1,2,2)
+            boxplot(t.rAV_V_Vr, t.Vr_useAAV)
+            hold on
+            hold on
+            scatter(ones(sum(~t.Vr_useAAV),1), t.rAV_V_Vr(~t.Vr_useAAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2])
+            scatter(ones(sum(t.Vr_useAAV),1)+1, t.rAV_V_Vr(t.Vr_useAAV), ...
+                'MarkerEdgeColor', [0.8, 0.2, 0.2], ...
+                'MarkerFaceColor', [0.8, 0.2, 0.2])
+            title('Ratio: cAV to cV')
+            suptitle('Visual response')
+            xlabel('Significant other-modality')
+            
+            
+        end
+        
+        function [mn, mfn, mod] = setMod(obj, mn)
+            switch mn
+                case {'NLC', 'NonLinearCorr'}
+                    mn = 'NonLinearCorr';
+                    mfn = 'Corr';
+                    mod = obj.GLMs.NonLinearCorr;
+                case {'NLR', 'NonLinearResp'}
+                    mn = 'NonLinearResp';
+                    mfn = 'Resp';
+                    mod = obj.GLMs.NonLinearResp;
+                otherwise
+                    disp('Invalid model.')
+                    return
+            end
+            
+        end
+        
+        function plotSingleSubjectSummary(obj, s, accFold, ...
+                accRel, congRel, midErrorRel)
+            % Plot the accuray, congruence judgement, midHist for one
+            % subject
+            % Doesn't do stats, error bars are within-subject
+            % Use .accuracy etc with restricted subsets to do
+            % across-subject stats.
+            
+            % Set subject fieldname
+            sub = ['s', num2str(s)];
+            
+            
+            %% Accuracy plot
+            % Options
+            if ~exist('accRel', 'var') || isempty(accRel)
+                accRel = true;
+            end
+            if ~exist('accFold', 'var') || isempty(accFold)
+                accFold = true;
+            end
+            
+            % Plot
+            if accFold && accRel
+                tit = ['S', num2str(s), ...
+                    ': Response accuracy - Rel'];
+                statsA = obj.stats.accuracy.AcFoldRel.data.(sub);
+                statsV = obj.stats.accuracy.VcFoldRel.data.(sub);
+                obj.plotAccs(statsA, statsV, tit)
+            elseif accFold && ~accRel
+                tit = ['S', num2str(s), ...
+                    ': Response accuracy - Abs'];
+                statsA = obj.stats.accuracy.AcFoldAbs.data.(sub);
+                statsV = obj.stats.accuracy.VcFoldAbs.data.(sub);
+                obj.plotAccs(statsA, statsV, tit)
+            elseif ~accFold && accRel
+                tit = ['S', num2str(s), ...
+                    ': Response accuracy - Rel'];
+                statsA = obj.stats.accuracy.AcRel.data.(sub);
+                statsV = obj.stats.accuracy.VcRel.data.(sub);
+                obj.plotAccs(statsA, statsV, tit)
+            elseif ~accFold && ~accRel
+                tit = ['S', num2str(s), ...
+                    ': Response accuracy - Abs'];
+                statsA = obj.stats.accuracy.AcAbs.data.(sub);
+                statsV = obj.stats.accuracy.VcAbs.data.(sub);
+                obj.plotAccs(statsA, statsV, tit)
+            end
+
+            
+            %% Congruence judgement plot
+            
+            if ~exist('congRel', 'var') || isempty(congRel)
+                congRel = true;
+            end
+            
+            if congRel
+                st = obj.stats.congruence.rel.(sub);
+                tit = ['S', num2str(s), ...
+                ': Proportion congruent responses,' ... 
+                 'relative diff between V and A'];
+            else
+                st = obj.stats.congruence.abs.(sub);
+                tit = ['S', num2str(s), ...
+                ': Proportion congruent responses,' ... 
+                 'abs diff between V and A'];
+            end
+            
+            
+            %% MidError plot
+            
+            if ~exist('midErrorRel', 'var') || isempty(midErrorRel)
+                midErrorRel = true;
+            end
+            
+            obj.plotCongProp(st, tit);
+            A = obj.stats.midError.(sub).A;
+            V = obj.stats.midError.(sub).V;
+            
+            if midErrorRel
+                abs = false;
+            else
+                abs = true;
+            end
+            
+            abs = false;
+            tit = 'All subjects, xNorm, yNorm';
+            obj.plotMidHist(A, V, tit, abs);
+            SpatialAnalysis.ng('1024NE');
+            
+            abs = true;
+            tit = 'All subjects, xNorm, yNorm';
+            obj.plotMidHist(A, V, tit, abs);
+            SpatialAnalysis.ng('1024NE');
+            
+            
+        end
+        
+        function obj = midError(obj, plt, subs)
+            % Plt is [(rel, yNorm), rel, abs]
+            if isempty(plt)
+                plt = [true, true, true];
+            end
+            
+            if ~exist('subs', 'var')
+                subs = unique(obj.expDataAll.Subject);
+            end
+            nSubs = numel(subs);
+            
+            for e = 1:nSubs
+                
+                s = subs(e);
+                fieldName = ['s', num2str(s)];
+                
+                % Get data
+                
+                [A, V] = ...
+                    obj.gatherMidHist(obj.expDataS.(fieldName));
+                
+                obj.stats.midError.(fieldName).A = A;
+                obj.stats.midError.(fieldName).V = V;
+            end
+            
+            % All data
+            [A, V] = obj.gatherMidHist(obj.expDataAll);
+            
+            obj.stats.midError.All.A = A;
+            obj.stats.midError.All.V = V;
+            
+            if plt(1)
+                abs = false;
+                tit = 'All subjects, xNorm, yNorm';
+                obj.plotMidHist(A, V, tit, abs);
+                SpatialAnalysis.ng('1024NE');
+            end
+            if plt(2)
+                abs = false;
+                tit = 'All subjects, xNorm';
+                obj.plotMidHist(A, V, tit, abs, true, false)
+                SpatialAnalysis.ng('1024NE');
+            end
+            if plt(3)
+                abs = true;
+                tit = 'All subjects, xNorm, abs';
+                obj.plotMidHist(A, V, tit, abs, true, false)
+                SpatialAnalysis.ng('1024NE');
+            end
+        end
+
+        function obj = plotGroupSummary(obj, group, type, name)
+            % Handle redoing .accuray, .congruence, .midError on both
+            % subsets of subjects - eg. integrators vs non-integrators
+            % Take tempoary objects from above methods and save to
+            % mainobject in sensible place
+            % Group should be logical of obj.expN x 1
+            % Type specifies method to apply - may be a lot of graphs so
+            % this will allow tidier publishing in calling script.
+            
+            if ~exist('type', 'var')
+                type = 'Acc';
+            end
+            if ~exist('name', 'var')
+                name = 'genericSubSet';
+            end
+            
+            switch lower(type)
+                case {'accuracy', 'acc'}
+                    statsMethod = @obj.accuracy;
+                    statsField = 'accuracy';
+                    plt = [true, false, true, false];
+                case {'congruence', 'cong'}
+                    statsMethod = @obj.congruence;
+                    statsField = 'congruence';
+                    plt = [true, false];
+                case {'miderror', 'me'}
+                    statsMethod = @obj.midError;
+                    statsField = 'midError';
+                    plt = [true, false, false];
+            end
+            
+            % Split groups
+            subs = 1:obj.expN;
+            subs1 = subs(group);
+            subs2 = subs(~group);
+            
+            % Apply method
+            if sum(subs1)>0
+                g1Obj = statsMethod(plt, subs1);
+            else
+                disp('Group 1 is empty')
+            end
+            
+            if sum(subs2)>0
+                g2Obj = statsMethod(plt, subs2);
+            else
+                disp('Group 2 is empty')
+            end
+            
+            % Extract stats from tempoary objects and save
+            obj.statsSubsets.(type).(name).group1 = ...
+                g1Obj.stats.(statsField);
+            obj.statsSubsets.(type).(name).group2 = ...
+                g2Obj.stats.(statsField);
+            obj.statsSubsets.(type).(name).group = group;
         end
 
         obj = plotAccuracy(obj, summaryStatsA, summaryStatsV )
@@ -654,7 +1051,6 @@ classdef SpatialAnalysis < InitialAnalysis
     
     
     methods (Static)
-        
         
     end
     

@@ -12,6 +12,9 @@ for ai = 1:length(varargin)
         case 'char'
             % Save any string to fnG (filename)
             fnG = varargin{ai};
+        case 'string'
+            % Save any string to fnG (filename)
+            fnG = varargin{ai}.char();
     end
 end
 

@@ -11,8 +11,11 @@ function [summary, data, posAx] = gatherAcrossSubjectAccuracy(stats)
 
 subs = fieldnames(stats);
 nSubs = numel(subs);
-nPos = size(stats.s1, 1);
-nDiff = size(stats.s1, 3);
+% Get metadata from first field (will be same for all)
+flds = fieldnames(stats);
+ff = flds{1};
+nPos = size(stats.(ff), 1);
+nDiff = size(stats.(ff), 3);
 
 data = NaN(nPos, nDiff, nSubs);
 n = 0;
@@ -31,7 +34,7 @@ end
 % Return an x axis for convenience
 % (nanmean to get all and avoid NaNs where positon not filled when
 % pos/diff combinations didn't exist)
-posAx = nanmean(stats.s1(:,1,:),3);
+posAx = nanmean(stats.(ff)(:,1,:),3);
 
 
 %% Takes stats
