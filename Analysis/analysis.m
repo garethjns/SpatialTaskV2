@@ -1,4 +1,4 @@
-close all force
+18+7close all force
 clear all  %#ok<CLALL> Recompile classes
 
 
@@ -134,3 +134,6 @@ group = exp.integrators.NonLinearResp.V_Ar;
 
 exp = exp.plotGroupSummary(group, type);
 
+%% Tidy
+
+close all force

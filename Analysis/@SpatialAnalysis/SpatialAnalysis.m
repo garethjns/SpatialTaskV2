@@ -12,7 +12,7 @@ classdef SpatialAnalysis < InitialAnalysis
         function obj = SpatialAnalysis()
         end
         
-        function obj = accuracy(obj, plt, subs)
+        function [obj, h] = accuracy(obj, plt, subs)
             % Calculate across-subject accuracy for specified subjects (or
             % all)
             % Note, for now, writes to and returns object - subsequent runs
@@ -24,6 +24,7 @@ classdef SpatialAnalysis < InitialAnalysis
             if isempty(plt)
                 plt = [true, true, true, true];
             end
+            h = gobjects(6, length(plt));
             
             % Default use all subjects
             if ~exist('subs', 'var')
@@ -159,7 +160,7 @@ classdef SpatialAnalysis < InitialAnalysis
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcAbs);
             if plt(1)
-                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                h(1:2,1) = obj.plotAcrossSubjectAccuracy(summaryA, ...
                     summaryV, posAx, tit);
             end
             % A stats
@@ -172,10 +173,10 @@ classdef SpatialAnalysis < InitialAnalysis
                 'varname', {'cong', 'aPos', 'Rate'});
             % Compare on rate
             if plt(1)
-                figure;
+                h(3,1) = figure;
                 multcompare(st, 'Dimension', 3);
                 % Compare on cong
-                figure;
+                h(4,1) = figure;
                 multcompare(st, 'Dimension', 1);
             end
             % Save
@@ -199,10 +200,10 @@ classdef SpatialAnalysis < InitialAnalysis
             
             % Compare on rate
             if plt(1)
-                figure;
+                h(5,1) = figure;
                 multcompare(st, 'Dimension', 3);
                 % Compare on cong
-                figure;
+                h(6,1) = figure;
                 multcompare(st, 'Dimension', 1);
             end
             
@@ -213,7 +214,7 @@ classdef SpatialAnalysis < InitialAnalysis
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcRel);
             if plt(2)
-                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                h(1:2,2) = obj.plotAcrossSubjectAccuracy(summaryA, ...
                     summaryV, posAx, tit);
             end
             
@@ -225,7 +226,7 @@ classdef SpatialAnalysis < InitialAnalysis
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldRel);
             if plt(3)
-                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                h(1:2,3) = obj.plotAcrossSubjectAccuracy(summaryA, ...
                     summaryV, posAx, tit);
             end
             
@@ -240,10 +241,10 @@ classdef SpatialAnalysis < InitialAnalysis
             
             % Compare on cong
             if plt(3)
-                figure;
+                h(3,3) = figure;
                 multcompare(st, 'Dimension', 1);
                 % Compare on cong vs pos
-                figure;
+                h(4,3) = figure;
                 multcompare(st, 'Dimension', [1, 2]);
             end
             
@@ -263,10 +264,10 @@ classdef SpatialAnalysis < InitialAnalysis
             
             % Compare on cong
             if plt(3)
-                figure;
+                h(5,3) = figure;
                 multcompare(st, 'Dimension', 1);
                 % Compare on cong vs pos
-                figure;
+                h(6,3) = figure;
                 multcompare(st, 'Dimension', [1, 2]);
             end
             
@@ -283,7 +284,7 @@ classdef SpatialAnalysis < InitialAnalysis
             [summaryV, ~, ~] = ...
                 obj.gatherAcrossSubjectAccuracy(statsVcFoldAbs);
             if plt(4)
-                obj.plotAcrossSubjectAccuracy(summaryA, ...
+                h(1:2,4) = obj.plotAcrossSubjectAccuracy(summaryA, ...
                     summaryV, posAx, tit);
             end
             
@@ -604,7 +605,7 @@ classdef SpatialAnalysis < InitialAnalysis
             
         end
         
-        function obj = congruence(obj, plt, subs)
+        function [obj, h] = congruence(obj, plt, subs)
             % Parameters are fixed here:
             % rel:
             % Relative (2) or absolute (1) disparity where everything is
@@ -630,6 +631,7 @@ classdef SpatialAnalysis < InitialAnalysis
             if isempty(plt)
                 plt = [true, true];
             end
+            h = gobjects(1, length(plt));
                         
             if ~exist('subs', 'var')
                 subs = 1:obj.expN;
@@ -702,13 +704,13 @@ classdef SpatialAnalysis < InitialAnalysis
             if plt(1)
                 tit = ['Avg: Proportion congruent responses,',...
                     'abs diff between A and V'];
-                obj.plotCongProp(statsP3Av, tit);
+                h(1) = obj.plotCongProp(statsP3Av, tit);
                 
             end
             if plt(2)
                 tit = ['Avg: Proportion congruent responses,', ...
                     'relative diff between A and V'];
-                obj.plotCongProp(statsP4Av, tit);
+                h(2) = obj.plotCongProp(statsP4Av, tit);
             end
         end
         
@@ -937,11 +939,16 @@ classdef SpatialAnalysis < InitialAnalysis
             
         end
         
-        function obj = midError(obj, plt, subs)
-            % Plt is [(rel, yNorm), rel, abs]
+        function [obj, h] = midError(obj, plt, subs)
+            % Plt is [(rel, yNorm), rel, abs].
+            % Runs per sub and saves stats.
+            % Runs on all data (using all subs or subset) and calculates
+            % error from this (rather than doing across-subject average).
+            
             if isempty(plt)
                 plt = [true, true, true];
             end
+            h = gobjects(1, length(plt));
             
             if ~exist('subs', 'var')
                 subs = unique(obj.expDataAll.Subject);
@@ -963,27 +970,32 @@ classdef SpatialAnalysis < InitialAnalysis
             end
             
             % All data
-            [A, V] = obj.gatherMidHist(obj.expDataAll);
+            % Set index of subjects to use
+            subIdx = ismember(obj.expDataAll.Subject, subs);
+            % Calculate error hist directly on this data
+            [A, V] = obj.gatherMidHist(obj.expDataAll(subIdx,:));
             
+            % Even if run on subset, save to "All" field. Leave calling
+            % function to handle object (eg. see plotGroupSummary())
             obj.stats.midError.All.A = A;
             obj.stats.midError.All.V = V;
             
             if plt(1)
                 abs = false;
                 tit = 'All subjects, xNorm, yNorm';
-                obj.plotMidHist(A, V, tit, abs);
+                h(1) = obj.plotMidHist(A, V, tit, abs);
                 SpatialAnalysis.ng('1024NE');
             end
             if plt(2)
                 abs = false;
                 tit = 'All subjects, xNorm';
-                obj.plotMidHist(A, V, tit, abs, true, false)
+                h(2) = obj.plotMidHist(A, V, tit, abs, true, false);
                 SpatialAnalysis.ng('1024NE');
             end
             if plt(3)
                 abs = true;
                 tit = 'All subjects, xNorm, abs';
-                obj.plotMidHist(A, V, tit, abs, true, false)
+                h(3) = obj.plotMidHist(A, V, tit, abs, true, false);
                 SpatialAnalysis.ng('1024NE');
             end
         end
@@ -1020,19 +1032,19 @@ classdef SpatialAnalysis < InitialAnalysis
             end
             
             % Split groups
-            subs = 1:obj.expN;
+            subs = unique(obj.expDataAll.Subject);
             subs1 = subs(group);
             subs2 = subs(~group);
             
             % Apply method
             if sum(subs1)>0
-                g1Obj = statsMethod(plt, subs1);
+                [g1Obj, g1h] = statsMethod(plt, subs1);
             else
                 disp('Group 1 is empty')
             end
             
             if sum(subs2)>0
-                g2Obj = statsMethod(plt, subs2);
+                [g2Obj, g2h] = statsMethod(plt, subs2);
             else
                 disp('Group 2 is empty')
             end
@@ -1043,6 +1055,20 @@ classdef SpatialAnalysis < InitialAnalysis
             obj.statsSubsets.(type).(name).group2 = ...
                 g2Obj.stats.(statsField);
             obj.statsSubsets.(type).(name).group = group;
+            
+            % Attempt to relabel plots with group
+            % for g = 1:numel(g1h)
+                % h = g1h(g);
+                % c = allchild(h);
+                % for t = 1:numel(c)
+                    % disp(class(c(t)))
+                %     switch class(c(t))
+                %         case 'matlab.graphics.axis.Axes'
+                %            % Fuck it
+                %    end
+                % end
+           % end
+            
         end
 
         obj = plotAccuracy(obj, summaryStatsA, summaryStatsV )

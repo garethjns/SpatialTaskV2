@@ -34,8 +34,8 @@ AVDiffs = 0 - AVDiffs;
 % diffs = unique([AVDiffs, AVDiffs]);
 diffs = [-30, -15, 0, 15, 30];
 nDiff = numel(diffs);
-dataA = NaN(round(height(allData)/8), nDiff); 
-dataV = NaN(round(height(allData)/8), nDiff);
+dataA = NaN(round(height(allData)/4), nDiff); 
+dataV = NaN(round(height(allData)/4), nDiff);
 
 pIdxA = abs(allData.Position(:,1)) == 37.5;
 pIdxV = abs(allData.Position(:,2)) == 37.5;
@@ -81,24 +81,6 @@ for d = 1:nDiff
     
 end
 
-dataA = dataA(~all(isnan(dataA),2),:);
-dataV = dataV(~all(isnan(dataV),2),:);
-
-% Audotory response
-% Aud from middle position
-% 
-% pIdxVPoor = AVDiffs==15;
-% pIdxAV = AVDiffs==0;
-% pIdxVGood = AVDiffs==-15;
-%
-
-% subsetPoor = allData(pIdxAud & pIdxVPoor,:);
-% subsetAV = allData(pIdxAud & pIdxAV,:);
-% subsetGood = allData(pIdxAud & pIdxVGood,:);
-%
-
-% matPoor = cell2mat(subsetPoor.diffAngle);
-% matAV = cell2mat(subsetAV.diffAngle);
-% matGood = cell2mat(subsetGood.diffAngle);
-%
-%dataA = [matPoor, matAV, matGood];
+% Return data without NaNs
+dataA = dataA(~all(isnan(dataA), 2),:);
+dataV = dataV(~all(isnan(dataV), 2),:);
