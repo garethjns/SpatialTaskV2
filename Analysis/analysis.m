@@ -1,4 +1,4 @@
-18+7close all force
+close all force
 clear all  %#ok<CLALL> Recompile classes
 
 
@@ -6,7 +6,7 @@ clear all  %#ok<CLALL> Recompile classes
 
 exp = SpatialAnalysis();
 % Assuming running in \Analysis\
-exp = exp.setPaths(pwd);
+exp = exp.setPaths();
 
 
 %% Import 
@@ -80,20 +80,6 @@ close all force
 exp.dispIntergrators('NLR')
 
 
-%% 
-
-% Change  Ar_useVAV = ArUseV || Ar_Use AV
-% AVr_useVAVAAV = Ar_useVAV && Vr_useAAV 
-% boxplot summaries difference between Ar_useVAV==1 and Ar_useVAV==0
-% And Vr_useAAV ==0 and Vr_useAAV==1
-
-% Normalise:
-% Eg. Ar
-% V coeff / A coeff
-% AV coeff / A coeff
-% Boxplot for two groups Ar_useVAV==1 and Ar_useVAV==0
-
-
 %% Plot single subject summary
 
 congRel = true;
@@ -105,35 +91,42 @@ exp.plotSingleSubjectSummary(9, [], [], congRel)
 exp.plotSingleSubjectSummary(6, [], [], congRel)
 
 
-%% Plot group summary V_ar - accuracy
+%% Plot group summary V_ar - int==1
 
 close all force
 
 type = 'Accuracy';
 group = exp.integrators.NonLinearResp.V_Ar;
-
 exp = exp.plotGroupSummary(group, type);
-
-
-%% Plot group summary V_ar - midError - not finished yet
-
-close all force
 
 type = 'MidError';
 group = exp.integrators.NonLinearResp.V_Ar;
-
 exp = exp.plotGroupSummary(group, type);
-
-
-%% Plot group summary V_ar - congruence judement
-
-close all force
 
 type = 'Congruence';
 group = exp.integrators.NonLinearResp.V_Ar;
-
 exp = exp.plotGroupSummary(group, type);
+
+
+%% Plot group summary V_ar - int==0
+
+close all force
+
+type = 'Accuracy';
+group = ~exp.integrators.NonLinearResp.V_Ar;
+exp = exp.plotGroupSummary(group, type);
+
+type = 'MidError';
+group = ~exp.integrators.NonLinearResp.V_Ar;
+exp = exp.plotGroupSummary(group, type);
+
+type = 'Congruence';
+group = ~exp.integrators.NonLinearResp.V_Ar;
+exp = exp.plotGroupSummary(group, type);
+
 
 %% Tidy
 
 close all force
+clear plt print group eyePlot debug congRel type thresh
+

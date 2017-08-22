@@ -7,8 +7,6 @@ function [H1, H2] = ...
 % diff labels are coded in legend setting
 
 %
-
-
 %% Plot - lines/scatter
 
 % Detect if folded or unfolded data
