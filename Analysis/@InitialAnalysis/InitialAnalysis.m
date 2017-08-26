@@ -17,8 +17,6 @@ classdef InitialAnalysis < ggraph
             
         end
         
-        
-        
         function obj = applyGazeThresh(obj, print)
             
             if ~exist('print', 'var')

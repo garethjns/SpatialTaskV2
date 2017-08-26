@@ -17,11 +17,11 @@ switch lower(type)
     case {'accuracy', 'acc'}
         statsMethod = @obj.accuracy;
         statsField = 'accuracy';
-        plt = [true, false, true, false];
+        plt = [false, false, true, false];
     case {'congruence', 'cong'}
         statsMethod = @obj.congruence;
         statsField = 'congruence';
-        plt = [true, false];
+        plt = [true, true];
     case {'miderror', 'me'}
         statsMethod = @obj.midError;
         statsField = 'midError';

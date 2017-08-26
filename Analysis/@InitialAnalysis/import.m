@@ -1,11 +1,4 @@
 function obj = import(obj, eyePlot, debug, print)
-% Import data set by .setPaths
-% Do subject/task version specific preprocessing - standardise columns,
-% add eye data, etc.
-% Do basic preprocessing - add Correct column etc.
-
-%% Parse inputs and set defualts
-% Needs updating to work properly!
 
 if ~exist('debug', 'var')
     debug = true;
@@ -16,9 +9,6 @@ end
 if ~exist('print', 'var')
     print = true;
 end
-
-
-%% Import
 
 eN = numel(fields(obj.exp));
 obj.expN = eN;
@@ -44,7 +34,7 @@ for e = 1:eN
     if print; disp(['Loaded ', num2str(n), ' trials']); end
     
     % For all data, correct angle calculation from raw response
-    newAngles = cellfun(@SpatialAnalysis.calcAngle, ...
+    newAngles = cellfun(@InitialAnalysis.calcAngle, ...
         a.stimLog.RawResponse, ...
         'UniformOutput', false);
     
@@ -52,54 +42,16 @@ for e = 1:eN
     da = cell2mat(a.stimLog.diffAngle);
     pos = mat2cell(a.stimLog.Position, ...
         ones(height(a.stimLog),1), 2);
-    newDiffAngles = cellfun(@SpatialAnalysis.diffAngle, ...
+    newDiffAngles = cellfun(@InitialAnalysis.diffAngle, ...
         pos, newAngles, ...
         'UniformOutput', false);
     
     % And respBinAn
-    newRespBinAn = cellfun(@SpatialAnalysis.calcRespBinAn, ...
+    newRespBinAn = cellfun(@InitialAnalysis.calcRespBinAn, ...
         newAngles, ...
         'UniformOutput', false);
     
     if debug % Debug plots
-        
-        % Plot comparison of diff and old angles
-        figure 
-        nda = cell2mat(newDiffAngles);
-        scatter(da(1:2:end), nda(1:2:end))
-        hold on
-        scatter(da(2:2:end), nda(2:2:end))
-        legend({'Aud', 'Vis'})
-        xlabel('Old angle')
-        ylabel('New angle')
-        title(['Subject: ', num2str(e), ...
-            'Comparison of diff angles'])
-        % This looks like this because the diffAngles have different error
-        % added at different locations
-        % The ksdensity therefore has multiple peaks:
-        % eg. 15 (resp) error + pos 7.5 error
-        % 15 (resp) error + pos 22.5 error, etc ....
-        figure
-        subplot(2,1,1)
-        ksdensity(da(1:2:end), 'bandwidth', 1)
-        hold on
-        ksdensity(nda(1:2:end), 'bandwidth', 1)
-        legend({'Aud new', 'Aud old'})
-        subplot(2,1,2)
-        ksdensity(da(2:2:end), 'bandwidth', 1)
-        hold on
-        ksdensity(nda(2:2:end), 'bandwidth', 1)
-        legend({'Vis new', 'Vis old'})
-        xlabel('Response error')
-        suptitle(['Subject: ', num2str(e), ...
-            'Distribution of resp errors across all positions'])
-        % That's better - reponse error is binned (mostly) at -15, 0, 15,
-        % and doesn't vary with response location (which it shouldn't,
-        % assuming subjects are using points on response screen to
-        % self-bin, which they do - see raw response plots in
-        % initalAnalysis)
-        
-        % Plot overall distribution of responses across space
         avNew = cell2mat(newAngles);
         av = cell2mat(a.stimLog.Angle);
         
@@ -126,12 +78,7 @@ for e = 1:eN
         title('Visual responses')
         suptitle(['Subject: ', num2str(e), ...
             ' Corrected angle plot'])
-        % This now looks as expected - response peaks line up with
-        % indicated response locations, whereas previous there was error
-        % scaled by absolte location
         
-        % Plot FFT - periodicity of response binning should be 15 degs, as
-        % per locations on response figure.
         figure
         subplot(2,1,1)
         InitialAnalysis.plot180FFT(xAOld, yAOld)
@@ -145,9 +92,6 @@ for e = 1:eN
             'Visual responses')
         suptitle(['Subject: ', num2str(e), ...
             ' Response angle regularity'])
-        % And it is - whereas before it was <15 (representing the error
-        % from the miscalucation averaged over absolute space).
-        
     end
     
     % Sabe new values
@@ -165,11 +109,62 @@ for e = 1:eN
     
     % Process data according to version subject was run on
     % (swithces not mutually exclusive)
-    % V1 (1, 2 from initialAnalysis) & V2 (1-6 from initialAnalysis)
-    % removed
-    % V3 (8 onwards in initialAnalysis) included here but no version
-    % specific import requirements (switch removed)
-
+    % V1: S1 and S2
+    switch fn
+        case {obj.exp.s1, obj.exp.s2}
+            % These two lack two columns present in later exps,
+            % add dummies PossBinLog and PossBin
+            
+            poss = [-82.5, unique(a.stimLog.Position)', 82.5];
+            
+            a.stimLog.PosBinLog = cell(n,1);
+            a.stimLog.PosBin = NaN(n,2);
+            
+            for t = 1:n
+                a.stimLog.PosBinLog{t} = ...
+                    [a.stimLog.Position(t,1) == poss; ...
+                    a.stimLog.Position(t,2) == poss];
+                
+                a.stimLog.PosBin(t,:) = ...
+                    [find(a.stimLog.PosBinLog{t}(1,:));...
+                    find(a.stimLog.PosBinLog{t}(2,:))];
+            end
+    end
+    
+    % V2: S1-6
+    switch fn
+        case {obj.exp.s1, obj.exp.s2, obj.exp.s3, ...
+                obj.exp.s4, obj.exp.s5, obj.exp.s6}
+            % These need dummy timing columns
+            n = height(a.stimLog);
+            a.stimLog.timeStamp = NaN(n, 2);
+            a.stimLog.startClock = ...
+                repmat([1900, 1, 1, 1, 1, 1],n,1);
+            a.stimLog.endClock = ...
+                repmat([1900, 1, 1, 1, 1, 1],n,1);
+    end
+    
+    % V3: - add eyedata if available
+    % If not, adds placeholders
+    % Available S7 onwards, but run for all
+    switch fn
+        case {obj.exp.s1, obj.exp.s2, obj.exp.s3, ...
+                obj.exp.s4, obj.exp.s5, obj.exp.s6, obj.exp.s7}
+            % Not using eye data
+            % Give addEyeData2 some dummy params
+            a.params = [];
+            
+        otherwise % Fututre exps (8 onwards)
+            % From here, timesync info is available in params.
+            % Need to load this.
+            % Not using eye data from before this.
+            % stimlog should contains gaze, not correctedGaze
+            % any more.
+            
+            % No additional processing here at the moment
+            % - handled in addEyeData2
+    end
+    
     % Add eye data
     [a.stimLog, gaze] = ...
         InitialAnalysis.addEyeData2(a.stimLog, ...
@@ -216,3 +211,55 @@ end
 obj.expDataS = data;
 obj.expDataAll = allData;
 obj.eyeDataS = gazeData;
+end
+
+function obj = applyGazeThresh(obj, print)
+
+if ~exist('print', 'var')
+    print = true;
+end
+
+% Reset
+data = obj.expDataS;
+allData = obj.expDataAll;
+
+% Which onSurfProp to use?
+osp = 'onSurfProp';
+% Or
+% osp = 'onSurfPropCorrectedED'; - removed
+
+% Set thresh where there is eye data
+thresh1 = 0.75;
+% Set thresh where there isn't eye data -
+% true = include all,
+% false = discard all
+thresh2 = true;
+
+allOK = [];
+for e = 1:obj.expN
+    fieldName = ['s', num2str(e)];
+    
+    [data.(fieldName).onSurf, rs1, rs2] = ...
+        InitialAnalysis.eyeIndex(data.(fieldName), ...
+        osp, thresh1, thresh2);
+    
+    dataFilt.(fieldName) = ...
+        data.(fieldName)(data.(fieldName).onSurf,:);
+    
+    % Lazy
+    allOK = [allOK; data.(fieldName).onSurf]; %#ok<AGROW>
+    
+    if print
+        disp('----')
+        disp(fieldName)
+        disp(rs1)
+        disp(rs2)
+        disp('----')
+    end
+end
+
+allData.onSurf = allOK;
+
+% Continue with data passing thresh only
+obj.expDataS = dataFilt;
+obj.expDataAll = allData(allData.onSurf==1,:);

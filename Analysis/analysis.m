@@ -82,29 +82,34 @@ exp.dispIntergrators('NLR')
 
 %% Plot single subject summary
 
+close all force
+
 congRel = true;
-exp.plotSingleSubjectSummary(9, [], [], congRel)
+sub = 1; % Int
+exp.plotSingleSubjectSummary(sub, [], [], congRel)
 
 
 %% Plot single subject summary
 
-exp.plotSingleSubjectSummary(6, [], [], congRel)
+close all force
+
+sub = 2; % Non-int
+exp.plotSingleSubjectSummary(sub, [], [], congRel)
 
 
 %% Plot group summary V_ar - int==1
 
 close all force
 
-type = 'Accuracy';
 group = exp.integrators.NonLinearResp.V_Ar;
+
+type = 'Accuracy';
 exp = exp.plotGroupSummary(group, type);
 
 type = 'MidError';
-group = exp.integrators.NonLinearResp.V_Ar;
 exp = exp.plotGroupSummary(group, type);
 
 type = 'Congruence';
-group = exp.integrators.NonLinearResp.V_Ar;
 exp = exp.plotGroupSummary(group, type);
 
 
@@ -112,21 +117,20 @@ exp = exp.plotGroupSummary(group, type);
 
 close all force
 
-type = 'Accuracy';
 group = ~exp.integrators.NonLinearResp.V_Ar;
+
+type = 'Accuracy';
 exp = exp.plotGroupSummary(group, type);
 
 type = 'MidError';
-group = ~exp.integrators.NonLinearResp.V_Ar;
 exp = exp.plotGroupSummary(group, type);
 
 type = 'Congruence';
-group = ~exp.integrators.NonLinearResp.V_Ar;
 exp = exp.plotGroupSummary(group, type);
 
 
 %% Tidy
 
 close all force
-clear plt print group eyePlot debug congRel type thresh
+clear plt print group eyePlot debug congRel type thresh sub
 

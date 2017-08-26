@@ -47,8 +47,8 @@ end
 
 % Calculate across subject averages and plot
 % Take averages (code from initialAnalysis)
-statsP3Av_tmp = NaN(6, 6, 5, obj.expN);
-statsP4Av_tmp = NaN(6, 10, 5, obj.expN);
+statsP3Av_tmp = NaN(6, 6, 5, nSubs);
+statsP4Av_tmp = NaN(6, 10, 5, nSubs);
 statsP3Av = NaN(6, 6, 5);
 statsP4Av = NaN(6, 10, 5);
 for e = 1:nSubs
@@ -74,8 +74,8 @@ end
 statsP3Av(1,:,:) = statsP3Av_tmp(1,:,:,1);
 statsP4Av(1,:,:) = statsP4Av_tmp(1,:,:,1);
 % Copy diffs from one subject
-statsP3Av(2,:,:) = statsP3Av_tmp(2,:,:,2);
-statsP4Av(2,:,:) = statsP4Av_tmp(2,:,:,2);
+statsP3Av(2,:,:) = statsP3Av_tmp(2,:,:,1);
+statsP4Av(2,:,:) = statsP4Av_tmp(2,:,:,1);
 % Take mean congProp across subjects
 statsP3Av(3,:,:) = nanmean(statsP3Av_tmp(3,:,:,:), 4);
 statsP4Av(3,:,:) = nanmean(statsP4Av_tmp(3,:,:,:), 4);
@@ -86,8 +86,8 @@ statsP4Av(4,:,:) = nanstd(statsP4Av_tmp(3,:,:,:), 0, 4);
 statsP3Av(5,:,:) = sum(statsP3Av_tmp(5,:,:,:), 4);
 statsP4Av(5,:,:) = sum(statsP4Av_tmp(5,:,:,:), 4);
 % Replace n with exp.expN
-statsP3Av(6,:,:) = obj.expN;
-statsP4Av(6,:,:) = obj.expN;
+statsP3Av(6,:,:) = nSubs;
+statsP4Av(6,:,:) = nSubs;
 
 % Save
 obj.stats.congruence.absAV = statsP3Av;
