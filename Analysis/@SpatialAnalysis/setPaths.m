@@ -15,6 +15,12 @@ else
 end
 
 
+%% Set output graph path 
+
+% Just using [path]/Graphs/
+gPath = 'Graphs\';
+
+
 %% List of subjects
 
 s = 1;
@@ -44,6 +50,9 @@ ex.(['s', num2str(s)]) = ... 8 (15)
     s = s+1;
 ex.(['s', num2str(s)]) = ... 9 (new)
     [dPath, '16J\23-Aug-2017 14_28_08\SpatialCapture_16J.mat']; ...
+    s = s+1;
+ex.(['s', num2str(s)]) = ... 10 (new)
+    [dPath, '17D\30-Aug-2017 13_18_41\SpatialCapture_17D.mat']; ...
     % s = s+1; % Increment number and add here
 
 
@@ -66,6 +75,10 @@ ey.(['s', num2str(s)]) = ... 8
     [dPath, '15SI\07-Apr-2017 16_08_46\15SI.mat']; s = s+1;
 ey.(['s', num2str(s)]) = ... 9
     [dPath, '16J\23-Aug-2017 14_28_08\16J.mat']; s = s+1;
+ey.(['s', num2str(s)]) = ... 10
+    [dPath, '17D\30-Aug-2017 13_18_41\17D.mat']; s = s+1;
 
 obj.eye = ey;
 obj.exp = ex;
+obj.paths.dPath = dPath;
+obj.paths.gPath = gPath;

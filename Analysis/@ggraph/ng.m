@@ -5,8 +5,9 @@ if nargin==0
 end
 
 %% Set defaults
+
 % Figure positions
-fPos=[1 1 800 600];
+fPos = [1 1 800 600];
 
 % Axes fonts
 aFontSize = 12;
@@ -23,6 +24,7 @@ bLineWidth = 1.3;
 
 % Scatter markers
 scMarkerSize = 60;
+scFill = true;
 
 % Legend
 lLoc = 'NorthWest';
@@ -32,6 +34,7 @@ lFontWeight = 'bold';
 % Grid
 gr = 1;
 grm = 0;
+
 
 %% Re-set specific settings for template
 
@@ -108,11 +111,29 @@ switch template
         gr = 0;
         grm = 1;
         fPos = [1 1 1024 768];
+    case 'spFigure1'
+        gr = 0;
+        grm = 0;
+        fPos = [100 100 1124 868];
+        lLoc = 'South';
+    case 'spFigure2'
+        gr = 0;
+        grm = 0;
+        fPos = [100 100 1124 868];
+        lLoc = 'SouthWest';
+        lFontSize = 8;
+    case 'spFigure3'
+        fPos = [100 100 1124 868];
+        lLoc = 'NorthWest';
+        lLineWidth = 2;
     case '...' % Define new templates here
         
 end
 
+
 %% Figure
+% Run through all handles in figure and apply settings from 
+% defaults/template.
 
 % Get current figure
 f = gcf;
@@ -120,7 +141,7 @@ f = gcf;
 handles = findobj(f);
 
 % Run through these and set properties according to template
-for i=1:length(handles)
+for i = 1:length(handles)
     switch handles(i).Type
         case 'figure'
             % Set size
@@ -133,19 +154,19 @@ for i=1:length(handles)
             handles(i).FontWeight = aFontWeight;
             
             % Grid
-            if gr==1
+            if gr
                 % Turn on major grid only
                 grid(handles(i), 'On')
             end
             
-            if grm==1
+            if grm
                 % Turn on minor grid (and major)
                 handles(i).XMinorGrid = 'on';
                 % Tick labels are in
                 % handles(i).XRuler.MinorTickValues
-                if gr==0
+                if ~gr % 
                     % Specifically hide the major grid, which just came
-                    % on as well
+                    % on as well (not working)...
                     % This loses labels too:
                     % handles(i).XRuler.TickValues = [];
                     % And this doesn't do anything??
@@ -163,14 +184,17 @@ for i=1:length(handles)
             handles(i).LineWidth = lLineWidth;
             
         case 'scatter'
-            % Special case - not set in template. Fills markers.
+            % Special case - not set in template. Changes marker size.
             switch template
                 case {'ScatterCC', 'BigScatter', 'PosterThinCC'}
                 otherwise
                     handles(i).SizeData = scMarkerSize;
                     
             end
-            handles(i).MarkerFaceColor = handles(i).CData;
+            % Fill markers with edge color
+            if scFill
+                handles(i).MarkerFaceColor = handles(i).MarkerEdgeColor;
+            end
             
         case 'legend'
             handles(i).FontSize = lFontSize;
@@ -178,6 +202,7 @@ for i=1:length(handles)
             handles(i).FontWeight = lFontWeight;
             
         case 'text'
+            % Doesn't have any effect on suptitles
             handles(i).FontSize = lFontSize;
     end
 end

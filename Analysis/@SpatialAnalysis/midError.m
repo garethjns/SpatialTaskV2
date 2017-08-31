@@ -20,7 +20,6 @@ for e = 1:nSubs
     fieldName = ['s', num2str(s)];
     
     % Get data
-    
     [A, V] = ...
         obj.gatherMidHist(obj.expDataS.(fieldName));
     
@@ -42,18 +41,15 @@ obj.stats.midError.All.V = V;
 if plt(1)
     abs = false;
     tit = 'All subjects, xNorm, yNorm';
-    h(1) = obj.plotMidHist(A, V, tit, abs);
-    SpatialAnalysis.ng('1024NE');
+    h(1) = obj.plotMidError(A, V, tit, abs);
 end
 if plt(2)
     abs = false;
     tit = 'All subjects, xNorm';
-    h(2) = obj.plotMidHist(A, V, tit, abs, true, false);
-    SpatialAnalysis.ng('1024NE');
+    h(2) = obj.plotMidError(A, V, tit, abs, true, false);
 end
 if plt(3)
     abs = true;
     tit = 'All subjects, xNorm, abs';
-    h(3) = obj.plotMidHist(A, V, tit, abs, true, false);
-    SpatialAnalysis.ng('1024NE');
+    h(3) = obj.plotMidError(A, V, tit, abs, true, false);
 end

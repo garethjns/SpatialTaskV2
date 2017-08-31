@@ -1,5 +1,6 @@
-function [H1, H2] = ...
-    plotAccuracy(obj, summaryA, summaryV, fold, posAx, tit)
+function H1 = ...
+    plotAccuracy(obj, summaryA, summaryV, posAx, tit)
+% Modified version of InitialAnlaysis.plotAcrossSubjectAccuracy().
 % Plot across subject average with error bars
 % Summary is pos x diff x stat
 % Stat: 1 = % Correct, 2 = n, 3 = SD, 4 = SE
@@ -9,11 +10,11 @@ function [H1, H2] = ...
 %
 %% Plot - lines/scatter
 
-% Detect if folded or unfolded data
-summaryA.aPos
+% Diffs are on axis 2
+nDiff = size(summaryA, 2);
 
 % Set diff labels for legend
-if nPoss>5
+if nDiff>5
     % Assume rel
     diffs = [-60, -45, -30, -15, ...
         0, 15, 30, 45, 60];
@@ -28,8 +29,9 @@ h2 = gobjects(1, nDiff);
 
 H1 = figure;
 % Double width ([BLx, BLy, W, H])
-H1.Position = [H1.Position(1), H1.Position(2), ...
-    H1.Position(3)*2, H1.Position(4)];
+offset = 100;
+H1.Position = [offset, offset, ...
+    offset+1024, offset+768];
 
 for d = 1:nDiff
     
@@ -49,7 +51,7 @@ for d = 1:nDiff
     end
     
     % A
-    subplot(1,2,1)
+    subplot(2,2,1)
     hold on
     h1(d) = errorbar(posAx, summaryA(:,d,1), summaryA(:,d,4), ...
         'LineStyle', ls, 'LineWidth', lw);
@@ -58,7 +60,7 @@ for d = 1:nDiff
     ylabel('Aud % correct')
     
     % V
-    subplot(1,2,2);
+    subplot(2,2,2);
     hold on
     h2(d) = errorbar(posAx, summaryV(:,d,1), summaryV(:,d,4), ...
         'LineStyle', ls, 'LineWidth', lw);
@@ -68,10 +70,14 @@ for d = 1:nDiff
 end
 
 % Finish graphs
-subplot(1,2,1)
+subplot(2,2,1);
 title('Aud')
-subplot(1,2,2)
+xlim([min(posAx), max(posAx)])
+ylim([0,1])
+subplot(2,2,2)
 title('Vis')
+xlim([min(posAx), max(posAx)])
+ylim([0,1])
 suptitle(tit)
 
 % Legend
@@ -84,14 +90,10 @@ hLeg.Title.String = 'AV disparity, deg';
 
 
 %% Plot - heatmap version
-
-H2 = figure;
-% Double width ([BLx, BLy, W, H])
-H2.Position = [H2.Position(1), H2.Position(2), ...
-    H2.Position(3)*2, H2.Position(4)];
+% Now on subplots of same figure
 
 % A
-ax = subplot(1,2,1);
+ax = subplot(2,2,3);
 imagesc(summaryA(:,:,1)')
 ax.XTick = 1:numel(posAx);
 ax.XTickLabel = string(posAx);
@@ -101,7 +103,7 @@ ylabel('AV disparity')
 xlabel('A Position')
 
 % V
-ax = subplot(1,2,2);
+ax = subplot(2,2,4);
 imagesc(summaryV(:,:,1)')
 ax.XTick = 1:numel(posAx);
 ax.XTickLabel = string(posAx);
@@ -111,9 +113,9 @@ ylabel('AV disparity')
 xlabel('V Position')
 
 % Finish graphs
-subplot(1,2,1)
+subplot(2,2,3)
 title('Aud')
-subplot(1,2,2)
+subplot(2,2,4)
 title('Vis')
 suptitle(tit)
 

@@ -13,6 +13,7 @@ classdef SpatialAnalysis < InitialAnalysis
     % 1) Sort graph presentation/sizing/titles out
     
     properties
+        paths % Data, graph paths for this experiment
         GLMs % Struct with various GLM fits
         stats % Struct with dumps of graph data
         statsSubsets % Struct withs stats done on subsets
@@ -52,16 +53,20 @@ classdef SpatialAnalysis < InitialAnalysis
         
         [obj, h] = congruence(obj, plt, subs)
         
-        dispIntergrators(obj, mn)
+        h = plotCongruence(obj, stats, tit)
+        
+        h = dispIntergrators(obj, mn, plt)
         
         plotSingleSubjectSummary(obj, s, accFold, ...
             accRel, congRel, midErrorRel)
 
         [obj, h] = midError(obj, plt, subs)
+        
+        h = plotMidError(obj, dataA, dataV, tit, absX, normX, normY)
 
         [obj, h] = plotGroupSummary(obj, group, type, name)
 
-        % obj = plotAccuracy(obj, summaryStatsA, summaryStatsV)
+        h = plotAccuracy(obj, summaryA, summaryV, posAx, tit)
         
     end
     

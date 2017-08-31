@@ -13,9 +13,9 @@ exp = exp.setPaths();
 
 close all force
 
-debug = false;
-eyePlot = false;
-print = false;
+debug = true;
+eyePlot = true;
+print = true;
 exp = exp.import(eyePlot, debug, print);
 
 
@@ -50,11 +50,9 @@ exp = exp.midError(plt);
 
 %% Congruence judgements
 
-
-% Remove abs plots
 close all force
 
-plt = [true, false];
+plt = [true, true];
 exp = exp.congruence(plt);
 
 
@@ -77,7 +75,8 @@ exp = exp.findIntegrators('NLR', thresh);
 
 close all force
 
-exp.dispIntergrators('NLR')
+plt = [true, true, true];
+exp.dispIntergrators('NLR', plt);
 
 
 %% Plot single subject summary

@@ -97,11 +97,11 @@ obj.stats.congruence.relAV = statsP4Av;
 if plt(1)
     tit = ['Avg: Proportion congruent responses,',...
         'abs diff between A and V'];
-    h(1) = obj.plotCongProp(statsP3Av, tit);
+    h(1) = obj.plotCongruence(statsP3Av, tit);
     
 end
 if plt(2)
     tit = ['Avg: Proportion congruent responses,', ...
         'relative diff between A and V'];
-    h(2) = obj.plotCongProp(statsP4Av, tit);
+    h(2) = obj.plotCongruence(statsP4Av, tit);
 end

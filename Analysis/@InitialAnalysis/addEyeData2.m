@@ -76,10 +76,11 @@ if process
     gaze.TS4 = datetime(gaze.TS3, 'ConvertFrom', 'posixtime');
     % ie:
     % Should be 100%.... almost is - rounding errors??
-    disp(['Timing rounding check: ', ...
-        num2str(sum(gaze.TS3==datenum(posixtime(gaze.TS4))) ...
-        / height(gaze)), '% identical (posix==datetime)'])
-    
+    if print
+        disp(['Timing rounding check: ', ...
+            num2str(sum(gaze.TS3==datenum(posixtime(gaze.TS4))) ...
+            / height(gaze)), '% identical (posix==datetime)'])
+    end
 end
 
 
