@@ -1,5 +1,8 @@
 function [obj, h] = GLMNonLinearCor(obj)
-% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
+% ACorr = a+ b*ALoc + c*Vloc + d*ALoc*VLoc
+% Fits ACorr model (fitGLM2) and plots. Plotting code is not up to date -
+% see .GLMNonLinearResp(). If this function is used again, would be worth
+% generalising with .GLMNonLinearResp().
 
 % For each subject
 h = figure;

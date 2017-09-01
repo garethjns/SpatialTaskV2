@@ -77,7 +77,12 @@ SpatialAnalysis.hgx([exp.paths.gPath, 'Figure4']);
 
 close all force
 
-exp = exp.GLMNonLinearResp();
+[exp, h] = exp.GLMNonLinearResp();
+
+% Save figure 5
+figure(h)
+SpatialAnalysis.ng('spFigure5');
+SpatialAnalysis.hgx([exp.paths.gPath, 'Figure5']);
 
 
 %% Figure 6 (integrators heatmap)
@@ -87,7 +92,12 @@ close all force
 plt = [true, false, false];
 thresh = 0.05;
 exp = exp.findIntegrators('NLR', thresh);
-exp.dispIntergrators('NLR', plt)
+h = exp.dispIntergrators('NLR', plt);
+
+% Save figure 6
+figure(h(1))
+SpatialAnalysis.ng('spFigure6');
+SpatialAnalysis.hgx([exp.paths.gPath, 'Figure6']);
 
 
 %% Figure 7 (integrators)
@@ -95,15 +105,22 @@ exp.dispIntergrators('NLR', plt)
 close all force
 
 group = exp.integrators.NonLinearResp.V_Ar;
+disp(['V_Ar: Integrators, n = ', num2str(sum(group))])
 
 type = 'Accuracy';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,3))
+SpatialAnalysis.ng('spFigure2');
 
 type = 'MidError';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,1))
+SpatialAnalysis.ng('spFigure3');
 
 type = 'Congruence';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,2))
+SpatialAnalysis.ng('Wide');
 
 
 %% Figure 8 (non-integrators)
@@ -111,12 +128,19 @@ exp = exp.plotGroupSummary(group, type);
 close all force
 
 group = ~exp.integrators.NonLinearResp.V_Ar;
+disp(['V_Ar: Non-integrators, n = ', num2str(sum(group))])
 
 type = 'Accuracy';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,3))
+SpatialAnalysis.ng('spFigure2');
 
 type = 'MidError';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,1))
+SpatialAnalysis.ng('spFigure3');
 
 type = 'Congruence';
-exp = exp.plotGroupSummary(group, type);
+[exp, h] = exp.plotGroupSummary(group, type);
+figure(h(1,2))
+SpatialAnalysis.ng('Wide');

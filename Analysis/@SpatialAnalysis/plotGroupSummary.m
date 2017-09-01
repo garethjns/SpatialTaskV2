@@ -21,7 +21,7 @@ switch lower(type)
     case {'congruence', 'cong'}
         statsMethod = @obj.congruence;
         statsField = 'congruence';
-        plt = [true, true];
+        plt = [false, true];
     case {'miderror', 'me'}
         statsMethod = @obj.midError;
         statsField = 'midError';

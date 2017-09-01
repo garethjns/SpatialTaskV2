@@ -1,5 +1,7 @@
 function [obj, h] = GLMNonLinearResp(obj)
-% AResp = a+ b*ALoc + c*Vloc + + d*ALoc*VLoc
+% A/V Resp = a+ b*ALoc + c*Vloc + d*ALoc*VLoc
+% Fits Resp model (fitGLM4) and plots. More up to date that
+% .GLMNonLinearCor().
 
 normX = false;
 normY = false;
@@ -34,6 +36,7 @@ for e = 1:obj.expN
     else
         lCol = [0.3, 0.3, 0.8];
     end
+    
     plot(x, y, 'LineStyle', '--', 'Color', lCol);
     % Scatter oon significant values
     scatter(x(p<0.05), y(p<0.05), ...
@@ -70,8 +73,16 @@ end
 
 % Finish figure
 subplot(1,2,1)
+% Add hidden lines
+lh(1) = plot([-10, -5], [-10, -5], ...
+    'LineStyle', '--', 'Color', [0.6, 0.6, 0.6]);
+lh(2) = plot([-10, -5], [-10, -5], ...
+    'LineStyle', '--', 'Color', [0.3, 0.3, 0.8]);
+% Add legend using these
+legend(lh, {'"Non integrator"', '"Integrator"'})
 xlim([0, 4])
-% ylim([-0.5, 1])
+ylim([-0.3, 1.1])
+% Label ticks with coefficient name
 aAx.XTick = [1, 2, 3];
 aAx.XTickLabels = ...
     st.AResp.Coefficients.Properties.RowNames(2:4);
@@ -81,8 +92,15 @@ ylabel('Magnitude')
 title('AResp = ALoc + Vloc + ALoc*VLoc')
 
 subplot(1,2,2)
+% Add hidden lines
+lh(1) = plot([-10, -5], [-10, -5], ...
+    'LineStyle', '--', 'Color', [0.6, 0.6, 0.6]);
+lh(2) = plot([-10, -5], [-10, -5], ...
+    'LineStyle', '--', 'Color', [0.3, 0.3, 0.8]);
+% Add legend using these
+legend(lh, {'"Non integrator"', '"Integrator"'})
 xlim([0, 4])
-% ylim([-0.5, 1])
+ylim([-0.3, 1.1])
 vAx.XTick = [1, 2, 3];
 vAx.XTickLabels = ...
     st.VResp.Coefficients.Properties.RowNames(2:4);

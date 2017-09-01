@@ -94,35 +94,34 @@ for s = 1:nSubs
         mod.(fns{s}).(['V', mfn]).Coefficients.pValue(3);
     t.pAV_Vr(sIdx) = ...
         mod.(fns{s}).(['V', mfn]).Coefficients.pValue(4);
-    
 end
 
 % Simple logicals
-t.A_Ar = t.pA_Ar < thresh;
-t.V_Ar = t.pV_Ar < thresh;
+t.A_Ar  = t.pA_Ar  < thresh;
+t.V_Ar  = t.pV_Ar  < thresh;
 t.AV_Ar = t.pAV_Ar < thresh;
-t.A_Vr = t.pA_Vr < thresh;
-t.V_Vr = t.pV_Vr < thresh;
+t.A_Vr  = t.pA_Vr  < thresh;
+t.V_Vr  = t.pV_Vr  < thresh;
 t.AV_Vr = t.pAV_Vr < thresh;
 
 % Simple integrator definitions
-t.Ar_useV = t.V_Ar;
-t.Vr_useA = t.A_Vr;
+t.Ar_useV  = t.V_Ar;
+t.Vr_useA  = t.A_Vr;
 t.Ar_useAV = t.AV_Ar;
 t.Vr_useAV = t.AV_Vr;
 
 % More complex integrator definitions
-t.Ar_useVAV = t.V_Ar | t.AV_Ar; %
-t.Vr_useAAV = t.A_Vr | t.AV_Vr;
+t.Ar_useVAV     = t.V_Ar      | t.AV_Ar; %
+t.Vr_useAAV     = t.A_Vr      | t.AV_Vr;
 t.AVr_useVAVAAV = t.Ar_useVAV & t.Vr_useAAV;
 
 % Calculate ratios
-t.rA_A_Ar = t.cA_Ar   ./ t.cA_Ar;
-t.rV_A_Ar = t.cV_Ar   ./ t.cA_Ar;
-t.rAV_A_Ar = t.cAV_Ar ./ t.cA_Ar;
-t.rA_V_Vr = t.cA_Vr   ./ t.cV_Vr;
-t.rV_V_Vr = t.cV_Vr   ./ t.cV_Vr;
-t.rAV_V_Vr = t.cAV_Vr ./ t.cV_Vr;
+t.rA_A_Ar  =  t.cA_Ar  ./ t.cA_Ar;
+t.rV_A_Ar  =  t.cV_Ar  ./ t.cA_Ar;
+t.rAV_A_Ar =  t.cAV_Ar ./ t.cA_Ar;
+t.rA_V_Vr  =  t.cA_Vr  ./ t.cV_Vr;
+t.rV_V_Vr  =  t.cV_Vr  ./ t.cV_Vr;
+t.rAV_V_Vr =  t.cAV_Vr ./ t.cV_Vr;
 
 % Save table
 obj.integrators.(mn) = t;

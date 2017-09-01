@@ -126,6 +126,14 @@ switch template
         fPos = [100 100 1124 868];
         lLoc = 'NorthWest';
         lLineWidth = 2;
+    case 'spFigure5'
+        fPos = [100 100 1124 868];
+        scFill = false;
+        lLoc = 'NorthEast';
+    case 'spFigure6'
+        fPos = [100 100 1124 868];
+        gr = false;
+        grm = false;
     case '...' % Define new templates here
         
 end

@@ -30,8 +30,14 @@ disp(t(:, ['Subject', colsAr, colsVr, colsAVr]))
 if plt(1)
     
     h(1) = figure;
+    % Auditory
     ax = subplot(1,7,1:3);
+    % Plot heatmap
     imagesc(t{:,colsAr})
+    hold on
+    % Add manual gridlines
+    addGrids(obj, true, true)
+    % Set ticks and labels
     ax.YTick = 1:15;
     ax.XTick = 1:3;
     ax.XMinorTick = 'on';
@@ -42,28 +48,37 @@ if plt(1)
     ylabel('Subject')
     title('Aud resp.')
     
+    % Visual
     ax = subplot(1,7,4:6);
     imagesc(t{:,colsVr})
-    ax.YTick = 1:15;
+    hold on
+    addGrids(obj, true, true)
+    ax.YTick = [];
     ax.XTick = 1:3;
     ax.XMinorTick = 'on';
     ax.XRuler.MinorTickValues = 0.5:2.5;
     ax.YRuler.MinorTickValues = 0.5:14.5;
+    ax.XTickLabel = colsVr;
     ax.XTickLabelRotation = 45;
     title('Vis resp.')
     
+    % AV
     ax = subplot(1,7,7);
     imagesc(t{:,colsAVr})
-    ax.YTick = 1:15;
+    hold on
+    addGrids(obj, true, false)
+    ax.YTick = [];
     ax.XTick = 1;
     ax.XMinorTick = 'on';
     ax.XRuler.MinorTickValues = 0.5:2.5;
     ax.YRuler.MinorTickValues = 0.5:14.5;
     ax.XTickLabel = colsAVr;
-    ax.XTickLabelRotation = 45;
+    ax.XTickLabelRotation = 25;
     title('AV resp.')
     
-    SpatialAnalysis.ng('GridMinor');
+    hc = colorbar;
+    hc.Ticks = [0, 1];
+  
 end
 
 
@@ -119,4 +134,24 @@ if plt(3)
     title('Ratio: cAV to cV')
     suptitle('Visual response')
     xlabel('Significant other-modality')
+end
+
+
+%% Helpers
+
+function addGrids(obj, h, v)
+
+if v % Add vert
+    plot([1.5, 1.5], [-1, obj.expN+1], ...
+        'LineStyle', '--', 'LineWidth', 2, 'color', 'k')
+    plot([2.5, 2.5], [-1, obj.expN+1], ...
+        'LineStyle', '--', 'LineWidth', 2, 'color', 'k')
+end
+
+if h % Add horz
+    for s = 1:obj.expN
+        plot([-0.5, 3.5], [s-0.5, s-0.5], 'LineWidth', 2, 'color', 'k')
+    end
+    plot([-0.5, 3.5], [obj.expN+0.5, obj.expN+0.5], ...
+        'LineWidth', 2, 'color', 'k')
 end
